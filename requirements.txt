@@ -1,0 +1,24 @@
+# Core Dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Scraping Dependencies
+requests==2.31.0
+aiohttp==3.9.1
+asyncio==3.4.3
+praw==7.7.1
+
+# LLM Dependencies
+groq==0.4.1
+google-generativeai==0.3.2
+
+# Frontend Dependencies
+streamlit==1.29.0
+
+# Utilities
+python-dateutil==2.8.2

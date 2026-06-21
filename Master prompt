@@ -1,0 +1,100 @@
+"I am building an AI-Powered Product Discovery Engine for Spotify. I need to build a backend system that maintains a persistent state of 6 specific research insights and updates them dynamically using live data.
+
+1. THE 6 CORE RESEARCH INSIGHTS (JSON Schema)
+Every insight must strictly follow this JSON schema. The system must maintain 6 separate records in the database, each representing one of these questions:
+
+Q1: 'Why do users struggle to discover new music?'
+
+Q2: 'What are the most common frustrations with recommendations?'
+
+Q3: 'What listening behaviors are users trying to achieve?'
+
+Q4: 'What causes users to repeatedly listen to the same content?'
+
+Q5: 'Which user segments experience different discovery challenges?'
+
+Q6: 'What unmet needs emerge consistently across reviews?'
+
+JSON Structure Requirement:
+
+JSON
+{
+  "question_id": "Q1",
+  "question_text": "...",
+  "insight_summary": "...",
+  "key_findings": ["Finding 1", "Finding 2"],
+  "metadata": {
+    "total_reviews_analyzed": 0,
+    "last_updated": "ISO-Timestamp"
+  }
+}
+2. BACKEND WORKFLOW (The 'Refresh' Loop)
+When the /refresh-insights endpoint is triggered, execute this exact sequence:
+A. Fetch: Retrieve the current state of all 6 JSON objects from the insights_state table in PostgreSQL.
+B. Scrape: Run three asynchronous tasks to fetch the latest reviews from (1) Apple App Store, (2) Google Play Store, and (3) Reddit.
+C. Store: Save every newly scraped review into the raw_reviews table (columns: source, review_text, timestamp).
+D. LLM Synthesis: Send a prompt to Gemini/Groq:
+'You are an expert Growth PM. You have historical data (Current JSONs) and new data (List of Raw Reviews). Update the JSONs.
+Logic: Update 'insight_summary' and 'key_findings' based on the new data. Calculate the new 'total_reviews_analyzed' (previous total + count of new reviews). Output must be a list of 6 updated JSON objects.'
+E. Commit: Save the 6 updated JSON objects back to the insights_state table using an 'upsert' or 'update' operation. Ensure db.commit() is called so the state is permanently persisted.
+
+3. TECHNICAL DELIVERABLES
+A. models.py: Define SQLAlchemy models for:
+
+RawReview: (id, source, review_text, created_at)
+
+InsightState: (question_id [PK], json_content [JSONB Type])
+
+B. analysis_service.py:
+
+Function update_insights(new_reviews): Loads existing JSONs from InsightState, crafts the prompt for the LLM, parses the JSON response, validates it, and performs db.session.merge() followed by db.session.commit().
+
+C. main.py:
+
+GET /insights: Returns the list of all 6 JSON objects from the database.
+
+POST /refresh-insights: Triggers the scraping, passes data to analysis_service, and returns the refreshed insights.
+
+D. frontend.py (Streamlit):
+
+Render 6 cards, one for each question_id.
+
+Each card displays insight_summary, the key_findings list, and a badge showing: 'Based on [total_reviews_analyzed] reviews | Last updated: [last_updated]'.
+
+Please generate the code for these modules step-by-step, starting with models.py and the database setup."
+
+"CRITICAL: Filtering & Pre-processing Logic
+
+Negative Sentiment Bias:
+
+App Stores: When calling the scrapers, force the filter to only extract 1-star, 2-star, and 3-star reviews. (Exclude 4 and 5-star reviews).
+
+Reddit: In the search query for Reddit, append negative sentiment keywords to the search strings, for example: ("Spotify" AND ("sucks" OR "fix" OR "annoying" OR "frustrated" OR "why is it so")).
+
+Feedback-Only Focus:
+
+In the analysis_service.py, before sending data to the LLM, add a preprocessing step to discard reviews shorter than 10 words. Short reviews like 'It's bad' or 'fix it' add no value to your 6 research questions.
+
+Deduplication: Ensure the scraper deduplicates based on review text to avoid scraping the same bot/spam review multiple times."
+
+How to implement the "Negative/Feedback" filter in your Scraping Service:
+1. For App Stores (The "Star Filter"):
+Most managed scrapers (Apify/The Wolves/Neatrat) allow you to specify the rating or stars field.
+
+Input: rating: [1, 2, 3]
+
+Why: 1-2 star reviews are pure frustration; 3-star reviews are often "constructive criticism" (the gold standard for PM feedback). 4-5 stars are usually just noise.
+
+2. For Reddit (The "Intent Filter"):
+Reddit is harder to filter by rating. Instead, you filter by search intent. When you configure your searchTerms for the Reddit Scraper in Cursor, use these:
+
+Python
+# In your scraper_service.py configuration
+SEARCH_TERMS = [
+    "Spotify recommendation engine feedback",
+    "Spotify discovery issues complaint",
+    "Spotify music recommendation frustration",
+    "How to fix Spotify recommendations",
+    "Spotify algorithm repetitive fix"
+]
+Why: Adding words like “feedback,” “issue,” “complaint,” and “fix” forces the search algorithm to surface posts where users are actively trying to solve a problem, rather than just venting or sharing links.
