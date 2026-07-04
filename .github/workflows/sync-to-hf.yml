@@ -12,7 +12,7 @@ jobs:
         with:
           github_repo_id: ${{ github.repository }}
           huggingface_repo_id: rucha2103/spotify_review_generation_engine
-          hf_token: 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
+          hf_token: ${{ secrets.HF_TOKEN }}
           space_sdk: streamlit
 
 
