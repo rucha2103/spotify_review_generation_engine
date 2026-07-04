@@ -3,6 +3,6 @@ title: Spotify Review Engine
 emoji: 🎵
 colorFrom: green
 colorTo: blue
-sdk: streamlit
+sdk: docker
 app_file: frontend.py
 ---
