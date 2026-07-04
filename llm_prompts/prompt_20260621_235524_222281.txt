@@ -1,0 +1,1027 @@
+Timestamp: 20260621_235524_222281
+Model: gemini-3-flash-preview
+==================================================
+PROMPT:
+You are an expert Growth Product Manager specializing in music streaming services. 
+
+I have historical data (current insights) and new data (user reviews). Your task is to update the insights based on the new data.
+
+CURRENT INSIGHTS:
+{
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation has expanded from the 'Ethical Exiter' to include 'Economic Refugees' and 'Technical Minimalists' who are abandoning the platform due to price hikes and app bloat in favor of modified apps or local playback.",
+    "key_findings": [
+      "A growing segment of 'Economic Refugees' (students and minimum-wage workers) find the $18-$20 price point unsustainable and are migrating to YouTube Premium for better 'value-per-dollar' or using modified APKs like Morphe/ReVanced.",
+      "The 'Technical Minimalist' segment is emerging, frustrated by a 'heavy' and 'laggy' UI that prevents older hardware (like older Sony Walkmans or phones) from even launching the app.",
+      "The 'Ethical/Artist-First' segment has matured into active 'Direct Supporters' who use streaming only for discovery but buy physical media or digital files from Bandcamp/Qobuz to ensure artists are paid beyond 'peanuts.'",
+      "Free tier users are increasingly turning to 'YouTube-backed' apps like Demus that offer a cleaner, ad-free experience without the manual selection restrictions of the official app.",
+      "Long-term 'Library Curators' are now using third-party tools to 'force-shuffle' their playlists because the native algorithm has become too repetitive to support large-scale discovery."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 470,
+      "last_updated": "2024-07-24T14:20:00.000Z"
+    }
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustration has shifted from simple repetition to a feeling of being 'algorithmically gaslit' by features like Smart Shuffle and AI DJ, which users believe prioritize shareholder-friendly 'royalty-free' content over user taste.",
+    "key_findings": [
+      "Users perceive 'Smart Shuffle' as a deceptive tool that inserts unwanted, unrelated tracks into curated playlists, often ignoring 'unsave' commands to keep playing the same songs.",
+      "The AI DJ is criticized for 'hallucinating' connections between genres and serving as a 'voice-over' for the same recycled playlists rather than providing genuine discovery.",
+      "There is a strong suspicion that the algorithm deliberately pushes 'AI-generated' or 'fake' music to avoid paying royalties to human artists, creating a 'lifeless' listening experience.",
+      "Users report a 'looping' effect where the algorithm interprets its own repetitive plays as 'user preference,' creating an inescapable feedback loop of the same 10-20 songs.",
+      "Competitors like Pandora and SiriusXM are being revisited by users who miss 'true variety' and find Spotify's 'niche' recommendations to be increasingly narrow and predictable."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 470,
+      "last_updated": "2024-07-24T14:20:00.000Z"
+    }
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is being stifled by a 'broken shuffle' architecture and a 'pay-to-play' atmosphere where technical bugs and high subscription costs act as barriers to organic exploration.",
+    "key_findings": [
+      "The 'Static Shuffle Bug' is a major barrier; users report the platform generates a fixed shuffle order that stays identical across different devices and sessions, preventing them from hearing the bulk of their libraries.",
+      "Discovery tools are being 'devalued' by app performance issues, with users describing the app as 'slower than ever,' making the act of searching and browsing frustratingly sluggish.",
+      "The 'Artist Exodus' continues to create content gaps, but it is now compounded by a 'User Exodus' where fans follow their favorite artists to platforms like Tidal or Qobuz that promise 'No AI' environments.",
+      "Users feel 'Smart Shuffle' is an obstacle rather than an aid, as it often fails to respect the 'vibe' of the original playlist, leading to a disjointed discovery experience.",
+      "External sources like Reddit, YouTube, and niche radio (SiriusXM) are now the primary trusted channels for discovery, as the native 'Made For You' playlists are seen as redundant."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 470,
+      "last_updated": "2024-07-24T14:20:00.000Z"
+    }
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "The demand for 'Ethical Consumption' has been joined by a desperate need for 'Functional Reliability'\u2014specifically a transparent shuffle algorithm and a lightweight, high-performance app.",
+    "key_findings": [
+      "There is a massive demand for a 'True Random' shuffle toggle that ignores 'recent plays' and 'algorithmic weights' to allow for genuine variety in large playlists.",
+      "Users are calling for 'Automated Cache Management' or a 'Light Mode' app to fix the extreme lag and storage bloat that currently forces manual troubleshooting.",
+      "A 'Fair Payout' transparency tool is highly requested; users want to see exactly how much of their $18-$20 fee reaches the artists they listen to.",
+      "Migration tools (Soundiiz, etc.) are now considered 'essential' features for new platforms, as users seek to move decade-old libraries away from Spotify's ecosystem.",
+      "There is an emerging need for 'AI-Free' filters, with users specifically praising platforms like Qobuz for banning AI-generated content and providing high-quality metadata."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 470,
+      "last_updated": "2024-07-24T14:20:00.000Z"
+    }
+  },
+  "Q4": {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition has evolved from a 'comfort strategy' into a 'technical prison' where a flawed shuffle seed and persistent caching force users into the same audio loops across all devices.",
+    "key_findings": [
+      "The 'Shuffle Seed' issue: Users report that the platform shuffles 'behind the scenes' once a day and then plays the exact same sequence (e.g., song 2, 8, 4, 6) regardless of device or restarts.",
+      "Users are 'trapped by stats'; many stay with the platform solely to see their 'Wrapped' or listening history, even when they find the actual playback experience 'unusable.'",
+      "Manual 'Cache Clearing' has become a necessary user behavior to 'reset' the algorithm and stop the app from playing the same 10-20 'heavy rotation' tracks.",
+      "The 'Price-to-Value' disconnect: As prices rise, users feel less inclined to explore and instead retreat to 'known' music to justify the cost, or they leave for YouTube Music where the value is higher.",
+      "Smart Shuffle is reported to 'ignore' skips; if a user skips a song in Smart Shuffle, the app often re-inserts it into the queue shortly after, forcing repetitive exposure."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 470,
+      "last_updated": "2024-07-24T14:20:00.000Z"
+    }
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are pursuing 'Platform Independence' and 'Economic Efficiency,' using modified apps to bypass ads and external players to regain the 'fun' of local file ownership.",
+    "key_findings": [
+      "A 'Modified App' behavior is rising on Android (Morphe, ReVanced), where users modify the official client to remove ads and 'shareholder-focused' UI elements.",
+      "Users are 'Value-Stacking' by moving to YouTube Premium, viewing the music service as a 'free bonus' to an ad-free video experience, effectively decoupling from the standalone music sub model.",
+      "The 'Hybrid Local' model is growing: users are downloading lossless audio (via Soulseek/1337x) and using basic music players to avoid 'renting' culture and subscription hikes.",
+      "Manual 'Playlist Shuffling' via 3rd party apps is becoming a workaround for power users who create multiple identical playlists just to get a fresh 'shuffle' order.",
+      "A return to 'Radio-Style' listening is evident, with users switching to SiriusXM or Pandora to escape the 'echo chamber' of Spotify's personalized algorithms."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 470,
+      "last_updated": "2024-07-24T14:20:00.000Z"
+    }
+  }
+}
+
+NEW REVIEWS (sample of 98 reviews):
+Source: reddit
+Text: is there a way to clear downloaded local files all at once?. I have over 2000 songs downloaded via local files and I want them all gone is there any way to do this? Ive tried toggling local files off on the phone but it doesnt change anything because they are all already downloaded to the phone so it doesnt remove them. I dont even have the computer that the local files are from anymore so any solution that involves that wouldnt work either pls help
+Rating: None
+
+Source: reddit
+Text: How good i your spotify shuffle today twin?. All good song on streak 
+Images:
+	https://preview.redd.it/ej1thj9tyk8h1.jpeg?auto=webp&s=bb88b8388761ffa52b6e512f02e7b8319aa6fc43
+Rating: None
+
+Source: reddit
+Text: Turn on mix. Is this new? Now it seems that I can turn on mix on any song.
+Images:
+	https://preview.redd.it/7ecigpb1sk8h1.jpeg?auto=webp&s=5ef90e9b5c0e6469bc7988f4da9a4c09abd93b33
+Rating: None
+
+Source: reddit
+Text: The lyrics feature on Spotify sucks. I used to have Apple Music but recently switched to Spotify so I could use the jam feature with my friends, but the placement of the Spotify’s lyrics card sucks! Half the time it’s down so far I can’t find it. The worst thing for me is I like to sing while doing dishes and want to see all the lyrics, but every time a new song comes up I have to find the lyrics again! I just want it to show me the lyrics of the next song without me drying my hands every 4 minutes to pull up the next lyrics. I don’t know if there’s a setting I can put on to keep the full lyrics up every song but this is really starting to get annoying. I know there’s the lyric preview but I want to see ALL the lyrics ALL the time. 
+Rating: None
+
+Source: reddit
+Text: New Extension: Better Discography (separation of singles and EPs, yay!). I got tired of scrolling through artist pages with all the repeated singles that already show up in albums, and frustrated that Spotify groups singles and EPs together. So I made this extension that allows you to selectively filter by release types. It's a visual-only filter, so playback is not affected. More details in the readme.
+
+You can install manually or find it in the Spicetify Marketplace. I hope this will be of use to you!
+
+
+
+[](https://preview.redd.it/new-extension-better-discography-separation-of-singles-and-v0-plkgu77dnk8h1.png?width=1020&amp;format=png&amp;auto=webp&amp;s=b228727497e6b67c461359623c6d5817524bc2e7)
+Images:
+	https://external-preview.redd.it/mkzm5PywwwyvYdld596bnNFaBXOQT6IY2iO-Hs8_4GA.png?auto=webp&s=eeedfa7951a1f69bb5aef9e4a5d277e8fa8a0a6a
+Rating: None
+
+Source: reddit
+Text: This is the worst thing ever. A free account, I am restricted from the BAREBONES NECESSITIES of listening to music. oh, you made a playlist? FUCK YOU I’m adding other songs you don’t want to it and I’m gonna force you to listen to them. i play aphex twins slightly longer than average #19, Spotify unconsentually forces its way in my butt and shoves 4 unskippable adds in me. you know what’s SO infuriating? I CANT EVEN MOVE THE PLAYING BAR TO SKIP TO THE END OR GO BACK. Every time Spotify takes a metal tray and smashes it into my face with the tone deaf meandering of an excruciatingly placed ad. I am FURIOUS
+Rating: None
+
+Source: reddit
+Text: Some of my covers for local files are not showing up all of a sudden. Idk if this has happened to anyone else but some of my covers for certain local file songs have just stopped working. I checked the file itself and the cover art is there but it’s not showing on spotify. I haven’t had this problem until now, the last ss is a ss I took a week ago of the same song with the cover clearly showing. So far i’ve tried removing and readding the file and duplicating the file and adding that one but neither method has made the cover show back up, so I’m asking if anyone here would know a fix for it ? I’m not sure if this is really related but spotify in general has been quite slow for me, sometimes when i swipe out of the app tab to close it the song playing will continue playing for another 10 seconds until closing, but all of this is really annoying and i’m very much considering switching to apple music. But can anybody help me ?
+Images:
+	https://i.redd.it/59nbmi257k8h1.jpg
+	https://i.redd.it/mffmbj257k8h1.jpg
+	https://i.redd.it/lhmc7i257k8h1.jpg
+	https://i.redd.it/i488oh257k8h1.jpg
+	https://i.redd.it/a4hubl257k8h1.jpg
+	https://i.redd.it/7th25k257k8h1.jpg
+Rating: None
+
+Source: reddit
+Text: sheerID. Does anyone know how to bypass this? it's for the student plan.
+Images:
+	https://preview.redd.it/w4o1j8b71k8h1.png?auto=webp&s=f79db566e8afbd8d7d2366bdeea0febf0e888bd1
+Rating: None
+
+Source: reddit
+Text: Why are the tracks not available?. it has a song from my favorite band ever (the like) but i cant listen to it ? maybe it’s cause of the region or something but it shows up sometimes when i’m listening to that band and then just instantly skips
+Images:
+	https://preview.redd.it/wwy5wjlu0k8h1.jpeg?auto=webp&s=40533f92fb7b0c1ddd548bec9a1d65751bff076e
+Rating: None
+
+Source: reddit
+Text: Somehow I made a song unplayable?. I was trying to add a song to my playlist when I misclicked and now it is saying the song is “unavailable because of a setting made by my parent or guardian” there is no parent or guardian associated with my account, and I was just listening to the song. Anyone know how to fix this?
+Images:
+	https://preview.redd.it/z77ihqx2zj8h1.jpeg?auto=webp&s=14283a64557684e24f4cb0ca67c3498b28662ac3
+Rating: None
+
+Source: reddit
+Text: anyone having this really annoying error where a song starts off with horrible quality but if you manually scrub just one second ahead the quality gets better again? its driving me crazy
+Rating: None
+
+Source: reddit
+Text: crossfade not working. is this a personal issue or is anyone else experiencing this?
+Rating: None
+
+Source: reddit
+Text: A Spotify feature most people have never heard of (I think its even better than wrapped). So a few years ago I discovered something about Spotify that I feel almost nobody uses. Everyone knows the yearly Wrapped, and I love it, but there's something even better: you can request your full streaming history. Not just last year's songs like in Wrapped, but basically every song you've ever played on Spotify. I think it's an incredible feature and almost no one talks about it.
+
+I catch myself pretty often just going into the Spotify app, scrolling through songs over that browsing feature, or playing my old playlists. I don't know, it always feels a bit like nostalgia to me. And since I've built a couple of apps in the past and just really enjoy making products, I thought it would be a cool idea to take this feature and turn it into a little app around exactly that (it's called SoundSort and I've had it on iOS for about a month now, but that's really not the point here).
+
+I'm mostly just curious: is there anyone else who knew about this feature and maybe saw cool ideas or cool projects on how to use it even more? Because to me it's honestly one of the coolest features in all of Spotify, and I feel like there's so much more you could do with that data than what Spotify itself offers.
+Rating: None
+
+Source: reddit
+Text: Playlists while high &amp; enjoying some time together?. What are some great playlists while high and enjoying some sexy time?
+Rating: None
+
+Source: reddit
+Text: Anyway to revert this back to how it usually is? Just showing the Album covers and such? I dont need to see all this.. Images:
+	https://preview.redd.it/x24jc22zij8h1.png?auto=webp&s=2aa90a69d3a73c112f9c4df67b3eb3e6780f1804
+Rating: None
+
+Source: reddit
+Text: Spotify not allowing me to allow an artist to play again after asking it not to play them. Wondering if anyone else has had this issue and has found a solution, a few weeks ago I had aux at work and wanted to play my 90s/00s alt playlist which has a lot of Ween on it (not the most popular band at work) so rather than delete the songs from it I decided to tell Spotify to not allow them to play and allow them again later (I forgot I did this until just now). I’m now trying to reactivate them so I can listen to them again, but when I click on their artist page, it is greyed out and I receive the following message
+
+We can’t play this for you- this is not available due to settings made by a parent or guardian. 
+
+I can’t click on their page at all. Anybody else ever experience this? My current theory is that because I am on a family plan to make it cheaper, maybe the owner of the account has some sort of setting enabled where if an artist is disallowed from playing, only the “parent” can re enable it as some sort of parental restriction tool? Is that a thing? I can’t find anything on it, so I’m wondering if any true parents with kids on Spotify could confirm or deny that theory that would be helpful too!
+
+Thank you for taking the time to read!
+Rating: None
+
+Source: reddit
+Text: oh okay, thanks for the recs spotify…... bruh tf did i google 
+Images:
+	https://preview.redd.it/ojr3c1e19j8h1.jpeg?auto=webp&s=4be2c2d2b5139e7f441891fa07814f0309676ab7
+Rating: None
+
+Source: reddit
+Text: Wow spotify free isnt a thing i guess.. My subscription to spotify just ended and i wanted to see if i could just listen to a few songs until i decide to give them money again, but i literally cant, everytime i tap on a song it just says "youve discovered a premium feature" and also all the albums and playlists are just empty. Why do they even have the app as free on the app store if you literally cant use it, or does this only happen to me? 
+Rating: None
+
+Source: reddit
+Text: Android app consistently requires login after closing. As stated after an app close, if i reopen the app 5-10 seconds later, i have to go through a full login. Measures taken: deleted app and reinstalled, cleared data and cache and restarted phone. any help would be appreciated.
+
+  
+thanks,
+
+  
+Jay
+Rating: None
+
+Source: reddit
+Text: Spotify cant shuffle to save its life. Genuinely annoys me how bad the Spotify shuffle feature is 124 songs in this Playlist but somehow an entire albums appears all at once
+Images:
+	https://preview.redd.it/fsi1fzl5ui8h1.jpeg?auto=webp&s=8a6160019884c2c2a8b70cf8154b6f00a3ce8311
+Rating: None
+
+Source: reddit
+Text: How did this happen?. I was doing something else on a different device and my ipad with spotify was not being used and off, but it was still connected to my bluetooth headphones. So I could hear the headphones and spotify was just randomly playing songs on its own when I didn't do anything. Spotify wasn't even open on the ipad but the ipad still showed songs playing from spotify
+Rating: None
+
+Source: reddit
+Text: Im kinda spooked. So a couple months ago, a couple small artists and soundtracks i like removed only one or two songs each. Pretty normal, just a dirty protest right?
+
+But then some of them reuploades these horrible versions with new voiceovers with entirely new singers. Their voices are pitchy and nothin like the origional.
+
+&amp;#x200B;
+
+But then i checked a playlist i had forgotten about. Last christmas, i added the opening credits to Poppy Playtime onto there. "Its Playtime" by Mob Entertainment.
+
+It too completely disapeared without warning and all of Mob's other songs remained normal.
+
+But today i logged back onto my playlist and in that song's origional spot, between its two usual neighbors, was a new song i didnt add. In the playlust overveiw, it had the same name and artist credits, but the album cover was differrent and upon clicking play, it was an entirely new song with almost a differrent genre- where the old one was grand and nostalgic, this new one is like a music box.
+
+If i screenshot to share the song with a friend, it is listed as a whole new name and artist credits. But if i google "what is wrong with spotify songs" the only results are to do with outages.
+
+&amp;#x200B;
+
+Im kinda scared lmao
+
+ 
+Images:
+	https://i.redd.it/0xvh68cshi8h1.jpg
+	https://i.redd.it/j1iy1gfshi8h1.jpg
+	https://i.redd.it/vfzuwlishi8h1.jpg
+Rating: None
+
+Source: reddit
+Text: Spotify Widget wont work!!!. Whenever i try to play a song using the widget it would just grey out the play button repeatedly like its blinking, it also happens everytime i press the widget even if not on the play button itself. A few hours ago it was fine and now it just broke itself for no reason? i’ve tried reinstalling, deleting cache, and removing and readding the widget but no luck. If anyone knows a fix please let me know thanks. (both iOS and app is up to date)
+Images:
+	https://preview.redd.it/axi4ggutfi8h1.jpeg?auto=webp&s=d0d562f3681655a7bf5734fd3b46ee4f6aa6cc6b
+Rating: None
+
+Source: reddit
+Text: volume normalisation and wifi speakers?. hi
+
+i play Spotify made playlists over my heos speakers and often the volume seems to vary between tracks 
+
+.... and i doing something wrong as thought normalisation was supposed to prevent that? 🤔
+Rating: None
+
+Source: reddit
+Text: Issue with a playlist. I have a specific, annoying, first world problem that I would love some help with.
+
+&amp;#x200B;
+
+Years ago when I first joined Spotify I linked Shazam with it and it created an auto playlist called My Shazam Tracks. Whenever I shazam-ed a new song it would get automatically added to the playlist but since this became a daily go-to would also just add songs to it and through the years it grew to over 1000 songs. I also use android auto in my car and recently I noticed that when I opened the playlist on my car it wouldn't show all of the songs, it was like it stopped adding them after a while. If I open the playlist on my phone it shows all of the songs, but if I hit "edit" it doesn't show them all, it stops at the same point that it stops on android auto.
+
+&amp;#x200B;
+
+So I tried to make a new playlist and carry over the songs but unfortunately it didn't add them in order and that's kind of special to me. I viewed my playlist in "custom" and it shows them in the right order, however when I add new songs they go to the bottom and I have to edit and move them to the top. It's just super annoying and inconvenient, and the only thing I can think of is to make a new playlist and add each song one by one which would be super annoying. Does anyone have any idea how I can fix this? The ideal solution would be to somehow fix my original playlist so that it just works again lol
+Rating: None
+
+Source: reddit
+Text: Spotify free is unuseable for me.. I listen to music as often as possible, and have had premium a few times through gift cards but havent for a while cause they stopped selling them and i cant afford regular. and tell me, WHY AM I GETTING ADS AFTER EVERY 1-2 SONGS! I was just listening, a 7 minute song, 4 minute song, ad, 6 minute song, ad, 4 minute song and i bet im getting an ad. and there are always 3-5 EXTREMELY long ads, popups on the desktop app. on phone, it says i can add things to the que but then doesnt actually play anything from the queue. sometimes it'll play like 3 queue songs before shuffling, somethings nothing at all. im probably being dramatic but i cant sleep without music and i cant even relax when theres ads after almost every single song. ive noticed the quality of free spotify worsens every time i get off of premium, and i've been waiting for a deal (like last time i had it, spotify offered 2 months for 8 dollars) but tbh i dont think it will. Im too attatched to switch to anything else, but i wish i could afford premium or just buy a gift card. ALSO the volume has gotten so quiet. Like, on max loudness on my phone sounds like only mid loudness, and it doesnt do that for other apps. 
+Rating: None
+
+Source: reddit
+Text: Söker hjälp med laggande app.. Spotify har börjat lagga på de flesta funktioner, inklusive skip, och ladda långsamt, "nya avsnitt" tar t ex runt en halv minut att ladda. Det skedde för några månader sedan. 
+
+&amp;#x200B;
+
+Andra appar beter sig som vanligt. T ex Youtube som borde vara en minst lika tung applikation är fortfarande snabb. 
+
+&amp;#x200B;
+
+Dock verkar Spotify kunna dra ner andra appar när det är igång. 
+
+&amp;#x200B;
+
+Jag har testat följande:
+
+• Installerat om appen
+
+• Uppdaterat ett antal gånger
+
+• Tagit bort nedladdningar
+
+• Tömt cachen
+
+• Har sänkt följande från 1.0x till 0.5x skala och stängt av:
+
+• 	Skala - fönsteranimering
+
+• 	Skala - övergångsanimering
+
+• 	Längdskala för Animator
+
+&amp;#x200B;
+
+Jag kör inte lossless eller annat fancy. Hastigheten på bredbandet spelar ingen roll. Lyssnar mest på poddar men hanteringen av musik är också slö. 
+
+&amp;#x200B;
+
+Samsung Galaxy A32 5G med uppdaterad mjukvara. 
+
+&amp;#x200B;
+
+⚠️ Vad kan jag göra? 
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+Images:
+	https://preview.redd.it/pnm4nm5aqf8h1.jpeg?auto=webp&s=29c6cad60ef5335e01ccb88edddb06ffef1f9dec
+Rating: None
+
+Source: reddit
+Text: For once they added something useful. fyi: it plays all songs out of all of the playlists in a user created folder
+Images:
+	https://preview.redd.it/rmh7hvzidf8h1.png?auto=webp&s=a9df2e3045d4e909b51ca061de53a998a8fa3708
+Rating: None
+
+Source: reddit
+Text: Spotify keeps throwing out completely random songs no matter what I do. No matter what I do, listening to playlists, or albums, or like artists popular songs, it'll play the song I click on or, if using a playlist, will play a song from the playlist, but immediately after, every song that plays is completely random and also unrelated to my music taste, I got an AVIVA song today.. I haven't listen to Aviva since I was 13. I tried turning smart shuffle off and nothing has changed, it does it no matter if I have shuffle or next track on, ideas?
+
+
+Rating: None
+
+Source: reddit
+Text: Spotify's Krypto Scavenger hunt is driving me crazy - please help. Spotify released a scavenger hunt, and the clues are fairly simple. Supergirl's official playlist. Superman's official playlist. Supergirl's theme. Superman's theme.
+
+The official playlists are easy to find, the themes are not. Do you know how many themes they have had over the years? I have gone through so many so-called theme songs, scouring the covers, and I still only have the first half of the puzzle. Which theme is supposed to be the right one? I've looked at dozens these past two days and Krypto is nowhere, and I am on the verge of tears about it. I don't even need the answer told to me! Just WHICH artist posted the "right" theme.
+Rating: None
+
+Source: reddit
+Text: Bob Weir. Went on Spotify this morning and was going to play some Bob Weir music and it was all gone.  
+There were two Wolf brothers albums but that was it.  
+Anyone know what happened?
+Rating: None
+
+Source: reddit
+Text: spotify keeps crashing when trying to play a freshly unblocked song. for some reason the song 'roads untravelled' and other random linkin park songs are blocked despite me never blocking them, and when i unblock the song and try to play it spotify just closes, someone please tell me how to fix this
+Rating: None
+
+Source: reddit
+Text: Spotify crashing every time I open an app. Hello all, 
+
+&amp;#x200B;
+
+I've been having this issue for a few months, but it's gotten worse over the past week. As said in the title, Spotify crashes every single time I open an app (any app, not only those that play videos/music like Instagram or Twitter). 
+
+&amp;#x200B;
+
+I had this issue on my old phone, but assumed it was just because it was too old to make the app work properly. It only happened once in a while.
+
+&amp;#x200B;
+
+However, I've got a new phone (Samsung A14) and the issue is still here except way worse. I cannot do anything when Spotify is on, because it'll automatically closes it. I tried everything, turned off the video feature in the app, cleared the cache, uninstalled and reinstalled, turned off the standby mode, unlinked my account from discord... Nothing helps. 
+
+&amp;#x200B;
+
+Does anyone else have this problem? Is there a solution? It's really frustrating :(
+Rating: None
+
+Source: reddit
+Text: Can anyone help with this?!. I can’t find anything about how to fix this.
+
+Every time I go on the Home Screen on Spotify , it’s like all my songs play at once really loud. 
+
+This happens regardless of whether Bluetooth is connected too. 
+
+Any answers would be great thanks 😊
+Images:
+	https://external-preview.redd.it/cTNjcWZlZzF3ZThoMavWat3CSmL6WQXB7m25CbomahxG4uV3VboDgDymqySY.png?format=pjpg&auto=webp&s=e28bc74a464459b2b4543ca71198e3249c4bc700
+Rating: None
+
+Source: reddit
+Text: I need help with this region thing. My spotify account was created in japan aswell as this google play account and this thing is making me angry since i wanna pay with google play
+Images:
+	https://preview.redd.it/iregb1vqie8h1.jpeg?auto=webp&s=ab25da3f6de3e1d87f8796642f579c536b830edb
+Rating: None
+
+Source: reddit
+Text: How do I join a Spotify Jam by scanning a QR code?. How do I join a Spotify Jam by scanning a QR code?
+
+I tried everything to scan and join my brother's Spotify Jam while we were on a family trip, but I can't find any option to scan the QR code. I can join through the invitation link without any issues, though.
+
+Is joining a Jam by scanning a QR code available on the free version of Spotify? If so, where is the option located?
+
+I've checked around the app but don't see a camera or scan option anywhere.
+Images:
+	https://preview.redd.it/issdv8fcce8h1.jpeg?auto=webp&s=80071325cddae7fb3f5936dc58d04f784afc63d0
+Rating: None
+
+Source: reddit
+Text: My name is Taylor. The dj calls me Tail.. That's not my name!! Please stop calling me that!
+Rating: None
+
+Source: reddit
+Text: What happened to the original outlaw?. For a while I couldn't find outlaw from upchurch but now it's replaced by a version by Charlene, anyone know what happened to the original one? 
+Rating: None
+
+Source: reddit
+Text: How do I clear search history?. Me and this girl are really into Spotify/music in general. We create playlists for each other, we share music and all that jazz. Unfortunately, I have taken a slight cheat and searched her profile and occasionally steal her songs and tailor playlists for her, but she does have good taste.
+
+Anyways, we’re hanging out later and as the driver, she’ll be controlling my Spotify. I don’t want her finding out I’ve been Spotify-stalking her, hahah! I know it’s not a big deal, but even when I type the first letter of her name, it pops up as the first search recommendation! 
+
+Am I cooked or is there a way to properly clear this? I might just have to take an L on this one.
+Rating: None
+
+Source: reddit
+Text: Why are my songs disappearing from my playlist?. I've had this playlist called "I'd Sell my House for Mitski Tickets" for two years now, and I've just noticed that songs have been suddenly getting taken off. At first I thought that maybe I accidentally deleted them, but then I noticed that it's been happening more and more. It's usually only 1-2 songs that are missing, but it's irritating because I really like having my music in the order that they were originally put on the playlist in, and when I have to re add them, it doesn't show that original date on it anymore. Is this happening to anyone else?
+Rating: None
+
+Source: reddit
+Text: Something happened recently with my desktop app.   So, this has been happening with my Spotify I downloaded from when I got my laptop about a year ago.  As of recent, when I replay certain types of songs \[such as from the search bar, end of an album, or single\], an ad plays and the replay just doesn't continue afterward.  
+  This was pretty recent to me, say about a week or two.  I assume some update happened while I reset my laptop for Windows 11 updates, making it that after two or three replays, ads now roll instead of being only from letting it run.  I think and suspect it's the ads that are making this problem.  If there are any solutions to this, it would be helpful.  
+  And no, I'm not paying for premium.
+
+\[Edit\]: I think the Spotify version and how I downloaded it would be helpful to state.  
+\- Spotify for Windows (64 bit): 1.2.92.148.g882cc571  
+\- HP Windows 11  
+\- Downloaded instillation from Google, not Microsoft Store
+Rating: None
+
+Source: reddit
+Text: $99 gift card removed from Sam’s Club💔💔. Walmart, Best Buy, and Sam’s Club were the last stores to sell the gift card. Now Sam’s Club removed the Spotify cards off their website. Suggestions where to find them?? Please, much appreciated
+Rating: None
+
+Source: reddit
+Text: Ok how on earth do Tik Tokers stream Spotify live?. I follow a few Tik tokers who do their Lives and their entire Lives are music oriented and its playing on the live- not background. I keep reading its a copyright violation to stream on Tik Tok Lives but these people do it and have thousands of followers. I asked one woman what she is streaming and she said Spotify. There are tutorials on YouTube for a mobile but not very many, and it seems nothing works. I am not super techy, I am old.  I dont have a laptop except work and I cannot have Tik Tok up or on there due to rules.
+
+I want to do this from my Android and I cant seem to figure it out. How are the same Live Tik Tokers able to do it? I have asked them and they seem reluctant to tell me,  I guess they dont want me stealing their views. I am frustrated. I want to do Gen X stuff and songs no one remembers and all that. Is there another app that I can stream on TT Live? Or can I only stream music  on Tik Tok Live with a laptop? Is it easier? Help? Thank you 
+Rating: None
+
+Source: reddit
+Text: how to find niche artists on Spotify. to find niche and underrated artists on Spotify, here’s what to do :
+
+  
+1. think about a popular song
+
+ex: Trouble by Frank Ocean 
+
+2. research the title on Spotify 
+
+ex : Trouble 
+
+  
+3. scroll until you find an artist that you don’t know the name of 
+
+ex : I found trouble by frank, a 2000s uk indie band, I don’t know what their style is but i feel like it’s 2000s series soundtracks type of music 
+
+honestly I think it’ll be my favorite band from now on 
+
+please tell me there’s other FRANK lover out there 🙌
+Rating: None
+
+Source: reddit
+Text: Spotify app not turning off music when I close it, only when I reopen the app. Basically title. Whenever I close the spotify app with the music still playing it continues playing, but when I reopen the app it stops playing the music without me pressing pause  
+iOS 26.2.1  
+Spotify 9.1.58
+Rating: None
+
+Source: reddit
+Text: spotify playlist gone?. I had premium and it just expired. I went to go open one of my playlists and every song is gone!! I tried refreshing the app, restarting my phone and checking if my app needed an update. My playlists seem completely locked as i cannot add a thing into it. Is this a glitch or a new spotify premium add on? I had near 300+ hours to these playlists as well.
+Images:
+	https://i.redd.it/1qtc3ilhvb8h1.jpg
+	https://i.redd.it/v3dafaohvb8h1.jpg
+Rating: None
+
+Source: reddit
+Text: Help. Soo does anyone have a fix for this? Relogin and reinstall doesn’t work 
+Images:
+	https://preview.redd.it/k57lecqevb8h1.jpeg?auto=webp&s=ed907ef81253c36943d7a23fccf4ed170fbad4f7
+Rating: None
+
+Source: reddit
+Text: How do i fix this, and stop this from happening. Ive forced closed the app multiple times, yet nothing works, cant listen to my likes songs, playlist, see my followed artists, nothing, only god damn local files.
+Images:
+	https://preview.redd.it/2b8yjbsxub8h1.png?auto=webp&s=a8c0340135401ef5fccf56aea29fc3060d8a96a5
+Rating: None
+
+Source: reddit
+Text: Why is it so unbearably laggy?. Already have deleted the app and reinstalled, cleared everything, reset my phone, and still this app is so laggy. It’s almost unusable at points as albums and playlists won’t load or after pausing a song it takes 5-6 seconds to actually pause it. The downfall of the app quality is crazy.
+Rating: None
+
+Source: reddit
+Text: Spotify DJ was actually good yesterday and today it's back to the same old garbage. I'm not sure if they're doing some weird AB test but yesterday I was listening to DJ exclusively the entire day. It was actually playing music I've never heard before and songs I haven't listened to in years. Today it's back to the same old BS. Every time I press the DJ button it's the same 5 or 6 prompts over and over, "Top songs from 2022/23/24/25" or "driving music". Is anyone else experiencing this?
+Rating: None
+
+Source: reddit
+Text: PSA: These buttons exist. https://preview.redd.it/ra2e4l6qxa8h1.png?width=264&amp;format=png&amp;auto=webp&amp;s=c0de82088c505c0356865069c33091184d711db5
+
+I'm seeing so many posts and comments about the "echo chamber" and how much people hate personalized playlists, etc. So anyway, there's this. It's been there for months. Enjoy.
+Rating: None
+
+Source: reddit
+Text: Mix Button on Apple CarPlay. Since the mixing feature can now be toggled on to basically any playlist/song selection, I think it should be fitting to have a button for it in the Apple CarPlay UI. Need I say more?
+Rating: None
+
+Source: reddit
+Text: Weird activity on my Spotify account? Random songs taking over my home/stats. [My Top Tracks - Last 12 months and the song i've listened to is at place 17...](https://preview.redd.it/4r2bsip1qa8h1.png?width=464&amp;format=png&amp;auto=webp&amp;s=05e241a04f1cb3f317cfb6df94b855fc8cc34dbb)
+
+Recently I noticed that my homepage was suddenly filled with random Brazilian, Mexican, and Spanish songs that I've never listened to or even heard of.
+
+That made me check my Spotify stats (which should only consist of old rock), and somehow these songs have completely taken over my listening history. My actual most-played song, *Sultans of Swing* by Dire Straits, has been pushed all the way down to #17 in my 12-month stats.
+
+I contacted Spotify Support, but they weren't very helpful. They just told me to change my password and use the "Sign Out Everywhere" option. I've already done that, but it still feels like someone is using my account because my homepage recommendations keep changing every hour and continue showing these same types of songs.
+
+What's really strange is that I never see anyone actively listening on my account. I can always play my own music normally, and it doesn't interrupt anything. Yet somehow these songs keep appearing in my stats and recommendations as if they're being streamed from my account.
+
+Has anyone experienced something similar? Is there anything else I can do, or is Spotify missing something here?
+
+  
+Any help would be gladly appreciated!
+Rating: None
+
+Source: reddit
+Text: Wierd issue between mobile and console. I added a bunch of music and on my phone they weren't showing in my Playlist but showed the checkmark like it was and I just opened my Xbox then all of a sudden they are there? What could cause this to happen? 
+Rating: None
+
+Source: reddit
+Text: Add an option where it fixes your transitions for spotify mix. Sometimes when I play my mixed playlist the transitions sounds off and bad so maybe they should add a feature where just incase it sounds off ppl can press the “sync” option and when you press the sync option it automatically fixes the transition.
+Rating: None
+
+Source: reddit
+Text: Transitions. Hey yall question did spotify make song transitions a premium? I have the free version and noticed that my songs are no longer transitioning into the other and when i went to settings i didnt see the option anymore 
+Images:
+	https://preview.redd.it/8sbwm72aja8h1.jpeg?auto=webp&s=a4d246bb58a6e279ba34353a1ec56c6b89f025fd
+Rating: None
+
+Source: reddit
+Text: Custom Spotify Extension with weekly wraps and customization features. 
+
+Hey everyone, I recently made this extension called Spotify Sidekick that lets you customize/enhance spotify!
+
+Some key features include better css customization, weekly recaps of what you listen to, custom themes, more keyboard shortcuts, right click search, and easy copy paste of song name and singer.
+
+[https://chromewebstore.google.com/detail/spotify-sidekick/bgdioakibckgimkilmkffgbihmcinmjo](https://chromewebstore.google.com/detail/spotify-sidekick/bgdioakibckgimkilmkffgbihmcinmjo)
+
+If anyone who uses spotify could try it out and give some feedback, that would be great! Thank you in advance!
+
+Images:
+	https://preview.redd.it/s8a0741d1a8h1.jpeg?auto=webp&s=a103f28b6df8374439e45343c43584e55affd39a
+Rating: None
+
+Source: reddit
+Text: 'Verified artists' includes AI generated music if they released their own music in the past.. I've been getting recommendations for Artists that have been making music for some time but have since shifted to pushing AI slop. 
+
+One for example is known to me as they used to make their own music 2018-21 but after a 3 year layoff decided to start using AI to make slop instead. Because of that back catalogue, they now have a 'verified artist' badge but since 2024 has been using AI to generate music including the vocals and terrible lyrics. Just released a new album recommended to me that's the same thing again.
+
+Why is this being allowed? This appears to be a loophole or they don't care. Make your own music at some point allows you to be verified then push slop there after. 
+Rating: None
+
+Source: reddit
+Text: I built a Chrome extension that brings Winamp-style visualizers to Spotify. Hey everyone,
+
+I spend a lot of time listening to music while working, coding, reading, training or just having something playing in the background. At some point I realized that I still really miss the old Winamp feeling: those algorithmic visuals that actually moved with the music.
+
+A few weeks ago I came across Webamp, which is basically a Winamp-like player in the browser. It gave me a nice hit of nostalgia, but also reminded me why this kind of thing does not really fit how I listen to music today.
+
+I do not keep a local music library anymore. I mostly use Spotify. I do not want to upload tracks into a separate player just to get visuals. I want to keep using the streaming service I already use every day, but make the listening experience feel more alive.
+
+So I started building a small pet project in the evenings, somewhere between vibe coding, math, shaders and fractals.
+
+The result is **Deus**, a Chrome extension that adds audio-reactive visualizers directly inside Spotify.
+
+The idea is simple: it does not replace Spotify and it is not a separate player. You open Spotify in Chrome as usual, play music, turn on the extension, and the page gets a custom visual layer that reacts to the track in real time.
+
+What it currently does:
+
+* adds audio-reactive visual presets inside Spotify
+* lets you switch between different visual styles
+* supports fullscreen mode
+* can replace the default Spotify background with a visual canvas
+* includes custom interface themes and color palettes
+* processes audio locally in the browser
+
+The original motivation was pretty simple: I wanted something that feels like a modern continuation of Winamp visualizations, but for the way people actually listen to music now.
+
+Not a local-file setup. Not a separate desktop app. Just Spotify, but with visuals that move with the music.
+
+The project is still early, and I am trying to understand what people actually enjoy in this kind of tool. Do people prefer abstract fractals? Cleaner ambient visuals? More chaotic MilkDrop-style motion?
+
+If you use Spotify in Chrome and this sounds interesting, I would really appreciate it if you tried it and shared your honest feedback.
+
+What I am especially curious about:
+
+* which presets feel good and which ones feel annoying
+* whether the visuals feel connected to the music or too random
+* whether fullscreen mode is something you would actually use
+* what kind of visual styles you would want next
+
+The extension is called **Deus — Spotify Music Visualizer &amp; Themes** and it is available in the Chrome Web Store. There is also a website with demos: [**deus-soft.com**](http://deus-soft.com)
+
+I am also giving early users a free lifetime Pro license in exchange for feedback, because at this stage real impressions are much more useful to me than polished marketing.
+
+Would love to hear what you think.
+Images:
+	https://external-preview.redd.it/8xYZGeK5SMKgZLOg8j0w8jvOSr5ofJKY1HaSazPK68c.png?auto=webp&s=ef1822fd5eed0cec5a153faa95d827a854ca2a32
+Rating: None
+
+Source: reddit
+Text: Always getting the same songs in random listening mode when listening to my favorite songs playlist. Hello, I have about 4000+ (liked/hearted) songs in my standard favorite songs playlist. I listen to spotify every day for hours and recently I noticed that even if I turn on shuffle mode, I always keep getting the same songs as next ones. This is impossible with 4000+ songs!!!? there is no update for spotify, I already checked. does anyone deal with the same problem or have experienced this as well? and maybe knows whats the problem with spotify? i really p\*sses me off that I pay every month for it and then they bring you this kind of sh't!! Spotify gets worse every year, unfortunately.... 
+Rating: None
+
+Source: reddit
+Text: Lyrics window small. Spotify what the eff
+
+Why can't I expand the lyrics window?? 
+Images:
+	https://preview.redd.it/j3kmb5e3q98h1.jpeg?auto=webp&s=7e9778ab99490746bb2a33f83e8af81e201aea74
+Rating: None
+
+Source: reddit
+Text: Spotify never opens on the first try, and when it does open all my settings are reset.. I've redownloaded the app several times through both the Microsoft app and from the Spotify website itself, and it doesn't fix the problem. A few settings that get reset are, the size of both my library sidebar and where the artist info is showcased, and artist discographies being a list instead of a grid.
+Rating: None
+
+Source: reddit
+Text: How do you guys organize your folders?. Recently discovered the ability to organize into folders on mobile and have been eager to test out the possibilities. 
+
+How do you guys use folders to maximize organization in your libraries
+Rating: None
+
+Source: reddit
+Text: Getting logged out of Spotify 5x a day. This is so frustrating. Is anyone else getting booted off the android app a few times a day? 
+
+&amp;#x200B;
+
+No pattern to it at all, sometimes it logs me out after 5 minutes, 5 hours, or switching networks? 
+
+&amp;#x200B;
+
+Have tried a reinstall. 
+Rating: None
+
+Source: reddit
+Text: They Changed The App Icon Back 😢. I started to like the anniversary one, but I’m sure I’ll learn to like this again. I don’t really understand the hate with the anniversary one, but it’s gone so no one can complain about it now!
+Images:
+	https://preview.redd.it/e5m8ddpl098h1.jpeg?auto=webp&s=d8ccda04d5b0922564601a09a39b3065a43f1768
+Rating: None
+
+Source: reddit
+Text: Spotify’s mobile UI is a rigid, form-over-function disaster. The miniplayer is an invisible stealth bar with zero contrast, causing extreme visual anxiety and constant misclicks on bumpy commutes. The transition animation is completely broken and jarring compared to competitors.
+Rating: None
+
+Source: reddit
+Text: Can't Login, but nothing has changed?. For some reason today I cannot get access to my account, just says 'oops something went wrong'. Definitely the correct details and used daily, so why now? hoping it's some Spotify Bug and nothing more sinister, but as I can't login I can't even post on the 'fan' community support pages, my first issue, but yet another company that dodges the whole 'customer service' part of the service? how the hell do I get it resolved! any help welcome.
+Rating: None
+
+Source: reddit
+Text: Is anyone else having login issues with Spotify?. My account is linked to my Gmail, and I can still receive Spotify emails. I only received one password reset email, but the link was already invalid. Since then, I haven't received any new reset emails.  
+I've tried logging in through the app and website, used different browsers and networks, but I keep getting "Something went wrong, please try again."  
+I've seen other users reporting similar login problems. Any fixes?
+Images:
+	https://i.redd.it/n255z68al88h1.jpg
+	https://i.redd.it/xe6m768al88h1.jpg
+	https://i.redd.it/k94e878al88h1.jpg
+Rating: None
+
+Source: reddit
+Text: (Help) Spotify Web Browser wont load. Web Browser keeps coming up with this everytime a load it. Weirdly it loads perfectly fine if im on a private tab or using a vpn. Anyone know a fix?
+
+https://preview.redd.it/hjbvpuu5l88h1.png?width=1123&amp;format=png&amp;auto=webp&amp;s=862165ae805b6f615f8678338e0ee6b2e98859e1
+
+
+Rating: None
+
+Source: reddit
+Text: my Spotify wont work on my laptop. no song will play on my Spotify. when it dose its only for about 5 seconds before going silent. iv restarted my laptop about 3 or 4 times now. i checked my wifi and it still wont work. i tried it on my phone and it works fine. what could be happening? 
+Rating: None
+
+Source: reddit
+Text: Is Spotify down?. Is the Spotify website down for anyone else? As of 2:36 PM on June 19, 2026. For me, it's down! It is german and means: Page not available  
+
+Edit: It's working now! 
+Images:
+	https://i.redd.it/r1jk01cii88h1.jpg
+	https://i.redd.it/yesmlpfii88h1.jpg
+Rating: None
+
+Source: reddit
+Text: Spotify ps5 error. My spotify is working fine on phone but once i open the ps5 it literally dont even open it says something went wrong and if i tried to open it from the side tap 'the music icon' it shows the same thing Any one experiencing this or have a solution please!!
+Rating: None
+
+Source: reddit
+Text: There's something wrong with my Spotify. This thing has been happening with me for like 5-6 days, it loads up plays songs perfectly but when I open my app, it just doesn't load. Help. I've cleared my app cache and all that stuff. Also have a premium subscription. What sould I do
+Images:
+	https://external-preview.redd.it/NmZtaG5jdjFpODhoMfBzo5MaNHPJo90q9B_VfxyLjgPMvqSygbYSqy4XlKIw.png?format=pjpg&auto=webp&s=6b044cafe23d491a2f6ff862964afb671c2ca714
+Rating: None
+
+Source: reddit
+Text: Spotify Problem. Ich kann mich auf meinen PC nichtmehr auf spotify anmelden. Hat wer das gleiche problen gehabt
+Rating: None
+
+Source: reddit
+Text: spotfy off ?. alguem mais esta com problema para entrar no spotfy?
+
+
+Rating: None
+
+Source: reddit
+Text: LG web OS Spotify sound quality. Anyone else notice it sounded muffled ? It's supposed to be lossless but it sure doesn't sound it.
+Rating: None
+
+Source: reddit
+Text: What is going on?. My phone's spotify is not working. I would click play and the music just buffers, so I went to put it on my computer at work and this is the page, anyone else having issues? The app has honestly been so slow lately idk if anyone else is experiencing this?
+Images:
+	https://preview.redd.it/btej7q2eg88h1.png?auto=webp&s=9e06ad4e0865aba88fea0dd9769a414bd0585c2b
+Rating: None
+
+Source: reddit
+Text: my instagram disconnected from my spotify and won’t reconnect. anyone else?. title basically. i tried two different instagram accounts, closing the apps, and turning my phone on and off. anyone else having this issue today?
+Rating: None
+
+Source: reddit
+Text: Would you guys pay for a playlist syncing app?. I'm a building an iOS app that lets user sync two playlists across music streaming service. If you already have a playlist in Spotify and you want to have that playlist on AM and keep it in sync, any changes made to playlist on either platform will update that change to the corresponding playlist on another platform. The changes are bidirectional. Planning to add multi-platform(more than 2) sync support as well. 
+
+Is anyone looking for something like this? Is the problem of manually keeping playlist in sync painfully enough? Would anyone of you pay for something like this?
+Rating: None
+
+Source: reddit
+Text: Found a bug that lets you use the old widget. Step1 put the old widget on (it will say switch to the new one just keep it)
+
+Step2 put the new widget in a page you don't open on your home screen so you don't have to look at it
+
+Step3 open a song in the new widget or press (next) to start a song, the old widget will work then
+
+Step4 enjoy the old widget and just ignore the new one.
+Rating: None
+
+Source: reddit
+Text: Playlists repeating the same songs in the same order on shuffle. Is anyone else’s Spotify just repeating the same stuff over and over again? 
+
+I’ll press play on a playlist and it’ll play 5 songs, no problem, then another 5, then it will play the first 5 again. It’s getting really frustrating.
+
+Is it maybe an issue with smart shuffle? 
+Rating: None
+
+Source: reddit
+Text: Question about how to know which audio books left (or will leave) the premium?. Just a week ago I started listening Viktor Frankl's Man's search for meaning and only had a couple of hours left on the book to finish. (I still have 6 hour left of my monthly out of 12 hours, so I listened roughly for 6 hours of that book). 
+
+Today it is showing me not included in premium with an option to purchase. I didn't notice any "leaving soon" badge or something like Netflix has. 
+
+I'd appriciate if anyone can help me with this, so I can avoid this in future from happening?
+Rating: None
+
+Source: reddit
+Text: spotify down?. Is it jut me or spotify is down? its been going on like this for 4 days. I tried the website and the app.
+Rating: None
+
+Source: reddit
+Text: Spotify keeps logging me out. Not sure which flair to use, I only use the web player and every time I log in as soon as I come back later its logged out again. Whats causing this? I’ve never had this issue before
+Rating: None
+
+Source: reddit
+Text: Spotify recommended Problem. Hi! I have some random playlists and songs on Spotify that I never heard about. I already changed my email, my password and logged out of all devices and played my favorite artists. But the songs keep showing up! Any help would be very kind. ( I mean the top songs and playlists. My only songs and playlists that I listen is the one on the top-left and the college dropout.)
+Images:
+	https://preview.redd.it/ezsexhbh468h1.png?auto=webp&s=63020beb32f68f3e4ad5f8ed64066201ae685646
+Rating: None
+
+Source: reddit
+Text: Are artists paying to get the AI DJ to recommend their songs?. Just used the DJ X for the first time since it first came out today and it was actually quite nice until it said something about playing songs that somebody at Spotify curated for me, then it started playing random new pop country songs? I never listen to that genre or any of those artists. 
+
+Are these artists paying to get these songs played cause what the fuck
+Rating: None
+
+Source: reddit
+Text: I need help!. I'm trying to find upcoming releases. They've always been on my search page but today I cannot find them anywhere! 😞 I've looked everywhere for an answer &amp; haven't been able to find a **correct** answer. 
+Rating: None
+
+Source: reddit
+Text: Why fix what wasn't broken. Ok so I just need to vent a little because it makes me so upset... 
+
+Up = old widget, working great
+
+Down = new widget which needs to be added so that the old widget can work.
+
+&amp;#x200B;
+
+Like... I thought at first, cool, more controls, but it never works, it seems to always be loading like in the image and does nothing when I press it. Do you think the old one will be left alone, working normally, or will it be eventually removed only to leave the broken one.
+
+&amp;#x200B;
+
+I use android and yes, phone is updated, app is updated.
+
+Ok rant is over, have a nice day if you read this.
+Images:
+	https://preview.redd.it/h6ow7peqo48h1.jpeg?auto=webp&s=4667a04ac592d2890a1c068c3c34843025bda919
+Rating: None
+
+Source: reddit
+Text: Wrong user?. This is driving me crazy. The date and song of this share are correct, it was done via Instagram with an ex. FWIW, I believe they were an Apple Music user and not Spotify. However, under “invite suggestion” it says I have had activity with/shared it with this person I have never heard of? Is this a simple glitch, or my ex using some sort of burner account with a fake picture? Has anyone else experienced this? 
+Images:
+	https://preview.redd.it/aswq8w6oi48h1.jpeg?auto=webp&s=4debf46c640bd26a17cb6927002806ee776f13af
+Rating: None
+
+Source: reddit
+Text: The worst thing you want to see right before your flight. Spotify randomly uninstalled all my downloaded songs I’ve had downloaded for years. Of course I discover this at the airport shortly before my flight with spotty data and wifi 😑 truly frustrating
+
+The real kicker is I was using the app at home earlier with no issue. 
+Images:
+	https://preview.redd.it/hsz5i3x5b48h1.jpeg?auto=webp&s=bf24e5cfa912008f2c84e38ff13e5884441b0535
+Rating: None
+
+Source: reddit
+Text: repeated songs. is anyones liked playlist playing different songs on a shuffle but its very limited and then repeats them same songs once ur through whatever song shuffle its given instead of going through the whole playlist
+Rating: None
+
+Source: reddit
+Text: Unable to disable listening activity. When I try to turn it off, I get an error. "failed to update setting" reinstalled the app, no change
+Images:
+	https://preview.redd.it/uiiv65sv348h1.jpeg?auto=webp&s=4711e4147340d57740750338dc7eb7c377ef5b54
+Rating: None
+
+Source: reddit
+Text: delete listening history of friends. is there a way to remove people’s listening history??? my ex’s recently played is on here and IDGAF what she’s listening to.. i tried blocking her but that still didn’t remove it. i have my listening history on and i can set who sees mine but I DONT WANNA SEE HERS i just want my friends 
+Images:
+	https://preview.redd.it/ygtje4rw048h1.jpeg?auto=webp&s=d7c1a7ebe6393b071ec16c3c6bd6a64959fedbc6
+Rating: None
+
+Source: reddit
+Text: Help please, support is not helping. I  need some help, and I already checked the FAQ post. 
+
+&amp;#x200B;
+
+I own and pay for a spotify family plan for my household. I have done so for a few years now. I have several roommates, and each time someone new moves in, they get to join our house plan. My friend recently moved in, and I sent him and another new roommate links to join. The other new roommate was able to join with no issues, but my friend cannot join for some reason. It doesn't even give him the option to type in the address and just says the plan is only for members of the same household. He thought maybe since his account had his old address he could just make a new account and the issue would be resolved, but the new account had the SAME ISSUE! 
+
+&amp;#x200B;
+
+When we contacted support, they said, "We've checked in our system and we can confirm that you won't be able to join the current Family plan. The account is prevented from doing so due to an automatic protection which we can't override. Unfortunately, we don't have any details regarding this. You can join a different Family Plan that's part of your household, or subscribe to Premium Individual: (link to spotify plans)"
+
+&amp;#x200B;
+
+I wondered if it was maybe just a device thing or IP address thing and decided to just make him a whole new email address and spotify account from my own laptop. I made the accounts and tried yet another fresh invite link, and it gave me the SAME error message without even allowing me to input my address! From my own laptop! Is this like a thing? Has anyone else gotten this kind of issue resolved? I have never heard of this before.
+
+&amp;#x200B;
+
+I will be copy pasting this to another subreddit, so if you see this elsewhere I swear it's real it's just me being frustrated and desperate for an answer
+
+Edit: The issue was resolved! They actually fixed it and let him join! I'm both shocked and relieved. 
+Rating: None
+
+Source: reddit
+Text: Massive Change in Suggestions - Mostly Slop. I am not going to say that it’s \*\*mostly\*\* AI slop that Spotify is recommending me through Discover Weekly—the only playlist I have been listening to for the last couple of weeks—is downright bad. Monotonous music. Stuff that would have never before found its way into my recommends for that particular playlist. Discover Weekly used to be gems and new finds that made me not thinking paying twice for Spotify. But the last two weeks have been atrocious. I don’t know how to put it more plainly.
+
+And no, I don’t tend to listen to only modern instrumentals. My music taste spans late ‘60s–today. I never used to have this problem and I’ve been with Spotify for close to 12 years.
+
+Anyway, I have decided to move on. YouTube Music is actually good. It’s come a long way in the last year. Mostly just recently: not showing video playlists in their Music app.
+
+It’s a sad ending. I can’t believe how screwed up Spotify, the company, has lost sight of the reason we use the app.
+
+Sorry for the rant.
+Rating: None
+
+Source: reddit
+Text: iOS local file bug. I have a bunch of local files that display their tagged photos when searched in the bar, but not in the player if that makes sense (example attached) is there a fix/reason for it?
+Images:
+	https://preview.redd.it/i4ru8ol7c38h1.jpeg?auto=webp&s=c30b7ad377087a8d401fde7e2cf1b64122578da7
+Rating: None
+
+Source: reddit
+Text: Artist that has been dead for over 30 years had an AI song posted onto his profile back in November, now deleted, what?. No way anyone affiliated with him would do this so it must be Spotify has anything similar ever happened 
+Images:
+	https://preview.redd.it/86cdqo56938h1.jpeg?auto=webp&s=0d1b5d321d2fc2346af31e66cebf8198aae62ae3
+Rating: None
+
+Source: reddit
+Text: Song keeps playing even after closing the app. Whenever I close Spotify the song keeps playing even though the app's already been closed. You also cant stop it from playing unless you wait 5 seconds or more. Any tips ???? I’ve already tried shutting down my phone completely 
+Rating: None
+
+
+Total new reviews to analyze: 98
+
+INSTRUCTIONS:
+1. Update the 'insight_summary' for each question based on patterns in the new reviews
+2. Update the 'key_findings' list with new findings from the reviews
+3. Calculate the new 'total_reviews_analyzed' by adding the count of new reviews to the previous total
+4. Update the 'last_updated' timestamp to the current time
+5. Maintain the exact same JSON structure for all 6 insights
+6. Output must be a valid JSON array containing exactly 6 insight objects
+7. Do not include markdown formatting or code blocks - output raw JSON only
+
+The 6 research questions are:
+- Q1: Why do users struggle to discover new music?
+- Q2: What are the most common frustrations with recommendations?
+- Q3: What listening behaviors are users trying to achieve?
+- Q4: What causes users to repeatedly listen to the same content?
+- Q5: Which user segments experience different discovery challenges?
+- Q6: What unmet needs emerge consistently across reviews?
+
+Output the updated insights as a JSON array.
+
+IMPORTANT: Output must be valid JSON only. No markdown, no code blocks, just raw JSON.
+==================================================
+RESPONSE:
+{
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation has expanded to include 'Free Tier Outcasts' who find the app practically non-functional, and 'Local File Librarians' who are struggling with metadata corruption and storage management issues that hinder their hybrid listening experience.",
+    "key_findings": [
+      "The 'Free Tier Outcast' segment reports that the app has become 'unusable,' with ads playing every 1-2 songs and core features like song selection and queueing being completely disabled or bugged.",
+      "A 'Local File Librarian' segment is frustrated by technical regressions where album covers disappear and the app fails to delete local files even when toggled off, creating storage bloat.",
+      "The 'Technical Minimalist' segment is now joined by 'Legacy Device Users' (PS5, older Androids) who face constant 'Something went wrong' errors and login loops that prevent app launch.",
+      "A 'Social Sharer' segment is emerging, frustrated by glitches in the 'Jam' and 'Invite' features, including 'automatic protection' bugs that block legitimate family plan members.",
+      "The 'Economic Refugee' segment is now facing a lack of alternatives as physical gift cards are being pulled from major retailers like Sam's Club and Walmart."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 568,
+      "last_updated": "2024-07-25T09:15:00.000Z"
+    }
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustration has intensified around 'AI Slop'—low-quality, AI-generated content infiltrating trusted discovery feeds—and a growing suspicion that the AI DJ is a 'pay-to-play' tool for labels to push unwanted genres.",
+    "key_findings": [
+      "Users report a massive drop in 'Discover Weekly' quality, describing it as 'monotonous slop' that ignores long-term taste in favor of generic, high-margin tracks.",
+      "There is a 'Verified Artist Loophole' where artists who previously made human music are now using their verified status to push AI-generated albums directly into user recommendations.",
+      "The AI DJ is accused of 'genre-smuggling,' where it suddenly pivots to unrelated genres (e.g., Pop Country) that the user has never listened to, leading to suspicions of paid placements.",
+      "Users feel 'ghost-streamed' by random international tracks (Brazilian, Mexican, Spanish) appearing in their top stats despite no active listening, suggesting account vulnerabilities or algorithmic errors.",
+      "The 'Mix' feature is being forced onto every song selection, which users find intrusive when they simply want to hear a specific track without an automated radio starting."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 568,
+      "last_updated": "2024-07-25T09:15:00.000Z"
+    }
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is being sabotaged by 'content replacement' where original tracks are replaced by AI-generated covers, and a UI that prioritizes visual 'vibes' over functional navigation and search.",
+    "key_findings": [
+      "Users report 'Song Hijacking' where original tracks in their playlists are replaced by AI-generated versions with different singers or genres under the same metadata.",
+      "The 'Discography Bloat' issue: Users struggle to find new music because artist pages are cluttered with repeated singles and EPs, leading to the creation of third-party extensions to filter release types.",
+      "Search is being used as a manual 'Niche Finder'—users are searching popular song titles to find obscure artists with the same name, bypassing the official recommendation engine.",
+      "Technical 'Login Loops' on Android and PC prevent users from even accessing discovery tools, with the app requiring 5+ logins a day or failing to load the home screen entirely.",
+      "The 'Verified AI' problem: Users are being recommended 'verified' artists who have transitioned entirely to AI-generated content, making 'Verified' status an unreliable signal for quality."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 568,
+      "last_updated": "2024-07-25T09:15:00.000Z"
+    }
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "Users are demanding 'Aesthetic and Functional Control,' specifically through customizable UI elements, persistent lyrics for accessibility, and third-party visualizers that recreate a 'Winamp-like' experience.",
+    "key_findings": [
+      "There is a desperate need for 'Persistent Lyrics': Users want a lyrics window that stays open and auto-advances without manual intervention, especially for hands-free activities like chores.",
+      "A demand for 'UI Customization' has led to a surge in third-party extensions (Spicetify, Sidekick) that allow users to fix contrast issues, change themes, and reorganize discographies.",
+      "Users are calling for 'Winamp-style Visualizers' (e.g., Deus extension) to make the desktop listening experience more 'alive' and audio-reactive.",
+      "There is a request for 'Smart Folder Management' on mobile to help users organize massive libraries that the current flat-list UI cannot handle.",
+      "A 'Syncing Utility' need has emerged for users who want to keep playlists identical across Spotify and Apple Music without manual duplication."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 568,
+      "last_updated": "2024-07-25T09:15:00.000Z"
+    }
+  },
+  "Q4": {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is now driven by a '5-Song Shuffle Loop' where the algorithm cycles the same handful of tracks even in libraries containing over 4,000 songs, combined with technical bugs that un-download libraries.",
+    "key_findings": [
+      "The 'Large Library Shuffle Failure': Users with 4,000+ liked songs report hearing the same 5-10 songs on repeat, suggesting the shuffle algorithm cannot handle high-volume libraries.",
+      "The 'Random Uninstall' bug: Users report Spotify randomly deleting all downloaded songs right before flights or commutes, forcing them to listen to whatever remains in cache.",
+      "Users are 'Trapped by History': New tools like 'SoundSort' allow users to request their full streaming history, keeping them in a 'nostalgia loop' of their own data rather than moving forward.",
+      "The 'Widget Freeze': Broken Android/iOS widgets stay stuck on the same song or 'loading' state, discouraging users from interacting with the app to change music.",
+      "Smart Shuffle is reported to 'ignore unblocks'; if a user unblocks a song, the app often crashes or refuses to play it, defaulting back to the 'safe' repetitive rotation."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 568,
+      "last_updated": "2024-07-25T09:15:00.000Z"
+    }
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are evolving into 'Platform Hackers,' using custom CSS, Chrome extensions, and cross-platform syncing tools to bypass Spotify's rigid UI and algorithmic limitations.",
+    "key_findings": [
+      "A 'Custom Extension' behavior is surging, where users install tools like 'Spotify Sidekick' or 'Better Discography' to fix the lack of native filtering and UI themes.",
+      "Users are engaging in 'Vibe Coding' and 'Visualizer Integration,' seeking out extensions that add audio-reactive fractals and shaders to the web player.",
+      "The 'Manual Sync' behavior: Users are paying for or building apps to sync playlists bidirectionally between Spotify and Apple Music to maintain 'platform independence.'",
+      "A 'Search-as-Discovery' tactic: Users are intentionally searching for common words to find 'niche' and 'underrated' artists that the 'Made For You' section ignores.",
+      "Users are attempting 'Audiobook Optimization,' trying to track 'leaving soon' content in the premium tier to avoid losing progress on books that suddenly become 'purchase only.'"
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 568,
+      "last_updated": "2024-07-25T09:15:00.000Z"
+    }
+  }
+}

@@ -1,0 +1,672 @@
+Timestamp: 20260621_235627_066716
+Model: gemini-3-flash-preview
+==================================================
+PROMPT:
+You are an expert Growth Product Manager specializing in music streaming services. 
+
+I have historical data (current insights) and new data (user reviews). Your task is to update the insights based on the new data.
+
+CURRENT INSIGHTS:
+{
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation now includes 'Anxious Professionals' using music for sensory grounding and 'Independent Creator-Musicians' who struggle with the technical overhead of layering live performance over loops, alongside 'Free Tier Outcasts' who have lost all active discovery agency.",
+    "key_findings": [
+      "The 'Free Tier Outcast' segment reports a total loss of discovery agency, as the removal of 'skip' and 'part-skip' features has turned the app into a passive radio experience.",
+      "An 'Anxious Professional' segment is emerging, using specific instrumental loops (e.g., Hans Zimmer) as a 'sensory off-switch' to disconnect from work-related stress.",
+      "The 'Independent Creator-Musician' segment is frustrated by the high friction of mixing and playing over loops, seeking mobile-first ways to integrate non-native voices into their setups.",
+      "The 'Gift Card Recipient' segment remains unable to access Premium discovery features due to persistent 'awaiting payment' loops.",
+      "Flagship Android users (S24 Ultra) continue to report session instability that resets their discovery progress every 2 hours."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustration has peaked with 'Forced Passive Listening' on the free tier, where the inability to skip tracks effectively kills the feedback loop required for the recommendation engine to learn user preferences.",
+    "key_findings": [
+      "Users on the free tier describe the service as 'no better than a radio' now that the ability to skip songs or specific parts has been removed.",
+      "There is a growing resentment toward the 'Radio-fication' of the app, where users feel forced to listen to content they dislike without any way to signal negative feedback.",
+      "The AI DJ and 'Discover Weekly' are being criticized for 'monotonous slop' that fails to adapt to the user's current mood or long-term taste.",
+      "Users report 'UI Envy' regarding special playlist layouts (blue buttons/colors) that appear inconsistently and lack user documentation.",
+      "The 'Mix' feature is perceived as intrusive when users are trying to listen to specific tracks or albums without automated intervention."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is being crippled by 'Control Stripping' on the free tier, where the removal of basic playback navigation (skips) prevents users from exploring beyond the current automated stream.",
+    "key_findings": [
+      "The removal of 'skip' functionality on the free tier has created a 'Discovery Deadlock'\u2014users cannot move past tracks they don't like to find ones they do.",
+      "Young creators (e.g., indie game devs) feel the 'Corporate Algorithm' and age-gating on other platforms (Roblox) are pushing them toward Spotify, yet they find the entry barriers for new artists high.",
+      "Technical 'Entry Friction' persists via the 'Who's listening?' account selection screen that adds unnecessary steps to the launch sequence.",
+      "Users report 'Song Hijacking' where original tracks are replaced by AI-generated versions, confusing the discovery of authentic artists.",
+      "Cluttered artist pages ('Discography Bloat') continue to make it difficult for users to distinguish between new releases and repackaged singles."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "Users are demanding 'Creative Utility' features, such as the ability to layer live instruments over loops and 'Mobile-First Mixing' tools, alongside a restoration of basic playback controls for free users.",
+    "key_findings": [
+      "There is a demand for 'Compact Creative Integration': Musicians want to add non-native voices to their instruments via the app without needing a laptop connection.",
+      "Users are seeking 'Sensory Ritual' support, requesting features that facilitate bedtime routines, such as high-quality loops paired with visual or grounding elements.",
+      "A need for 'Playback Agency' is critical: Free tier users are threatening to leave as the app moves closer to a traditional radio model without user-driven navigation.",
+      "There is a persistent request for 'Transaction Transparency' regarding gift card redemption and account status updates.",
+      "Users continue to call for 'Widget Stability' to prevent the frequent freezing and UI 'pulsating' issues on mobile OS lock screens."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  "Q4": {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is now being driven by 'Intentional Grounding,' where users utilize specific loops and soundtracks as a therapeutic tool to manage anxiety and work-related stress.",
+    "key_findings": [
+      "The 'Sensory Ritual' behavior: Users intentionally play the same loops (e.g., piano/Hans Zimmer) to create a predictable environment for sleep or anxiety management.",
+      "Technical 'Control Stripping' forces repetition: Free users who cannot skip are trapped in whatever loop the algorithm provides, regardless of preference.",
+      "The 'Brute Force Recording' issue: Musicians repeatedly play over the same loops to get a perfect take, highlighting a need for better in-app looping tools.",
+      "The 'Large Library Shuffle Failure' remains a major complaint, with users hearing the same subset of songs despite having thousands of liked tracks.",
+      "Users default to 'Safe' cached content when the app suffers from frequent logouts or widget freezes on high-end Android devices."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are pursuing 'Functional Layering' and 'Therapeutic Grounding,' seeking to use music as a creative foundation for live performance or a psychological tool for stress recovery.",
+    "key_findings": [
+      "A 'Live-to-Loop Layering' behavior is prominent among musicians who want to play live instruments over recorded tracks with minimal technical friction.",
+      "Users are engaging in 'Anxiety-Reduction Rituals,' combining specific music loops with tactile activities like handwriting or visual projectors to 'turn off' their brains.",
+      "The 'Aesthetic UI Hunting' behavior continues, with users trying to find and replicate unique playlist skins they see in social media communities.",
+      "Independent artists are using the platform as a 'Portfolio Hub' for soundtracks, attempting to bypass corporate filters on other gaming platforms.",
+      "Users are attempting 'Frictionless Entry' but are being blocked by new UI gates like the daily 'Who's listening?' account prompt."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  }
+}
+
+NEW REVIEWS (sample of 95 reviews):
+Source: unknown
+Text: Youtube music user here. Best part about it is if you find a super niche artist that only uploads videos to youtube you can just add it to a playlist and play it as a song even though it's not released as such.
+Rating: None
+
+Source: unknown
+Text: my biggest gripe with Spotify is how shit the lyrics are synced and half the lyrics are missing too. Apple music is always spot on a goes even further with animations that resemble karaoke, going letter by letter not just line by line. It's amazing. Not to mention you can turn up and down the level at which the vocals play to make it a true karaoke experience if you'd like.
+Rating: None
+
+Source: unknown
+Text: Student subscription for Apple Music also gives you Apple TV+. Similar to Spotify + Hulu.
+Rating: None
+
+Source: unknown
+Text: There’s nothing like Spotify’s recommendation algorithm, it really knows the vibe, the style, the bpm of the songs, combined with how other people categorize it in their own playlists
+Rating: None
+
+Source: unknown
+Text: One huge negative of Apple Music is if you ever switch regions or decide to stop your subscription for a while, Apple will delete your whole library including favorite tracks, playlists etc. whereas Spotify will still have everything even years after.
+Rating: None
+
+Source: unknown
+Text: I agree with you. I have used Spotify Premium for an year and then Switched to Apple music just because I got 3 months free with my iPhone. Since then, it is my 5th year I am with Apple music. Both services are Awesome. Personally, I would be in love with a Music app that has the UI of Apple Music and Song Suggestion algorithm of Spotify.
+Rating: None
+
+Source: unknown
+Text: I switched from Apple music to YouTube music and I am actually loving it.  Being able to access my music easily on every computer/ tablet / phone is great.
+Rating: None
+
+Source: unknown
+Text: I personally mostly prefer apple over Spotify, but one thing you missed is Apple has their Rewind, which is basically their version of Spotify Wrapped, and one thing that's nice about it that I don't think is available with Spotify is that you can see your Rewind on a yearly basis, but you can also see it on a monthly basis, whereas I think Spotify only does it yearly
+Rating: None
+
+Source: unknown
+Text: If you’re into classical music, there’s a dedicated app - Apple Music Classical, and it’s really the next level! So well organized, editor’s picks for recordings, and the best: listening guides for some pieces.
+Rating: None
+
+Source: unknown
+Text: Doesn't Apple Music also have a dedicated app for classical music, designed specifically for how people listen to classical?
+Rating: None
+
+Source: unknown
+Text: Tip for anyone who struggles with Apple Music song suggestions not being the best;  There is a way to fix that in Apple Music. I had that issue initially but I figured out how to fix it: go to settings, enable “use listening history”, and then any song you like make sure to heart/favorite/like it and then as you continue to use it, the personalized playlists like “(your Apple Music name)’s station”, then continue to like songs etc. then if some songs repeat on that station tap the station icon and it refreshes. it’s starts working really well when you do this
+
+Edit/Correction (5/25): it is “Use Listening history” not “use offline line history”
+
+Adding to this (date 5/25):
+Most people when they go to stations that suggest for you individual and/or recommendations playlist. Some of them update at different times / time intervals (which it will show you how long ago it was updated).
+Rating: None
+
+Source: unknown
+Text: My main tip for people making the switch is first using a service to transfer your playlist (like Soundiiz), and afterwards making sure you just play your library on silent 24/7 for a few days to a week to train the algorithms. You can’t beat years of data with regular listening, so make sure you give it plenty of data to work with as soon as possible.
+Rating: None
+
+Source: unknown
+Text: I tried Apple Music for about 3 years before switching over the Spotify. It took 6 months for Apple Music to accurately suggest music for me. And even then, it wasn’t great. Spotify did that in 15mins of me spending the time to tell the app the artist I love listening to.
+Rating: None
+
+Source: unknown
+Text: I use YouTube Music exclusively. There are some tracks that I enjoy that can only be found on YT. Unreleased underground hip hop, fan made videos of old songs off mixtapes, etc, that I only found on here, and adding it to my library or playlist is seamless. I will keep it because I will always pay for YouTube Premium because I hate ads, so having my music app tied in is perfect for me.
+Rating: None
+
+Source: unknown
+Text: one key point missing in this video. Spotify pays way less royalties to the artists. The only thing making me want to change from spotify, which i've been using for many years now, is the fact that Apple music (along with Tidal) pays the highest royalties to the artists. I love the thought about supporting the artists through listening to their music, and that just isnt the case for spotify anymore.
+Rating: None
+
+Source: unknown
+Text: The library organization is what has me hooked on Apple Music. With Apple Music, my library is organized just like iTunes, Zune, Foobar2000, etc. It basically works like my local MP3 library did back in the day. It doesn't try to shuffle in random stuff that's not part of my library.
+
+All the others I've tried (YT, Amazon, Spotify, and Tidal) are too focused on playlists and trying to slip in related songs where I don't want them slipped in. I just want to select an artist, and have it play the songs that are 1. only in my library, and 2. only by that artist. Kind of like making a mixed CD of all my favorite Atreyu songs or whatever. If I choose Atreyu, I just want it to play Atreyu.
+Rating: None
+
+Source: unknown
+Text: I switched to Apple Music funnily enough because of exclusive Radio Talk shows with artists and live events streamed exclusively to Apple, like the Super Bowl and the music quality, these things make me feel closer to the music and artist in a more organic way, rather than seeing merch and knowing their next tour dates.
+Rating: None
+
+Source: unknown
+Text: Adding my own two cents: I used to be on a family Apple Music plan that my dad was paying for, until he decided to switch the family to Spotify (at the drop of a dime with no warning). And I just could not get with the vibe of Spotify. It feels too cluttered. I prefer to listen to albums, and only have a few specific playlists. So the point about going for a simpler experience, that's precisely what I desired. I pay for an Individual Apple Music plan now.
+
+Minor thing, if you add your offline songs (that includes iTunes songs) to your account on desktop on Apple Music, they will synchronize across all of your devices. Though, annoyingly, the only format accepted for this seems to be MP3, at least, if you want features such as basic song details lmao
+Rating: None
+
+Source: unknown
+Text: The thing about one app "knowing you" and the other "not"... I think you nailed it.  One had a decade of history on you.  The other only has a few months.  Unless you get to free your history when you move, I don't see that ever changing.  It's what makes these individual platforms sticky subscriptions.
+Rating: None
+
+Source: unknown
+Text: My heart out to Spotify but after hearing lossless audio, it's like I'm hearing these songs for the first time. I couldn't believe what I was missing. I felt like Morty when he experienced true level ground and couldn't tolerate going back. 
+I was seriously at my wits end with Spotifys algorithm and I feel like I stand alone on that. Never got into a single song on music discovery. I always knew exactly what next three songs were gonna play after the end of a playlist or album, no matter the genre. At one point, Spotify would NOT STOP playing this one specific song after EVERYTHING. It got to the point where I had to block the artist and Spotify STILL queued that song. Apple Music actually takes the hint when I keep skipping a song or hit "play less". idk maybe im the outlier in this. I do miss Spotify's EQ and Spotify wrapped tho.
+Rating: None
+
+Source: unknown
+Text: Atm why I don’t change from Spotify to Apple Music is: I don’t need a seperate app for podcasts. Its all in one. While on long drives I like to switch between music and podcasts and it’s super easy via CarPlay
+Rating: None
+
+Source: unknown
+Text: I’ve used both Apple Music and Spotify and is sticking with Spotify for now. The one thing that is keeping me from using Apple Music is its lack of multi-language support to display artist names and song names.
+
+I listen to English, Chinese, and Japanese songs, but for Chinese and some Japanese artists, I’m much more familiar with their artist names and song names in their native languages. But when I use Apple Music, because my preferred system language for my Apple devices is English, almost all of my Chinese songs and Japanese song names got translated to English. This issue is especially severe with Chinese artists and songs as I can hardly recognise their names. I wish Apple Music could just implement an option to display artists and song names in their native languages.
+Rating: None
+
+Source: unknown
+Text: The one difference between the two that I can't look past is how much better the algorithm of Spotify is when it comes to giving you music relative to what you like or just giving you new things that you didn't know you'd end up loving. YouTube Music also has an amazing algorithm
+Rating: None
+
+Source: unknown
+Text: As a 3 year spotify user before switching back to Apple music, my main gripe is Spotify's like system vs apple music's library system. On apple music all your music from all categories are all together, on spotify all categories are seperate. you cant shuffle your playlists, albums and likes together which is something i like doing.
+Rating: None
+
+Source: unknown
+Text: I've used Spotify before, but I'm currently using YouTube Music. I find that it has a larger music library—almost every song is available since it's integrated with YouTube. The recommendation system is also similar, so the suggested songs are usually excellent. I use budget earbuds, so 320kbps audio quality is more than sufficient for me. Plus you can switch between audio to video or vice versa which is nice feature to have.
+Rating: None
+
+Source: unknown
+Text: I used to use YouTube Music and Tidal when I was on Android for the last 15 years. Last year I made the full switch from Android/PC to the full Apple ecosystem for business reasons. I’ve been using Apple Music since then and I love it. I am a bit of a musician and audiophile so i do listen to lossless music on occasion and it’s the best. Plus, the way it integrates with the rest of my ecosystem and family is a huge plus.
+Rating: None
+
+Source: unknown
+Text: I guess I am that one person who likes a very specific kind of music that only exists on YouTube and Youtube Music. Over the years I went from being a heavy Apple Music user to trying out Spotify and just never being satisfied with it over the years, to the day when my dad got YouTube Premium for the family, now suddenly I could listen to that subgenre and little creators that weren't on Apple Music no issues. As time went by I noticed myself opening YouTube Music more and more and using Apple Music less, I never made the concious switch, it just happened on it's own. 
+
+In case people are wondering what music this is that's only on YT Music, doomer remixes of Eastern European artists, f.e. Hungarian or Slovak doomer/doomerified songs and small artists who don't have tracks yet on Spotify or Apple Music. I discovered and listened to a at least 3 artists before they got big. Also, concerts, sometimes I just want the acoustic version and the vibes from a concert and that's not on Apple Music or Spotify.
+Rating: None
+
+Source: unknown
+Text: My family was using spotify but when I tried to compare the sound quality. I was surprised how great the sound on Apple Music compared to Spotify. After that, We all transfer to Apple Music and it has Dolby Atmos, It sounded amazing in my home theater even more!
+Rating: None
+
+Source: unknown
+Text: I'm glad you mentioned the section about Spotify Connect having pros, but also the inability to simultaneously play different songs on different devices. I always figured I would want Spotify Connect for Apple Music, but once I started playing music on my Apple TV, then wanted to listen to something different on my laptop in a different room, Spotify Connect became a hinderance.
+Rating: None
+
+Source: unknown
+Text: YouTube Music user here! Back in 2015 when I was thinking about subscribing to a Music steaming service, YouTube was the only platform that had all the Anime Openings and KPop songs i wanted to listen to at the time. Not to mention all the Vocaloid and Jpop covers from various artists.
+Rating: None
+
+Source: unknown
+Text: A feature Apple Music has that I love, is the ability to set a custom start/end time on a song.
+Rating: None
+
+Source: unknown
+Text: I use Apple Music on the Apple One family plan, have been using it for over a year now and switched from YouTube Music. I have YouTube premium though because I hate ads on YouTube but it’s on a family plan that my mom has taken over the payments on (she uses the music, and I reimburse her for the costs every other month).
+I prefer the audio quality on Apple Music and absolutely hate Spotify.
+Rating: None
+
+Source: unknown
+Text: I use the tight arse option , free Spotify with adds , the functions are a bit less than paid for as you would expect, but it’s an decent option imo if your funds are very limited , and adds are imo not the end of the world. One thing I like about using the free Spotify option, is when you hear something played you like , there’s a plus and minus  to show if you like the song , , and if you if hit the plus , it goes into your liked music and at some stage will in the rotation  to get played again. 
+And I agree , the random music Spotify seems to play is generally stuff that’s decent to listen to. 
+  If I was a bit more wealthy for sure I’d go the premium option , but you gotta go with what you can afford.
+Rating: None
+
+Source: unknown
+Text: This video was awesome! We just switched to Apple One family plan and it’s been rough to lose out on social part of Spotify. I agree with you!
+Rating: None
+
+Source: unknown
+Text: I’m curious to hear your opinion now that Spotify has lossless audio.
+Rating: None
+
+Source: unknown
+Text: On the music quality topic, I have noticed its not just that spotify doesn't have lossless (as an audiophile, that is rarely noticeable and definitely not on poorly tuned headphones or ANY bluetooth headphones) Spotify is much more likely to downmix the audio if your wifi is not fast or you're roaming and it often mixes music to a much LOWER bitrate. I might be wrong about this but I think it defaults to medium quality rather than high in settings.
+Rating: None
+
+Source: unknown
+Text: 8:40 This is only correct if you have a family Apple Music plan. If you have an individual plan, it will block concurrent playback, and actually often incorrectly detects it and blocks playback, which is a common bug.
+Rating: None
+
+Source: unknown
+Text: The one point you didn't touch on with this video is the difference in royalty rates that artists get paid per platform. That is the initial thing that got me considering switching from Spotify to Apple Music and I think for some people might be a huge component of where they decide to listen. Based of the info from your video, I do think switching to Apple Music might be the right move for me, because I really hate all the constant suggestions and clutter that I get in Spotify. I don't need one more algorithm app! I think the simplicity of apple music seems like a perfect fit for my taste. Thanks for the video!
+Rating: None
+
+Source: unknown
+Text: Thanks for the tips man! Apple Music does feel like the 4K version of a song.
+
+Btw, what iPhone case do you have? I really dig it!
+Rating: None
+
+Source: unknown
+Text: this perfectly encompasses my feelings.  i've been using spotify for the past 7 or 8 years and ive never had a problem with it. i originally got it bc i had a samsung and was afraid that apple music wouldn't be as usable on a samsung as it was on an iphone. i've had an iphone for the past 6 years and i still have spotify, but more and more recently ive been really considering switching to apple music--mostly because of the price increases and other problems with spotify. it's just so hard to make the change though bc music is so important to me and i love to expand my tastes, and spotify is just SO GOOD at recommending me songs i like--especially when it comes to playlist making (that's mostly how i discover new artists). ive discovered so many new artists through spotify that i genuinely love and couldn't imagine my music-listening without, and im so afraid that i would lose all of that if i switched to apple music.
+Rating: None
+
+Source: unknown
+Text: You're wrong about 6:04 about local files. If you upload local files onto your desktop spotify you can then go to any mobile device and offline download that playlist and the local files will transfer and continuously update in the future. I do this often to get my soundcloud music on my spotify. The only caveat is that you need to be on the same wifi whilst initially downloading. Aside from that, great video!
+Rating: None
+
+Source: unknown
+Text: 6:25 Someone needs to talk about Instagram. I have no idea how they do it. It is actually scary. Imagine an instagram music app with their algorithm.
+Rating: None
+
+Source: unknown
+Text: Some what random thing on 4:11 on the Spotify premium screenshot, several songs from Finland :D Torille!
+Rating: None
+
+Source: unknown
+Text: this was super helpful video! Current Spotify user but evaluating switching between Spotify and Apple and this helped provide insights with each platform.
+Rating: None
+
+Source: unknown
+Text: The fact that Spotify raised their prices is actually good in my opinion.Ok, if you listen only to a single playlist that you created then you are better off just buying the songs by themselves, but using the app's radio features and always listening to newly released songs is such a nice thing to be able to do. 
+Not too long ago you had to buy every single album or single. The artists were the ones getting paid (after label taxes ofc). Now the revenue generated by streaming platforms is so low for the simple fact that people digest lots of new music incredibly fast and the price for that is relatively affordable. 
+If the money generated after increasing the cost of the service goes to the artists, then I'm all for it. If it doesn't... it's sad.
+Rating: None
+
+Source: unknown
+Text: Yeah I’m weird. I have Apple Music on my iPhone and YouTube music with my premium subscription. I always find myself finding new music I like on YT music/YouTube more often than Apple Music. I use both, but I feel like for me I like personally finding new music, instead of having new music being brought to me and me deciding if I like it etc.
+Rating: None
+
+Source: unknown
+Text: It’s as simple as this: if you depend on a Windows computer, get Spotify. I’d love to use Apple Music but the Windows app is too buggy and inconsistent, and web access is not quite there yet. Hopefully one day it gets better, since I hate Spotify ads on premium.
+Rating: None
+
+Source: unknown
+Text: 8:29 On spotify if you have music dowloaded you can go on offline mode in settings on each extra device that you want to listen too simultaneously (music can be dowlpaded to up to 5 devices i belive). This is also really useful for sharing subscribtions so multiple people dont interupt eachother's music, you can just dowload whatever you want and go back online to add anything extra. Hope this helpsm
+Rating: None
+
+Source: unknown
+Text: I switched to apple music almost a year ago now after how bad the wrap was last year, it wasn't the main thing because there were a lot of things that were pushing me to get off spotify. One of the things was that I am a picky listener, meaning I listen to a lot of the same songs over and over again along with the same bands, this is probably what caused spotify to almost never show me anything new to listen to but that's not an excuse when I was able to go apple music and find new music from both new and old bands. I also hated how the shuffle on spotify works and honestly surprised you didn't go into it in this video, it was geniuelly so bad for me because I started to not listen to certain tracks that I loved because spotify would always front load them in the shuffle. Apple music doesn't this issue as much, it's still there but at least It picks songs that are deep into my playlists that I haven't hear in a while for some shuffles.
+I could also care less for the AI stuff that Spotify has been doing as of late, it doesn't improve the experience and makes it more feel more of a gimmicky shuffle. There was a time that I geniuelly used Spotify's podcast catalog because when I worked and was allowed to wear earbuds I would get tired of listening to music(thanks to spotify's abhorrent shuffle) and listen to podcasts but only at work. 
+I also don't like that it's turn into more of a 'social' app, with additions like short format videos that add nothing to the experience other than cluttering up the homepage. Apple music is just about music and nothing else, it's homepage is simple, but at least I'm not apposesed to exploring it for other stations or possible new albums to listen to. Apple music may look like it's iTunes predasser but if it ain't broke, don't fix it.
+
+Overall, spotify for me in the end just wasn't working out and I found that Apple music just suited my needs more, and with all my apple devices I have it just works(as much as I hate saying that line). I don't think I'll go back to spotify anytime soon, unless they do some drastic changes to their business model that makes them a overall better option than Apple music.
+Rating: None
+
+Source: unknown
+Text: It is very easy to choose don’t use Spotify pays 0.003 the artist per stream and does not pay until is reach 1000 for 12 months, i don’t think is ethical and does not honour the artist that made the music that we listen.
+Rating: None
+
+Source: unknown
+Text: I would switch in a heartbeat. But as a first-time subscriber, I once forgot to renew, and there went my 300+ liked songs and playlists gone, with no way to restore them. I'll stick to spotify.
+Rating: None
+
+Source: unknown
+Text: Listening to NIKI and Keshi? i have never even seen anyone even talk about them, i just switched over and i love your video. thank you!
+Rating: None
+
+Source: unknown
+Text: Spotify is just so good for finding new music. DJ, smart shuffle, recommended, etc, it’s so good
+Rating: None
+
+Source: unknown
+Text: I generally prefer Apple Music, clean interface, integrated into iOS and Mac, and pays artists 2.5x more per song than Spotify(still pittance but I like that it’s still more).
+
+I don’t like how it mixes my automated background music suggestions with general music, but yeah it’s not been necessarily great for new artists and song discovery.
+Rating: None
+
+Source: unknown
+Text: I randomly saw this video yesterday, and today Spotify announced lossless is coming.
+Rating: None
+
+Source: unknown
+Text: I’m currently using both. 
+
+Quality - I like Apple Music with Dolby Atmos, especially in the Rivian.
+
+What I don’t like is the syncing. Spotify lets me start and pick up on any of my devices. Apple Music does not do that and I can’t understand why.
+Rating: None
+
+Source: unknown
+Text: You are right about Spotify knowing your taste, I’m currently with YT music and I just can’t wait to go back to Spotify, but the money I’m saving with YT premium student plan keeps me away from it
+Rating: None
+
+Source: unknown
+Text: I feel like I find more new music on apple just through its recommended artists and albums in the home tab. The Home tab in general is great for finding new music, especially when it gives a “more like” section based on something I’ve listened to recently.
+Rating: None
+
+Source: unknown
+Text: pretty sure apple music's loss less only works with wired headphones. so the only benefit is dolby
+Rating: None
+
+Source: unknown
+Text: Who’s here after Spotify just announced that lossless audio will be coming? 😂
+Rating: None
+
+Source: unknown
+Text: It boils down to two things:
+
+1. If you want quality (lossless audio) as well as Dolby Atmos (or Spatial Audio), then go with Apple Music. 
+
+2. If you want to have a broader audience to share playlists with or from, go with Spotify. Although Apple Music has that too, there’s more users on Spotify.
+
+A side note to point 1: if you spent the money for AirPods Pro or Max, then you’re wasting its sound quality potential and listening experience if your going with Spotify.
+Rating: None
+
+Source: unknown
+Text: I was trying to put up my Easter lights and listen to this video at the same time. I heard you talk about when you and your wife were both in the car that you found less suggested music and that you and her are confused the algorithm based on your preferences and music my question is there are 5 to 6 of us on the family plan? How would that affect the choices and music that come up on Apple Music? Is there a way to keep each profile differentiated by your iCloud account. I am assuming this is the case but the way it sounded on your video and with me listening on the side was that you both use the same iCloud account which would be Hella weird but just wanted to clarify.
+Rating: None
+
+Source: unknown
+Text: Good video, very interesting advice. One question ( I am Spotify now) : one thing I don't like is that there is no way to listen the songs in a full shuffle manner for the albums I have 'downloaded' on my device, is it a function that is proposed and effectively working with Apple Music ?
+Rating: None
+
+Source: unknown
+Text: The most important distinction for me is that Apple Music pays the artists more. Spotify pays about 1/3 of a cent per stream ($0.003), which is much lower than other platforms. Apple Music pays about 1 cent per stream, which is about the same as having the song played on the radio.
+Rating: None
+
+Source: unknown
+Text: What keeps me with Apple Music isn't the better audio quality or integration with Apple devices (I recently switched to Android), but it's the old iTunes DNA. I'm an album listener first and foremost and Spotify is just awful for anyone like me that likes to have an actual 'library' of music. 
+
+When I add an artist or album to my library it's treated like an iTunes purchase and made accessible in one cohesive library. On Spotify, adding an artist acts as a shortcut to their artist page. No 'library' as such to speak of, instead funneling you into playlists or top songs whilst albums are hidden further down. I miss the social features of Spotify, sharing my stats and creating playlists with friends are two things I really miss but the pros far outweigh the cons for me 😊
+Rating: None
+
+Source: unknown
+Text: Spotify is becoming insane with pushing podcasts and videos. The home page littered with it. I don’t want any of it, especially auto-playing videos. And you can’t even turn it off. I prefer keeping my podcasts on a separate app.
+Rating: None
+
+Source: unknown
+Text: Spotify user since the US launch in July 2011. Don’t think I’ll ever switch, but it would be nice to have Dolby atmos in the Rivian Gen 2 subpar sound system. As a long time YouTube premium subscriber, I had no idea about the revenue you get from those viewers. Very cool!
+Rating: None
+
+Source: unknown
+Text: As a person who watches more Youtube than anything else, YT Music just makes the most sense. I'm not a huge audiophile and the way you can pick up a podcast that you started on YT in the car on the music app is clutch for me. All my uploaded Google Play music is there too and there's a lot of less known stuff that I listed to that I can't find anywhere else. The big thing that kept me with Spotify was the recap, but YT has that too and they do it quarterly and yearly. The only downside to me is that it doesn't work on Echo devices but the free tier of prime music is good enough. I can't justify paying another 12 just to play music there.
+Rating: None
+
+Source: unknown
+Text: 3:03 it’s “not” the same music though, in the sense that it’s a new master.  The whole “Mastered for iTunes” (and its new name under Apple Music) creates a different starting point that sounds “different” to a CD.  CDs are uncompressed audio and if you rip it to a WAV, it still doesn’t sound as good on any set of AirPods or AirPods Pro.  There are just details on the new mix you never heard on CD.
+Rating: None
+
+Source: unknown
+Text: 03:30 lossless audio only works if you have wired connected earphones, which nobody has on an iphone
+Rating: None
+
+Source: unknown
+Text: Apple also has a separate app for classical music that makes a huge difference if you enjoy classical. You can still listen to classical and search for it in the main app, but the stand-alone app avoids a lot of the classification problems that classical has vs. pop.
+Rating: None
+
+Source: unknown
+Text: I didn’t listen to radio music for a long time, and got back into it about 5 years ago, and plugging in the music I loved into Spotify, it’s recommended to me so much new music that I love! 
+
+Def a Spotify fan, despite having an iPhone!
+Rating: None
+
+Source: unknown
+Text: I really like Apple Music, but I'm currently using YT Music since it's included in YT Premium. 
+If I had a choice to get YT Premium without YT Music for less, then I would do that and use Apple Music. 
+I think all these services are so alike that it doesn't really matter which I use personally.
+Rating: None
+
+Source: unknown
+Text: I can’t support Spotify after what its useless ass CEO said about content creation. That man has no respect to creators and musicians.
+Rating: None
+
+Source: unknown
+Text: The fact that i can control the equalizer exactly how i want on Spotify made the choice very easy every time for me…and i tested both several times but the results is just day and night for me, i wish you mentioned that in the video…
+Rating: None
+
+Source: unknown
+Text: This is such a good video! Gonna try out Apple Music too, in India, Apple Music and Spotify Individual is the same price!
+Rating: None
+
+Source: unknown
+Text: Big Spotify guy here because I have a windows pc and when I tried out Apple Music for a while I found the windows app to be absolute hell to use on windows, also as pointed out being able to control my pc Spotify with my phone is really nice when I’m playing games or doing something where leaving my current app would be annoying
+Rating: None
+
+Source: unknown
+Text: Here in India, Apple Music (Individual) is 119 INR/month, that is 1.39 USD/month.
+While Spotify is also 119 INR/month,
+Also, Apple Music has better audio quality and offers support for lossless and spatial audio for supported songs & headsets/speakers.
+While Spotify offers a free plan,  which, though it has ads, is really popular here.
+Both platforms, though, are easily accessible through various platforms...
+Being honest, both have their ups and downs, and this does not make any platform better/worse than the other...
+Rating: None
+
+Source: unknown
+Text: You don't really need headphones that support Dolby Atmos, Apple Music contains a mixer that will convert the Dolby Atmos audio to stereo and it definitely makes a noticeable difference in sound positioning, though it is probably not as good as having headphones that support Dolby Atmos
+Rating: None
+
+Source: unknown
+Text: When I discovered Spotify, it was life changing for me. Had it for 2-3 years and absolutely loved it.
+
+Then Apple Music dropped lossless audio Dolby Atmos and THAT was a GAME CHANGER!
+
+I immediately upgraded my phone to a 1TB version and I’ve been using Apple Music since. Seriously, it’s been a game changer! I fucking LOVE the quality of Apple Music!
+
+I listen to it most of the time in a vehicle via USB and especially in my personal truck with the Fender audio system it is insanely clear!
+
+I’ve also discovered numerous rock/metal bands on Apple Music and it’s really expanded my library.
+
+I personally couldn’t give a shit about being “social” with my music. It’s just my daily therapy and Apple gives it to me in amazing lossless quality and hi-res lossless in some tracks. 
+
+Apple killed Spotify with lossless! For real…
+Rating: None
+
+Source: unknown
+Text: Thank you so much for this video! This is exactly what you wanted to hear
+Rating: None
+
+Source: unknown
+Text: 1:10 Meanwhile, Spotify in India at $1.7/m for a duo sub....
+Rating: None
+
+Source: unknown
+Text: The lyrics page of apple Music is the best in the industry
+Rating: None
+
+Source: unknown
+Text: I tried Apple Music for a month. The thing I disliked the most was the “add to playlist” functionality. As a Spotify user, I’ve become so accustomed to the checklist format where you can add a song to multiple playlists at a time. For me, that’s a big feature because I have era based playlists as well as genre based, so songs may be in 2-3 playlists each
+Rating: None
+
+Source: unknown
+Text: You can actually control music on your TV, Homepod from your iPhone with apple music. When you press the AirPlay button, at the bottom there is a button called Control other Speakers & TV, hit that and choose what you want to control from your iPhone.
+Rating: None
+
+Source: unknown
+Text: 0:17 Bro casually shows one of the greatest original game soundtracks of all time in b-roll
+Rating: None
+
+Source: unknown
+Text: YouTube Music is always my go-to. At $3.50/month YouTube Premium, I get an ad-free experience, high-quality music streaming, and a 6-person family plan, great value overall. Personally, lossless audio isn't worth it for me. I couldn't tell the difference between 320kbps MP3 and high-res lossless tracks during audio tests, even using high-end studio headphones. And even when there is a difference, it’s barely noticeable, definitely not a game-changer. What really turned me off Apple Music is that I lose all my playlists when my subscription expires, and I can't even get them back if I renew later. That’s just frustrating.
+Rating: None
+
+Source: unknown
+Text: You completely missed out on the fact that in Apple Music you can create a lot more organized profiles with your playlists and you can follow friends and share playlists with them. Also when you create a playlist with certain themes or genres, Apple Music will suggest a bunch of different songs that would fit beautifully. So for you to say Apple Music doesn’t do a good job at suggesting music is ridiculous. It’s just a lot more clean and organized!
+Rating: None
+
+Source: unknown
+Text: Currently deciding between Apple Music, Spotify and YouTube music. In Apple Music, I’ve grown to love the ability to mute/lower the volume of vocals with AI on certain/most tracks- it’s been very useful as a musician to hear the music more clearly or practice instruments, or to do karaoke with friends or singing practice. I also love YouTube Music for its access to "user generated content", meaning you can play your favourite live concerts, covers or original bands that upload to YouTube. I don’t really care much for Spotify’s social features, the only thing it has going for it for me is discover weekly, but I’ve found that it’s started to repeat tracks and gotten worse at finding new things I like over time.
+Rating: None
+
+Source: unknown
+Text: Please could you tell me which service is the best one for looking up very old music for ethnomusicology. I love listening to music of other cultures and tribes. But I find traditional music is very hard to find. Most services concentrate on what's new rather than picking up that I like traditional music. Thanks for readding my comment.
+Rating: None
+
+Source: unknown
+Text: You didn't mention the most awesome feature of any music streaming service. Spotifys AI DJ which is amazing and my wife is hooked on. It's like having your own personalized radio station just for you and the new AI DJ frequest feature is a game changer and wife is totally hooked on it.
+Rating: None
+
+Source: unknown
+Text: I switched a year ago to Apple Music and can’t agree movie about missing the music discovery in Spotify. The way playlists could be found and the way it truly tailored music to you was amazing. Apple feels more like “here’s music we want you to listen to”
+Rating: None
+
+Source: unknown
+Text: You're spot(ify) on about the discovery feature on Spotify being better than apple music. That's the only thing I miss when I left Spotify.
+Rating: None
+
+Source: unknown
+Text: The fact that trying to skip back a song in a Spotify queue results in skipping forward is something I just can't comprehend.
+Rating: None
+
+Source: unknown
+Text: Biggest feature of Spotify for me is to be able to control different devices, switch the current played song from one device to another and use multiroom audio via Alexa. I also noted, using the Airpod Max, that some tracks on Apple music really shine, some others sound completely broken (Metallica S&M2 for example). YT music has severe problems figuring out which "song" to play. I can even use the same playlist on YouTube and YouTube music and get different tracks/videos and there is no way to control this.
+Rating: None
+
+
+Total new reviews to analyze: 95
+
+INSTRUCTIONS:
+1. Update the 'insight_summary' for each question based on patterns in the new reviews
+2. Update the 'key_findings' list with new findings from the reviews
+3. Calculate the new 'total_reviews_analyzed' by adding the count of new reviews to the previous total
+4. Update the 'last_updated' timestamp to the current time
+5. Maintain the exact same JSON structure for all 6 insights
+6. Output must be a valid JSON array containing exactly 6 insight objects
+7. Do not include markdown formatting or code blocks - output raw JSON only
+
+The 6 research questions are:
+- Q1: Why do users struggle to discover new music?
+- Q2: What are the most common frustrations with recommendations?
+- Q3: What listening behaviors are users trying to achieve?
+- Q4: What causes users to repeatedly listen to the same content?
+- Q5: Which user segments experience different discovery challenges?
+- Q6: What unmet needs emerge consistently across reviews?
+
+Output the updated insights as a JSON array.
+
+IMPORTANT: Output must be valid JSON only. No markdown, no code blocks, just raw JSON.
+==================================================
+RESPONSE:
+{
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation has expanded to include 'Ethical Listeners' prioritizing artist royalty rates, 'Album Purists' who reject algorithmic playlists in favor of library-centric organization, and 'Globalist Listeners' frustrated by forced translation of artist names in non-native languages.",
+    "key_findings": [
+      "The 'Ethical Listener' segment is migrating from Spotify to Apple Music/Tidal specifically due to higher royalty payouts ($0.01 vs $0.003 per stream).",
+      "An 'Album Purist' segment finds modern streaming UIs too cluttered with 'Radio' and 'Mix' features, preferring the 'iTunes DNA' of a structured, non-shuffled library.",
+      "The 'UGC/Niche Hunter' segment relies on YouTube Music for 'Doomer remixes,' unreleased underground tracks, and live concert audio unavailable on standard streaming platforms.",
+      "The 'Multi-language Globalist' segment (listening to Chinese/Japanese/English) is blocked by Apple Music's forced translation of artist names based on system language settings.",
+      "The 'Platform Switcher' segment faces a 'Discovery Blackout' period of 3-6 months while training a new service's algorithm from scratch."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 682,
+      "last_updated": "2024-05-25T12:00:00.000Z"
+    }
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustrations have shifted toward 'Algorithmic Monotony' where engines repeat the same subset of songs regardless of library size, and 'Platform Clutter' where podcasts and short-form videos interfere with the music discovery experience.",
+    "key_findings": [
+      "Spotify's 'Broken Shuffle' is a major grievance; users report the algorithm front-loads the same 20-30 tracks in large playlists, ignoring thousands of other liked songs.",
+      "Apple Music is criticized for 'Forced Suggestions' that feel like 'music the platform wants you to hear' rather than a reflection of personal taste.",
+      "The 'Podcast/Video Intrusion' on Spotify's home page is viewed as 'clutter' that users cannot disable, driving a desire for simpler, music-only interfaces.",
+      "Users report 'Algorithm Training Lag,' noting it can take over 6 months for Apple Music to accurately suggest music compared to Spotify's '15-minute' onboarding.",
+      "Recommendation engines are failing to distinguish between 'background/sleep music' and 'active listening music,' leading to skewed daily mixes."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 682,
+      "last_updated": "2024-05-25T12:00:00.000Z"
+    }
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is hindered by 'Platform Lock-in' where years of historical data make switching services a high-friction event, and 'Feature Disparity' where critical discovery tools like 'Connect' or 'AI DJ' are exclusive to specific ecosystems.",
+    "key_findings": [
+      "The 'History Trap': Users feel stuck with Spotify because 'it knows them,' despite wanting the audio quality or ethical benefits of other platforms.",
+      "Discovery is crippled by 'Library Deletion' policies; users fear switching to Apple Music because their entire library is wiped if a subscription lapses for even a short period.",
+      "Technical 'Ecosystem Friction': Apple Music's Windows app is described as 'absolute hell,' preventing cross-platform users from engaging with discovery features on desktop.",
+      "The removal of 'Smart Shuffle' or 'AI DJ' equivalents on competing platforms makes discovery feel manual and labor-intensive for recent switchers.",
+      "Users struggle with 'Discovery Gaps' for niche genres like Classical or Ethnomusicology, where standard algorithms fail to categorize traditional or complex metadata correctly."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 682,
+      "last_updated": "2024-05-25T12:00:00.000Z"
+    }
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "Users are demanding 'Subscription Continuity' (protection of library data during payment lapses), 'Universal Cross-Device Control' (a Spotify Connect equivalent for all platforms), and 'High-Fidelity Accessibility' (Lossless/Atmos) across all devices.",
+    "key_findings": [
+      "There is a critical need for 'Library Safety Nets': Users want their playlists and likes to persist even if they pause their subscription for several months.",
+      "Demand for 'Linguistic Integrity': Users want an option to display artist and song names in their native script (e.g., Kanji/Hanzi) rather than forced English translations.",
+      "A 'Universal Connect' feature is missing: Users want to control music on their PC/TV from their phone regardless of the service provider (Spotify's current competitive moat).",
+      "Musicians and Karaoke fans are seeking 'Vocal Control' tools, like Apple Music's ability to lower vocal tracks for practice or performance.",
+      "There is a growing request for 'Monthly Recaps': Users want the 'Wrapped' experience on a monthly basis (similar to Apple's Rewind or YouTube's quarterly stats)."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 682,
+      "last_updated": "2024-05-25T12:00:00.000Z"
+    }
+  },
+  "Q4": {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is increasingly driven by 'Algorithmic Laziness' where platforms default to 'Safe' tracks to maintain engagement, and 'Data Stickiness' where users lack the energy to retrain a new platform's engine.",
+    "key_findings": [
+      "The 'Shuffle Loop' phenomenon: Users hear the same songs because the shuffle algorithm prioritizes 'high-confidence' tracks over deep cuts in the user's own library.",
+      "Historical Data Bias: Long-term users are 'trapped' in their own past preferences, as the algorithm struggles to move past a decade of listening history.",
+      "Intentional 'Album Looping': A subset of users (Album Purists) intentionally repeat full albums to avoid the 'randomness' and 'slop' of automated playlists.",
+      "The 'Silent Training' behavior: New platform users play their library on silent 24/7 for days just to force the algorithm to stop repeating the same 5 'starter' songs.",
+      "Lossless 'Re-Discovery': Users repeat old favorites specifically to hear them in high-fidelity (Lossless/Atmos), claiming it's like 'hearing it for the first time.'"
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 682,
+      "last_updated": "2024-05-25T12:00:00.000Z"
+    }
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are pursuing 'Active Utility Listening'—including Karaoke-style vocal suppression, 'UGC Integration' for unreleased tracks, and 'Multi-Device Continuity' where the phone acts as a remote for the entire home.",
+    "key_findings": [
+      "'Vocal-Suppressed Practice': Musicians and singers are using AI-driven vocal sliders to turn standard tracks into backing tracks for practice.",
+      "'UGC-Native Listening': YouTube Music users are blending official releases with fan-made covers and 'Doomer' remixes into single, seamless playlists.",
+      "'Ecosystem Hopping': Users are attempting to start a session on a car head unit (e.g., Rivian) and pick it up instantly on a desktop or smart speaker.",
+      "'Social-Agnostic Therapy': A segment of users is actively rejecting 'Social' features (Wrapped, sharing) in favor of 'Music as Therapy' in a private, clean UI.",
+      "'Classical Deep-Dives': Users are utilizing dedicated sub-apps (Apple Music Classical) to navigate complex metadata like movements, conductors, and recording dates."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 682,
+      "last_updated": "2024-05-25T12:00:00.000Z"
+    }
+  }
+}

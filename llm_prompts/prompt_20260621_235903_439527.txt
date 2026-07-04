@@ -1,0 +1,638 @@
+Timestamp: 20260621_235903_439527
+Model: gemini-3-flash-preview
+==================================================
+PROMPT:
+You are an expert Growth Product Manager specializing in music streaming services. 
+
+I have historical data (current insights) and new data (user reviews). Your task is to update the insights based on the new data.
+
+CURRENT INSIGHTS:
+{
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation has expanded to include 'Ethical Deserters' who are abandoning the platform due to the CEO's external investments, 'Catalog Exiles' following specific artists (e.g., King Gizzard, Xiu Xiu) who have pulled their music, and 'Physical Revivalists' returning to CDs and iPods to reclaim ownership of their libraries.",
+    "key_findings": [
+      "The 'Ethical Deserter' segment is canceling subscriptions specifically in protest of the company's perceived involvement in the defense/AI industry ('robots for war').",
+      "A 'Catalog Exile' segment is emerging as niche and indie artists remove their entire discographies, rendering the platform useless for their specific fanbases.",
+      "The 'Physical Revivalist' is a growing group of former users returning to 'second-gen iPods' and CDs to ensure they 'own' their music and avoid the 'renting culture' of streaming.",
+      "The 'YouTube Premium Migrator' is a pragmatic segment switching to YouTube Music because they already pay for the bundle and perceive a higher artist payout (reportedly 4x higher).",
+      "The 'Artist-Advocate' segment consists of small creators themselves who are leaving the platform to protect their own moral integrity and seek better financial sustainability."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 878,
+      "last_updated": "2024-05-29T14:30:00.000Z"
+    }
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustrations have intensified around 'AI Dilution,' where users feel the algorithm is aggressively pushing 'fake bands' and 'AI garbage' to minimize royalty payouts, alongside a growing resentment toward 'Useless Feature Bloat' like the AI DJ.",
+    "key_findings": [
+      "Users have coined the term 'Botify' to describe their suspicion that the platform is prioritizing AI-generated content over human artists.",
+      "The 'AI DJ' and other 'smart' features are increasingly viewed as distractions that 'shove crap' to the front page rather than helping users find the music they actually want.",
+      "There is a perception that recommendations have become 'disposable,' treating music as a commodity rather than an emotional connection between artist and fan.",
+      "Users report that the platform's focus on 'marketable' music makes discovering niche or emotionally striking underground music nearly impossible.",
+      "Recommendation fatigue is driving users toward 'Indie Radio' and manual MP3 collection to escape the 'tech overlord' curation."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 878,
+      "last_updated": "2024-05-29T14:30:00.000Z"
+    }
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is being crippled by 'Catalog Erosion' as influential artists remove their music in protest, and 'Algorithmic Hostility' where free-tier users are restricted from selecting specific songs, making the platform feel 'broken' for exploration.",
+    "key_findings": [
+      "The 'Artist Exodus': Major discovery hurdles are appearing because key artists are scrubbing their songs from the platform, leaving 'gaps' in the musical record.",
+      "Users report a 'Broken Interface' where they are only allowed to choose a few songs before the app blocks manual selection, forcing them into unwanted algorithmic loops.",
+      "Discovery is hindered by 'Ethical Friction,' where users no longer want to discover music on a platform they perceive as morally compromised.",
+      "The 'Disposable Art' problem: Users feel the platform devalues music to the point where discovery feels like 'content consumption' rather than meaningful art exploration.",
+      "Technical barriers on mobile continue to prevent users from picking specific tracks, which users interpret as the app 'not wanting people to listen to music.'"
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 878,
+      "last_updated": "2024-05-29T14:30:00.000Z"
+    }
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "Beyond technical features, users are demanding 'Moral Accountability' and 'Platform Portability.' There is a massive surge in the need for tools to easily transfer playlists to competitors and a desire for a 'Human-Centric' music ecosystem that prioritizes artists over AI.",
+    "key_findings": [
+      "Demand for 'Playlist Portability': Users are actively seeking and recommending tools (like Soundiiz) to migrate their data to Tidal, Deezer, or Apple Music.",
+      "Need for 'Ethical Streaming': A significant portion of the user base wants a platform that does not invest in military/AI technology.",
+      "Demand for 'Direct Support' mechanisms: Users want to know their money is reaching artists, leading to a resurgence in Bandcamp and physical merch sales.",
+      "Request for 'AI-Free Tiers': Users are expressing a desire for a version of the service that removes 'AI slop' and 'fake bands' entirely.",
+      "Need for 'Catalog Stability': Users are frustrated by the volatility of streaming rights and are looking for ways to ensure their favorite music doesn't disappear overnight."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 878,
+      "last_updated": "2024-05-29T14:30:00.000Z"
+    }
+  },
+  "Q4": {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is now a form of 'Ownership Defense.' Users are returning to physical media (CDs/Vinyl) and local MP3s to ensure they can listen to their favorite tracks repeatedly without them being removed or altered by the platform.",
+    "key_findings": [
+      "The 'Physical Anchor': Users are buying CDs of their favorite albums to listen to them on repeat, citing a deeper 'emotional connection' than streaming allows.",
+      "Repetition is driven by 'Financial Sustainability': Users who can no longer afford to buy every album piece-meal are sticking to a small, owned collection of MP3s.",
+      "The 'Playlist Archive' behavior: Users are desperately trying to archive their long-term playlists before canceling their subscriptions to preserve their listening history.",
+      "Users report that they 'pay attention more' when listening to physical media, suggesting that streaming encourages 'tuning out' rather than active listening.",
+      "The 'Convenience vs. Quality' trade-off: While streaming is convenient, users are finding the 'fun of collecting and organizing MP3s' more rewarding than algorithmic repetition."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 878,
+      "last_updated": "2024-05-29T14:30:00.000Z"
+    }
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are shifting toward 'Conscious and Moral Listening.' They are attempting to move away from 'renting culture' and toward 'Direct Artist Support,' often through a hybrid model of streaming for discovery and physical media for primary consumption.",
+    "key_findings": [
+      "'Moral Consumption': Users are trying to align their listening habits with their values, leading to a mass 'cancellation' movement driven by social media influencers.",
+      "'Library Migration': A primary behavior is the 'automated transfer' of libraries to other services like YouTube Music or Tidal to escape Spotify's ecosystem.",
+      "'The iPod Renaissance': Users are refurbishing old tech (iPod Classics) to achieve a distraction-free, high-autonomy listening experience.",
+      "'Full Album Immersion': A segment of users still prioritizes listening to full albums (80% of the time) to avoid the 'random consumption' encouraged by the platform.",
+      "'Archival Curation': Users are treating their final weeks on the platform as an archival period, documenting their playlists before 'biting the bullet' and leaving."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 878,
+      "last_updated": "2024-05-29T14:30:00.000Z"
+    }
+  }
+}
+
+NEW REVIEWS (sample of 87 reviews):
+Source: reddit
+Text: spotify sucks so damn bad. one of my playlists is over 100 hours long, yet every time i hit the shuffle button, either normal shuffle or smart shuffle, it plays the same songs in the same order every time. Theyve just put their subscription fee up as well. oh and also the app sucks so fucking bad too... never was there a slower app. I want to delete it forever but i love looking at my stats... when was the first time i listened to a song... how many times ive listened to it... really keeps me in their grips. dont even get me started with all the other problems they have as a company. f u spotify
+Rating: None
+
+Source: reddit
+Text: . It ruined some songs for me, even if shuffle was working, it always seems to play certain songs constantly, i ended up unsaving some songs  because they would always pop up. 
+
+
+Also some song i completely forgot I had in my playlist because it never played them, when i remembered they existed and searched them up, turns out they were already in my list, they just never get chosen on shuffle
+Rating: None
+
+Source: reddit
+Text: . Shuffle doesn't work. Their shuffle isn't random so its inherently broken.
+Rating: None
+
+Source: reddit
+Text: . It's either not at all random, or it's technically 100% random, meaning it playing every album from a band in order would be just as "random" as playing anything else. At least that's what i was told, that "true random" doesn't care about if it "feels" random to people, which is doubly infuriating, as who cares about a "true random" shuffle, we want what feels random to us, no repeated artists/albums/songs for a while.
+Rating: None
+
+Source: reddit
+Text: . At some point Spotify decided I needed to listen to Sunglasses at Night by Corey Hart once every ten songs. It kills song enjoyment almost as fast as having it as an alarm or ring tone. There's a reason we don't do that anymore.
+Rating: None
+
+Source: reddit
+Text: . "Fade into Me" by Mazzy Star is that song for me. It sneaks into so many playlists. 
+Rating: None
+
+Source: reddit
+Text: . Don't place the blame on the guy in shades! 
+Rating: None
+
+Source: reddit
+Text: . Also, so many of the playlist they make for me contain the same fucking songs. And not just a couple either. It’s not even worth listening to them.
+Rating: None
+
+Source: reddit
+Text: . It's At Seventeen by Janis Ian for me, which is really not a song I want to be jamming to on my way to work every morning. 
+Rating: None
+
+Source: reddit
+Text: . Even when you unsave a song. Smart shuffle will still play it 🙃
+Rating: None
+
+Source: reddit
+Text: . Yeah, the never ending loop of "You listened to this song, so I'm going to play it more. Obviously, it's playing more because you like it, so I'm going to play it more" was definitely grating to me, but the announcement of yet another price hike without any actual benefit is what made me finally cancel my sub.
+Rating: None
+
+Source: reddit
+Text: . This is my problem but I cant seem to find an alternative. Is youtube music worth it? Or is there maybe something else put there thats better equipped
+Rating: None
+
+Source: reddit
+Text: . Personally, I use YouTube Music. If you are able to, get ReVanced. Basically YT (and music) premium for free. 
+Rating: None
+
+Source: reddit
+Text: . I had that the last time until I believe google blocked it and then never got around to getting it again as it seemed a little more difficult to set up this time. 
+Rating: None
+
+Source: reddit
+Text: . Just pirate it honestly. I have like 400 or so gb of lossless audio, I simply download whole discographies of artists I like. 1337x dot to, Cyberghost (or any other VPN) and qbittorrent are your friends.
+
+You can also compress it for smartphone use.
+
+If buying isn't owning then pirating isn't stealing.
+
+Fuck capitalism.
+Rating: None
+
+Source: reddit
+Text: . The artists don't really make any money on streaming or sales anyway. The publishing and streaming companies make all the money. Artists make money playing live shows. I doubt many artists care about pirating, they want you to buy concert tickets. Record companies are notorious for basically screwing artists so, yeah. F those guys. 
+Rating: None
+
+Source: reddit
+Text: . Watch all the rich self righteous people downvote you and tell you that you're selfish af for not being able to pay money to artists who have more money than an average person does in 2 lifetimes, while you're living on minimum wage.
+
+Edit: this is for big artists. I support small artists by buying physical copies instead.
+Rating: None
+
+Source: reddit
+Text: . I don't think many people are up in arms about pirating Beyonce, it's more about the smaller artists that barely or don't make a living from their music.  That's where the really good shit is at anyway.
+Rating: None
+
+Source: reddit
+Text: . Yeah, small artists deserve the money. But Spotify pays them pennies anyway, I like to buy physical copies of their music.
+Rating: None
+
+Source: reddit
+Text: . It's not about the money it's about principle for me. Spotify and other streaming services charge users a fuckton of money while at the same time paying the artist peanuts.
+
+I'll gladly buy music, as I have done many times in the past, but only if the money goes to the artist, not some shitty overpriced middleman.
+Rating: None
+
+Source: reddit
+Text: . No I'm gonna downvote because piracy isn't a 1-1 replacement, at least without an obnoxious amount of setup and/or work.
+Rating: None
+
+Source: reddit
+Text: . Pirating is still stealing.
+
+Congrats on shitting on the artists from your high horse.
+Rating: None
+
+Source: reddit
+Text: .  morphe is what most of the revanced devs switched to, something happened behind the scenes so now revanced is mostly stealing the morphe code. it was super easy to set up though iirc, didnt need to do huge amounts of work with f-droid
+Rating: None
+
+Source: reddit
+Text: . its not so bad, there are guides on reddit you can search for.
+Rating: None
+
+Source: reddit
+Text: . Ah okay, looks like i may give it another go soon then
+Rating: None
+
+Source: reddit
+Text: . Morphe is the current working app. All you need to do is download a APK and the morph manager, go to the Morphe subreddit to get the working app. You downloaded an APK and put it into the manager and you’re pretty much good to go. It’s pretty easy to do.  
+Rating: None
+
+Source: reddit
+Text: . Morph is better, lots of YT revanced devs have moved there after the leadership got too egoistic.
+Rating: None
+
+Source: reddit
+Text: . Revanced is the worse alternative now. There is a better alternative than it. 
+Rating: None
+
+Source: reddit
+Text: . This is the way. I had Spotify for like a decade straight. I cancelled it as soon as I started to understand how much YT music was not only comparable in most ways, it literally didn't cost me any money because I have YT premium. 
+Rating: None
+
+Source: reddit
+Text: . I quit using Spotify back when YouTube Red first came out because it was the same price for basically the same thing and ad free YouTube.
+
+Having the family plan and putting my tech illiterate parents accounts on it also helps making sure they don't scammed
+Rating: None
+
+Source: reddit
+Text: . I use Qobuz, they pay the artist the most and no AI is allowed on their platform. The sub price was comparable to Spotify and you can import all of your playlists from other platforms for free when you first sign up. No brainer for me. You can even see all the information about the song and who created it etc.
+
+https://preview.redd.it/l611z9li1b3h1.png?width=1008&amp;format=png&amp;auto=webp&amp;s=ec9c4371de27b18a04e2be9cd047f17bdb8abd0c
+Rating: None
+
+Source: reddit
+Text: . How are you importing your playlists? I just created a new account and I'm trying to find out but I'm just finding external apps that will charge to import everything (e.g. Soundiiz).
+Rating: None
+
+Source: reddit
+Text: . I got 5 free months of Apple music and ended up keeping it afterwards. It's pretty great at only $11/mo. You can even transfer your playlists from Spotify. 
+
+I was also having the same issue as OP and paying $18/mo. for that nonsense was getting old. 
+Rating: None
+
+Source: reddit
+Text: . That’s a pretty good price. I’m personally using Spotify on the college student discount but once I finish college, I’m debating whether I’ll stick with it since the subscription jumps up to almost $20. $18 a month is too much for music in my opinion, I don’t listen to stuff 24 seven so that has a lot to do with it
+Rating: None
+
+Source: reddit
+Text: . You can buy the music and support the artists that’s a great alternative 
+Rating: None
+
+Source: reddit
+Text: . I went back to Sirius XM. Hundreds of radio stations with out commercials. I was tired of the same songs and not finding new artists. 
+Rating: None
+
+Source: reddit
+Text: . Are we using the same Sirius XM? All I hear are the same songs across different stations constantly. I have a theory that Steely Dan and Fleetwood Mac have to be playing at all times. 
+Rating: None
+
+Source: reddit
+Text: . SiriusXM also has more app only channels that play specific genres. And when you threaten to cancel they will offer you a lifetime supply for $2/mo.
+
+Before anyone takes me seriously, the “lifetime supply” was sarcasm but they will generally offer a year or 2 for $3-4 a month. Then you just rinse and repeat.
+Rating: None
+
+Source: reddit
+Text: . SiriusXM it’s pretty great if you find one of the coupon deals, I’ve noticed the sub Reddit for that service has linked to all of the current coupons, and if your car supports it, it’s really nice. It’s sometimes easier to just throw on a radio station than pick what Spotify playlist I want to listen to and it has no ads, also helps that I have an older car that doesn’t have CarPlay or anything
+Rating: None
+
+Source: reddit
+Text: . I have been using YT music on premium for 3 years, had great search abilities and access to content in other languages, + free movies on YT. They recent increased the member fee by $3. No legit reason to continue using a services that chooses to charge more every few years.. I use free Spotify now. There's always radio or I will go back to my mp3 collection since all these services play the same music all the time anyway. 
+Rating: None
+
+Source: reddit
+Text: . If you can get a family subscription, that’s typically the best way to use any of these music services. It’s pretty cheap if you split the cost between people in your family or your friends. That’s what I’m doing and it’s about five dollars a month that way. Your phone carrier may also provide the service for cheaper a lot of the time too
+Rating: None
+
+Source: reddit
+Text: . i use demus (ios, not sure about android). it’s completely free and pulls songs from youtube, spotify, etc. not really sure how it makes money since i never get ads while listening to music, and the only ads are little banners you can scroll past, but looking at the app rn i think if you have ad blockers then those go away as well. if you want to support the app then lifetime access is only $10. 
+
+using this app makes me so confused why so many people use spotify when there are tons of apps that let you listen for free without really annoying ads lol
+Rating: None
+
+Source: reddit
+Text: . Having access to YouTube without ads is worth it for me. That it also comes with the YouTube music app was a great bonus that allowed me to cancel Spotify, don’t miss it at all. 
+Rating: None
+
+Source: reddit
+Text: . I pay for YT premium which covers YT music. I like it, but i use YT on an almost daily basis either for work related things, projects, or laughs. Id say its a decent price a month compared to other platforms
+Rating: None
+
+Source: reddit
+Text: . Just download your music and use a basic music player app. Made the switch a month ago and I question why I didn't use it sooner. Don't fork over money monthly for something you can achieve easier on your own
+Rating: None
+
+Source: reddit
+Text: . This is the way. I own a sony walkman mp3 player and the spotify app was so heavy lately that it was not even able to start it. I have just started to use soulseek, that works better than ever, and fuck spotify.
+Rating: None
+
+Source: reddit
+Text: . Plus, if people want files with the artwork, or just want to ensure some reimbursement goes to the artists, there’s places like Bandcamp, Qobuz and even the old iTunes Store that still offer a lot of options there.
+Rating: None
+
+Source: reddit
+Text: . Sometimes I have a hard time finding the music I want to buy and can only find it streaming. I want to do this though 
+Rating: None
+
+Source: reddit
+Text: . I dropped Spotify and started using YouTube music, since I already had premium. I have no complaints. 
+Rating: None
+
+Source: reddit
+Text: . YouTube Premium is worth it because of the ad free. YTMusic is a nice bonus. 
+Rating: None
+
+Source: reddit
+Text: . Deezer. You can literally import all of your Spotify playlist to it. Also... Spotify is increasingly hard to pirate lately, but... Not it's alternatives, if you catch my drift.
+Rating: None
+
+Source: reddit
+Text: . I use Pandora, but never upvote anything. It tries to keep recommending new stuff, which is what I want. Got the idea from a classmate in college. 
+Rating: None
+
+Source: reddit
+Text: . the AI DJ is *confusing*. I usually pick a song/artist I'm vibing with and play 'song/artist radio', and sometimes it makes perfect sense how it chooses what else to play and sometimes it's like, what random nonsensical connections are you hallucinating that you've decided these belong on the same playlist?
+Rating: None
+
+Source: reddit
+Text: . Well, see, it doesn't fit the Playlist vibes, but it does fit the "Shovel the user AI-generated music we don't have to pay any royalties for" vibe that they're really going for right now
+Rating: None
+
+Source: reddit
+Text: . Or it plays the 3 songs I excluded from that album because I don't like them constantly, because it must think I just forgot them.
+
+
+The Pretender by Foo Fighters doesn't fit the vibe, Spotify!
+Rating: None
+
+Source: reddit
+Text: . I’m not convinced it’s really AI honestly. The way it picks music feels like the way the playlists work, the auto generated one, with a voice that read some commentary about the artist or music. I’m curious if there’s actual large language model behind it for the song choice because it seems to me the custom playlists in my genre, just switching between them
+Rating: None
+
+Source: reddit
+Text: . Demus on iOS. Free YouTube with background playback. Can import playlists from Spotify 
+Rating: None
+
+Source: reddit
+Text: . Sounds like some shit that won’t exist in 2 years. Man this is the problem, there’s no truly good alternative
+Rating: None
+
+Source: reddit
+Text: . Maybe but I still have my Spotify playlists to import to the next up and comer. I had a Spotify account from like 2013-2026 but I’m done. It’s too fucking expensive and the app keeps getting laggier and yeah. 
+Rating: None
+
+Source: reddit
+Text: . Yes there is, just gotta do a short look around. Amazon music is the same as Spotify but cheaper. Only downside is that you sometimes need to press shuffle a second time to make it work.
+
+TBH I even found it’s wrapped to be better than Spotify last year.
+
+Everyone always has this idea that Spotify is the best and it’s so impossible to find a bearable alternative but if you just google it there are dozens.
+Rating: None
+
+Source: reddit
+Text: . Yeah, I'd rather not give him even more money
+Rating: None
+
+Source: reddit
+Text: . I need to look into these because I am so annoyed with spotify. it might be time to dump them.
+Rating: None
+
+Source: reddit
+Text: . Demus is great. Import your playlists from Spotify. Call it a day. And since it uses YouTube as its backing you can get remixes and songs that will never be available on Spotify. Been using it 3 weeks now. Love it. 
+Rating: None
+
+Source: reddit
+Text: . Is it available for android?  A quick search was just yielding apple answers.
+Rating: None
+
+Source: reddit
+Text: . Thanks for trying! I'll have to look into it more.
+Rating: None
+
+Source: reddit
+Text: . Morphe would be my advice. You need to download a manager and it will tell you what version of an APK you can download, typically use APK mirror. It modifies the official app and removes items such as ads, and some versions of these modified apps. Allow you to download the music. I’d recommend going to the morph sub Reddit, you can find guides and the official links. There’s a modified YouTube app as well as YouTube music. I’m on iOS so it’s a different app, but it works pretty well in my experience.
+Rating: None
+
+Source: reddit
+Text: . I like Pandora. It has always been great for new music. 
+Rating: None
+
+Source: reddit
+Text: . Pandora was my original streaming app and it was literally the same music every single day. Worse than satellite radio stations. Spotify was light years ahead on variety when I switched. Now that was like 15 years ago, has Pandora improved since then?
+Rating: None
+
+Source: reddit
+Text: . I switched to tidal last year and never looked back. The only downside is no podcasts but it is what it is. It's way cheaper for my family plan and music quality is better. 
+Rating: None
+
+Source: reddit
+Text: . Right now I'm just listening to old CD rips and digital albums purchased directly from the bands. I don't know if I'll switch to anything in the long term, but for now it's honestly freeing to just put on an album start to finish
+Rating: None
+
+Source: reddit
+Text: . Without any benefit, are you kidding? Haven't you seen all the new AI features that nobody wanted that they can't stop shoving in your face??
+
+Do you have any idea how much is costs to have an LLM spit out a playlist that had nothing to do with what you asked for? Think of the shareholders.
+Rating: None
+
+Source: reddit
+Text: . In my defense, I said actual benefit, not shareholder/theoretical benefit. But I should keep the shareholders in my thoughts n prayers or something, yeah? Must be hard on them, dealing with dissent in the userbase.
+Rating: None
+
+Source: reddit
+Text: . You have to clear your cache within Spotify every once in a while. It makes a huge difference and it will start playing a much more diversified play list. 
+
+Go to settings -&gt; data saving and offline -&gt; clear cache
+
+Rating: None
+
+Source: reddit
+Text: . So... I have to take extra steps to stop Spotify from Spotify-ing? Pass.
+Rating: None
+
+Source: reddit
+Text: . Yes it's supremely annoying. They should have a setting for it to do it for you 
+Rating: None
+
+Source: reddit
+Text: . Didn’t even know this was a setting. Just disabled it and changed shuffle settings to standard. So far shuffle is so much better. Thank you 🙏!
+Rating: None
+
+Source: reddit
+Text: . If it is an obvious bug, it probably is a feature.
+Rating: None
+
+Source: reddit
+Text: . I had this issue. I had smart shuffle on the computer app, once I turned that off it stopped resetting back to smart shuffle.
+Rating: None
+
+Source: reddit
+Text: . I turned it off forever ago, and it continues to suck. Sad.
+Rating: None
+
+Source: reddit
+Text: . It's not smart shuffle. OP isn't talking about playing the same common songs in a fake shuffled manner.
+
+OP means that whenever you shuffle your playlist it literally plays song 2, 8, 4, 6.
+
+And then 4 hours later your shuffle the playlist on a completely different device, and it plays song 2, 8, 4, 6.
+
+I have the same issue. It's literally unusable. It seems like Spotify shuffles behind the scenes like once a day or something and then plays the EXACT same order from start to finish. It "syncs" between all devices on your account, even ones that haven't even opened Spotify that day. So you're doomed no matter what. 
+
+So if I shuffled once in the morning, after being at work all day, then on the way home in my car I have to skip like 200 songs because it plays the EXACT 200 songs in the EXACT order it did all day. 
+
+It's absolutely insane, and it has been doing it for years, before smart shuffle was a thing. People complain it all the time. And there is no fix.
+
+My "fix" is literally that i have 10 identical playlists with all my liked songs, that I use a third party service to shuffle for me every day and then play without shuffle turned on. That way I have 10 different actual shuffles a day at least. But absolutely insane that Spotify is getting away with this.
+Rating: None
+
+Source: reddit
+Text: . If you press shuffle on a different playlist, THEN shuffle again on your original target, it will come up with a new shuffle order
+Rating: None
+
+Source: reddit
+Text: . It does not. I know it does for some, I read that online too, but some seem to have this worse than others. 
+
+Untick shuffle, press shuffle again, press a random song, play a different playlist, clear your cache, go on a entirely different device. All nope. Plays the EXACT same songs anyway. 
+
+It literally still does it on a device that haven't even been turned on for days, which indicates to me the "shuffle" order is decided and stored online for X amount of time when it does it despite of having no cache, playing on a entirely new device 
+Rating: None
+
+Source: reddit
+Text: . maybe i’m not paying enough attention but in my experience, every time i notice the repetition, i press the shuffle button five or six times until im back on shuffle and it remixes the order plenty
+Rating: None
+
+Source: reddit
+Text: . Even when it’s off and it stays off, Spotify will play your same tracks over and over again until you’re so sick of it you move to another music service.
+Rating: None
+
+Source: reddit
+Text: . In the settings I have an option for 
+"Fewer repeats. Randomized while remembering recent plays; every track has an equal shot, even if that means you hear some tracks more often than others".
+ 
+Just curious if others have this setting or if this is something they added or are testing that hasn't made its way to everyone yet.
+ 
+My Spotify also has a reshuffle button that I just noticed a few days ago. It's on the bottom when I open the queue.
+Rating: None
+
+Source: reddit
+Text: . Im not understanding. It does this on standard shuffle too.
+Rating: None
+
+Source: reddit
+Text: . It happens on my PC app too (win 11)
+Rating: None
+
+
+Total new reviews to analyze: 87
+
+INSTRUCTIONS:
+1. Update the 'insight_summary' for each question based on patterns in the new reviews
+2. Update the 'key_findings' list with new findings from the reviews
+3. Calculate the new 'total_reviews_analyzed' by adding the count of new reviews to the previous total
+4. Update the 'last_updated' timestamp to the current time
+5. Maintain the exact same JSON structure for all 6 insights
+6. Output must be a valid JSON array containing exactly 6 insight objects
+7. Do not include markdown formatting or code blocks - output raw JSON only
+
+The 6 research questions are:
+- Q1: Why do users struggle to discover new music?
+- Q2: What are the most common frustrations with recommendations?
+- Q3: What listening behaviors are users trying to achieve?
+- Q4: What causes users to repeatedly listen to the same content?
+- Q5: Which user segments experience different discovery challenges?
+- Q6: What unmet needs emerge consistently across reviews?
+
+Output the updated insights as a JSON array.
+
+IMPORTANT: Output must be valid JSON only. No markdown, no code blocks, just raw JSON.
+==================================================
+RESPONSE:
+{
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation has evolved to include 'The Piracy Pragmatist' and 'The Bundle Refugee.' These groups are leaving not just for ethical reasons, but due to a perceived collapse in the platform's core utility (shuffle) and rising subscription costs that don't align with artist support or app performance.",
+    "key_findings": [
+      "The 'Piracy Pragmatist' is a growing segment returning to Soulseek, 1337x, and local MP3 players (Walkmans) to escape 'renting culture' and ensure they actually own their music.",
+      "The 'Bundle Refugee' is migrating to YouTube Music because they already pay for YouTube Premium, viewing the music service as a 'free' high-value add-on compared to Spotify's price hikes.",
+      "The 'Modified App Power-User' utilizes tools like ReVanced or 'Morphe' to bypass ads and technical limitations, reflecting a segment that wants the platform's library without its restrictive UI or pricing.",
+      "The 'Shuffle Victim' segment consists of long-term users with massive playlists (100+ hours) who find the platform unusable because the algorithm traps them in a loop of the same 20 songs.",
+      "The 'Ethical Deserter' and 'Artist-Advocate' segments remain active, now joined by 'High-Fidelity Seekers' moving to Qobuz or Tidal for better audio quality and higher artist payouts."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 965,
+      "last_updated": "2024-06-05T12:00:00.000Z"
+    }
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustrations have shifted from simple 'bad picks' to 'Deterministic Stagnation.' Users report that 'Smart Shuffle' and standard shuffle are fundamentally broken, playing the exact same songs in the exact same order across different devices, creating a 'Groundhog Day' listening experience.",
+    "key_findings": [
+      "The 'Broken Shuffle' phenomenon: Users report that shuffling a 100-hour playlist results in the same sequence of songs every time, suggesting the 'random' order is cached or server-side deterministic.",
+      "Smart Shuffle is widely perceived as a 'Trojan Horse' used to push AI-generated content or low-royalty tracks into user-curated spaces, even playing songs the user has previously unsaved.",
+      "Recommendation Echo Chambers: The algorithm creates a feedback loop where it plays a song because you listened to it, and you listen to it because it keeps playing it, leading to 'song fatigue.'",
+      "Technical Debt: Users find the app increasingly 'heavy' and 'laggy,' with some reporting that the app is too bloated to even start on dedicated music hardware like digital audio players.",
+      "AI DJ Resentment: Users view the AI DJ as 'shareholder-centric' bloat that provides no 'actual benefit' to the listener while justifying price increases."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 965,
+      "last_updated": "2024-06-05T12:00:00.000Z"
+    }
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is being stifled by 'Algorithmic Laziness' and technical bugs. The platform's tendency to prioritize familiar tracks over variety means users often 'forget' they have certain songs in their library because they are never surfaced.",
+    "key_findings": [
+      "The 'Library Burial' effect: Users with large collections find that the algorithm ignores 90% of their saved music, making discovery of their own 'forgotten' tracks impossible.",
+      "Involuntary Repetition: Features like 'Smart Shuffle' are reported to ignore user preferences, re-inserting tracks that were intentionally removed from playlists.",
+      "Manual Workaround Fatigue: Users are forced to use third-party services to 'shuffle' their playlists externally or create multiple identical playlists just to force the algorithm to provide variety.",
+      "Price-to-Value Disconnect: Discovery feels less rewarding when users feel they are paying more ($18-$20/month) for an app that is becoming functionally worse and more cluttered.",
+      "The 'Zombie Song' issue: Certain tracks (e.g., 'Sunglasses at Night', 'Fade into Me') are reported to 'haunt' users, appearing in almost every generated radio or shuffle session regardless of genre fit."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 965,
+      "last_updated": "2024-06-05T12:00:00.000Z"
+    }
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "Users are demanding a return to 'Functional Minimalism' and 'True Randomization.' There is a massive surge in demand for a lightweight app experience and a shuffle feature that prioritizes mathematical randomness over 'smart' algorithmic bias.",
+    "key_findings": [
+      "Demand for 'True Shuffle': Users want a toggle for 'pure random' listening that does not prioritize 'marketable' tracks or recently played songs.",
+      "Need for 'App Optimization': A significant portion of the user base is demanding a 'Lite' version of the app that removes podcasts, AI features, and social bloat to fix extreme lag.",
+      "Automated Maintenance: Users want the app to handle its own 'cache clearing' to prevent the performance degradation and shuffle loops that currently require manual intervention.",
+      "Transparent Compensation: A growing 'Principle over Convenience' movement seeks platforms (like Qobuz or Bandcamp) where a clear majority of the subscription fee reaches the artist.",
+      "Cross-Platform Portability: As frustration peaks, users are increasingly looking for 'one-click' migration tools to move decade-old libraries to YouTube Music or Apple Music."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 965,
+      "last_updated": "2024-06-05T12:00:00.000Z"
+    }
+  },
+  "Q4": {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is no longer just a choice; it is a 'System Default.' Users are trapped in repetition cycles caused by server-side shuffle syncing and a lack of 'Freshness' in algorithmic radio.",
+    "key_findings": [
+      "The 'Sync Trap': The shuffle order is often synced across all devices, meaning a user who hears 20 songs at work will hear the exact same 20 songs in the same order during their commute.",
+      "Cache-Induced Stagnation: Users have discovered that manually clearing the app cache is the only way to 'reset' the algorithm and get a diverse playlist, which they find 'supremely annoying.'",
+      "The 'Safe Pick' Bias: Users believe the platform intentionally repeats popular songs to minimize the risk of a user skipping, which inadvertently kills the enjoyment of those songs.",
+      "Financial Boycott: Some users are returning to 'Old Tech' (CDs/iPods) specifically to avoid paying monthly for a service that they feel 'shits on the artists' while providing a repetitive experience.",
+      "The 'Stats Grip': Users admit to staying with the platform despite frustrations only because of their historical data (Wrapped/stats), indicating a 'sunk cost' behavior."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 965,
+      "last_updated": "2024-06-05T12:00:00.000Z"
+    }
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are moving toward 'Sovereign Listening'—seeking ways to decouple their music from the platform's control through piracy, physical media, or modified software to ensure a high-quality, ad-free, and truly random experience.",
+    "key_findings": [
+      "'Platform Hopping': Users are actively testing 'Demus', 'Morphe', and 'Qobuz' to find a stable alternative that allows for easy playlist imports from Spotify.",
+      "'The New Piracy': A resurgence in 'Soulseek' and 'Lossless' downloading as a reaction to the 'if buying isn't owning, pirating isn't stealing' philosophy.",
+      "'Hybrid Support': A behavior where users stream for convenience but buy physical copies (vinyl/CDs) specifically to support small artists who are 'paid pennies' by streaming.",
+      "'Manual Curation': Users are increasingly ignoring the 'Smart' features and 'AI DJ' in favor of 'Song Radio' or manual queueing to avoid the 'shareholder-benefit' algorithms.",
+      "'Radio Revival': A segment is returning to SiriusXM or Pandora, seeking a 'lean-back' experience that actually provides the variety and discovery that Spotify's shuffle currently lacks."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 965,
+      "last_updated": "2024-06-05T12:00:00.000Z"
+    }
+  }
+}

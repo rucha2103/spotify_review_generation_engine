@@ -8,39 +8,33 @@ Build a backend system that maintains a persistent state of 6 specific research 
 
 ---
 
-## Phase 1: Database Setup & Models
+## Phase 1: JSON Storage Setup
 **Priority: HIGH** | **Dependencies: None**
 
-### 1.1 Database Schema Design
-- **PostgreSQL** as the primary database
-- Two main tables:
-  - `raw_reviews`: Stores scraped reviews
-  - `insights_state`: Stores the 6 JSON insight objects
+### 1.1 Storage Design
+- **JSON file storage** as the primary storage mechanism
+- Two main JSON files:
+  - `data/insights.json`: Stores the 6 JSON insight objects
+  - `data/reviews.json`: Stores scraped reviews
 
-### 1.2 SQLAlchemy Models (`models.py`)
+### 1.2 JSON Storage Service (`json_storage.py`)
 ```python
-# RawReview Model
-- id: Integer (Primary Key, Auto-increment)
-- source: String (Enum: 'app_store', 'google_play', 'reddit')
-- review_text: Text
-- created_at: DateTime (Default: current timestamp)
-- rating: Integer (Optional, for app stores)
-
-# InsightState Model
-- question_id: String (Primary Key) - Values: Q1-Q6
-- json_content: JSONB (Stores the complete JSON object)
-- updated_at: DateTime (Default: current timestamp, on update)
+# JSONStorage Class
+- load_insights(): Load insights from JSON file
+- save_insights(): Save insights to JSON file
+- load_reviews(): Load reviews from JSON file
+- save_reviews(): Save reviews to JSON file
+- append_reviews(): Append new reviews to existing file
+- initialize_insights(): Initialize with 6 research questions
 ```
 
-### 1.3 Database Initialization Script
-- Create `init_db.py` to initialize the database
+### 1.3 Storage Initialization Script
+- Create `json_storage.py` to initialize JSON storage
 - Seed initial 6 insight records with empty/default JSON structures
-- Handle database connection and session management
+- Handle file creation and validation
 
 ### 1.4 Deliverables
-- `models.py` - SQLAlchemy model definitions
-- `init_db.py` - Database initialization script
-- `database.py` - Database connection configuration
+- `json_storage.py` - JSON storage service
 
 ---
 
@@ -92,6 +86,15 @@ Build a backend system that maintains a persistent state of 6 specific research 
 - `google_play_scraper.py` - Google Play Store scraper
 - `reddit_scraper.py` - Reddit scraper
 - `preprocessor.py` - Review filtering and deduplication logic
+- `file_reader_service.py` - Alternative file-based data reader (for manually scraped data)
+
+### 2.6 Alternative Data Source: File-Based Reading
+- **Purpose**: Read manually scraped data files instead of live scraping
+- **Location**: `Data from scraping` folder
+- **File Types**: JSON files (App Store, Reddit, Google Play formats)
+- **Workflow**: When generate insights is called, read files one by one from the folder
+- **Parsing**: Automatic detection of file type and format conversion to standard review structure
+- **Preprocessing**: Same filtering logic applies (word count, deduplication)
 
 ---
 
@@ -168,11 +171,11 @@ Logic:
 - **Purpose**: Trigger the full refresh workflow
 - **Workflow**:
   1. Fetch current insights from DB
-  2. Trigger async scraping (3 sources)
+  2. Read files from 'Data from scraping' folder (file-based approach)
   3. Store new reviews in `raw_reviews`
   4. Call `analysis_service.update_insights()`
   5. Return refreshed insights
-- **Response**: Updated list of 6 JSON objects
+- **Response**: Updated list of 6 JSON objects with metadata (total_reviews_analyzed, last_updated)
 - **Timeout**: 60 seconds (async execution)
 
 #### 4.2.3 GET /health (Optional)
@@ -222,6 +225,13 @@ Each card displays:
 ### 5.5 Deliverables
 - `frontend.py` - Streamlit application
 - `styles.css` - Custom styling (optional)
+
+### 5.6 Deployment Considerations
+- **Netlify Deployment**: Streamlit requires Python runtime. For Netlify deployment:
+  - Option 1: Deploy Streamlit on Streamlit Cloud, API on separate server
+  - Option 2: Use Netlify Functions with Python runtime (experimental)
+  - Option 3: Convert to static frontend (React/Vue) and deploy on Netlify
+- **API URL**: Configure `API_URL` in frontend to point to deployed backend
 
 ---
 

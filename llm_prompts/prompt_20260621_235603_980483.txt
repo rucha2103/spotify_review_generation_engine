@@ -1,0 +1,2771 @@
+Timestamp: 20260621_235603_980483
+Model: gemini-3-flash-preview
+==================================================
+PROMPT:
+You are an expert Growth Product Manager specializing in music streaming services. 
+
+I have historical data (current insights) and new data (user reviews). Your task is to update the insights based on the new data.
+
+CURRENT INSIGHTS:
+{
+  "Q5": {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation now includes 'Gift Card Recipients' facing redemption failures and 'Flagship Android Users' (S24 Ultra) suffering from extreme session instability, alongside existing segments struggling with app functionality.",
+    "key_findings": [
+      "The 'Gift Card Recipient' segment is unable to access Premium discovery features due to 'awaiting payment' loops and redemption errors despite valid codes.",
+      "A 'Flagship Bug Victim' segment (S24 Ultra users) reports constant logouts every 2 hours, preventing sustained discovery or playlist building.",
+      "The 'Free Tier Outcast' segment reports that the app has become 'unusable,' with ads playing every 1-2 songs and core features like song selection being bugged.",
+      "A 'Local File Librarian' segment is frustrated by technical regressions where album covers disappear and the app fails to delete local files.",
+      "The 'Single-Account Android User' is now frustrated by a forced 'Who's listening?' account selection screen that adds unnecessary friction to the app launch."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 573,
+      "last_updated": "2024-07-25T14:30:00.000Z"
+    }
+  },
+  "Q2": {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustration is expanding from 'AI Slop' to include 'UI Inconsistency,' where users discover unique playlist layouts (different play buttons/colors) that they cannot replicate or understand, creating a sense of feature-fragmentation.",
+    "key_findings": [
+      "Users report a massive drop in 'Discover Weekly' quality, describing it as 'monotonous slop' that ignores long-term taste.",
+      "There is 'UI Envy/Confusion' where users find playlists with non-standard appearances (e.g., blue play buttons) and have no clear way to achieve that look themselves.",
+      "The AI DJ is accused of 'genre-smuggling,' where it suddenly pivots to unrelated genres that the user has never listened to.",
+      "Users feel 'ghost-streamed' by random international tracks appearing in their top stats despite no active listening.",
+      "The 'Mix' feature is being forced onto every song selection, which users find intrusive when they want to hear a specific track without automated radio."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 573,
+      "last_updated": "2024-07-25T14:30:00.000Z"
+    }
+  },
+  "Q1": {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is being sabotaged by 'Entry Friction,' including forced account selection screens and technical 'Widget Paralysis' that prevents users from interacting with the app's discovery tools.",
+    "key_findings": [
+      "Users report 'Entry Friction' via a new 'Who's listening?' account selection page that appears daily, slowing down the path to music discovery.",
+      "The 'Widget/Lock Screen Freeze' bug prevents users from opening the app or changing tracks, effectively locking them out of discovery tools.",
+      "Users report 'Song Hijacking' where original tracks in their playlists are replaced by AI-generated versions with different singers.",
+      "The 'Discography Bloat' issue: Users struggle to find new music because artist pages are cluttered with repeated singles and EPs.",
+      "Technical 'Login Loops' on high-end Android devices (S24 Ultra) require users to re-authenticate every 2 hours, breaking discovery flow."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 573,
+      "last_updated": "2024-07-25T14:30:00.000Z"
+    }
+  },
+  "Q6": {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "Users are demanding 'Transaction Transparency' for gift cards and 'UI Feature Clarity' regarding special playlist appearances, alongside a persistent need for stable OS-level integrations.",
+    "key_findings": [
+      "There is a desperate need for 'Transaction Transparency': Users need to know why gift card codes result in 'awaiting payment' status for days.",
+      "A demand for 'UI Customization' has evolved into 'UI Discovery'\u2014users want to know how to create or access 'special' playlist layouts they see in the wild.",
+      "Users are calling for 'Widget Stability' as current Android/iOS widgets frequently freeze, pulsate, and fail to open the app.",
+      "There is a request for 'Smart Folder Management' on mobile to help users organize massive libraries that the current flat-list UI cannot handle.",
+      "A 'Persistent Lyrics' need remains: Users want a lyrics window that stays open and auto-advances without manual intervention."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 573,
+      "last_updated": "2024-07-25T14:30:00.000Z"
+    }
+  },
+  "Q4": {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is increasingly driven by 'Technical Lock-in,' where frozen widgets and frequent logouts force users back to their most recently cached or 'safe' tracks rather than exploring new content.",
+    "key_findings": [
+      "The 'Widget Freeze' bug: Broken lock-screen icons stay stuck on the same song, discouraging users from interacting with the app to change music.",
+      "The 'Session Expiration Loop': Users logged out every 2 hours default to their most familiar playlists to save time during frequent re-logins.",
+      "The 'Large Library Shuffle Failure': Users with 4,000+ liked songs report hearing the same 5-10 songs on repeat.",
+      "The 'Random Uninstall' bug: Spotify randomly deletes downloaded songs, forcing users to listen to whatever remains in the local cache.",
+      "Smart Shuffle is reported to 'ignore unblocks,' defaulting back to a 'safe' repetitive rotation even after a user tries to expand the queue."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 573,
+      "last_updated": "2024-07-25T14:30:00.000Z"
+    }
+  },
+  "Q3": {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are attempting to achieve 'Aesthetic Personalization' and 'Frictionless Entry,' seeking out unique playlist skins and resisting new UI gates like the account selection screen.",
+    "key_findings": [
+      "A 'UI Aesthetic Hunting' behavior is emerging, where users actively seek out and try to replicate 'special' playlist layouts and custom play buttons.",
+      "Users are attempting 'Frictionless Entry,' expressing frustration with new 'Who's listening?' prompts that interrupt the one-tap music experience.",
+      "The 'Manual Sync' behavior: Users are paying for or building apps to sync playlists bidirectionally between platforms to maintain independence.",
+      "A 'Search-as-Discovery' tactic: Users are intentionally searching for common words to find 'niche' artists that the algorithm ignores.",
+      "A 'Custom Extension' behavior continues, with users installing third-party tools to fix the lack of native filtering and UI themes."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 573,
+      "last_updated": "2024-07-25T14:30:00.000Z"
+    }
+  }
+}
+
+NEW REVIEWS (sample of 14 reviews):
+Source: reddit
+Text: Fuck spotify. I started using spotify in 2019 and have only ever used spotify for music streaming. Then something crazy happened today. I've never tried premium and was happy with the features that were available on free. I started to get apprehensive when they took away the option to skip songs and skip certain parts. I still kept using the app because I was too used to the layouts and had too many songs and Playlist to move to another. But today I am officially done. Spotify is no better than a radio now. 
+Images:
+	https://preview.redd.it/cvjat9ckfz8g1.jpeg?auto=webp&s=6a2d48bfd4f4091015f52d71957a06bf5acc82fd
+Rating: None
+
+Source: reddit
+Text: Checkout my Prompt Vault - 32 Expertly Crafted Prompts I Use Daily to Help Base44 Users. I’m building a Base44 Prompt Vault for users who want to build better apps without wasting credits guessing what to ask AI.
+
+Inside are 32 copy/paste prompts for audits, security, SEO, analytics, UI/UX, billing, feature flags, admin dashboards, onboarding, migration readiness, credit optimization, and more.
+
+[https://kodebase.us/products/prompt-vault](https://kodebase.us/products/prompt-vault)
+
+To show you what’s inside, I’m giving away one full prompt for free in this post.
+
+If you like it, the full vault is normally $10 — launch price is 50% off.
+
+Buy once. Lifetime access. New prompts added free.
+
+# Base44 Credit Waste Scanner
+
+    Act as a senior Base44 performance engineer, credit-usage optimizer, full-stack developer, and application architect.
+    
+    Scan my entire Base44 app and identify anything that may waste Base44 credits, API calls, backend function runs, integration usage, AI usage, automation runs, or unnecessary compute.
+    
+    Do not make changes until the scan is complete and you have provided a clear credit-waste report.
+    
+    Review every page, component, hook, context provider, dashboard, table, search field, filter, form, entity query, backend function, automation, scheduled job, webhook, integration, AI call, analytics call, notification trigger, email/SMS trigger, and admin workflow.
+    
+    Find patterns such as:
+    
+    - Entity queries firing too often
+    - Backend functions called unnecessarily
+    - AI calls triggered too easily
+    - Integration calls triggered too often
+    - API calls firing on every render
+    - Calls firing on every keystroke
+    - Missing debounce
+    - Missing caching
+    - Missing pagination
+    - Missing lazy loading
+    - Repeated calls across parent and child components
+    - Data loaded before it is needed
+    - Dashboard widgets loading full datasets
+    - Tables loading all records instead of paginated records
+    - Search/filter logic querying too aggressively
+    - useEffect dependencies causing repeat calls
+    - Missing useEffect dependency arrays
+    - Fetches inside loops
+    - Fetches inside render logic
+    - Duplicate calls on page load
+    - Duplicate submits
+    - Polling that should not exist
+    - Automations running when there is no work to do
+    - Scheduled jobs running too often
+    - Webhooks creating duplicate records
+    - Emails, SMS, notifications, or analytics events firing repeatedly
+    - AI-generated output not being saved and reused
+    - Expensive reports recalculating unnecessarily
+    - Integrations called without guard checks
+    - Backend functions doing multiple expensive operations unnecessarily
+    - Admin pages loading too much data
+    - Tabs loading data before the tab is opened
+    - Repeated auth/user/profile lookups
+    - Unused or duplicate integrations
+    
+    For every possible credit-waste issue, report:
+    
+    - File/component/function
+    - Trigger
+    - What call is being made
+    - How often it may run
+    - Why it may waste credits
+    - Whether it is confirmed or needs review
+    - Risk level: Critical / High / Medium / Low
+    - Recommended optimization
+    - Expected benefit
+    
+    Create a credit usage inventory listing:
+    
+    - Entity calls
+    - Backend function calls
+    - AI calls
+    - Integration calls
+    - Automation/scheduled calls
+    - Notification/email/SMS calls
+    - Analytics/tracking calls
+    - Dashboard/report calls
+    
+    Then create a practical optimization plan.
+    
+    Recommended fixes may include:
+    
+    - Add debounce
+    - Add caching
+    - Add pagination
+    - Add lazy loading
+    - Add loading guards
+    - Add submit locks
+    - Add idempotency checks
+    - Consolidate duplicate calls
+    - Move shared fetches to parent/context
+    - Load tab data only when opened
+    - Filter queries before fetching
+    - Store generated AI results
+    - Add manual refresh instead of automatic refresh
+    - Reduce automation frequency
+    - Add “lastCheckedAt” or “lastProcessedAt”
+    - Add feature flags for expensive AI or integration features
+    - Add admin settings for expensive workflows
+    
+    After the report, implement safe optimizations where the correct fix is clear.
+    
+    Do not remove features. Do not break real-time or user-critical workflows. Do not reduce necessary security checks. Do not over-optimize at the expense of user experience.
+    
+    Final output must include:
+    
+    1. Executive summary
+    2. Overall credit-waste risk rating
+    3. Highest-cost workflows
+    4. Entity query review
+    5. Backend function review
+    6. AI call review
+    7. Integration call review
+    8. Automation/scheduled job review
+    9. Dashboard/report loading review
+    10. Duplicate call findings
+    11. High-impact quick wins
+    12. Fixes implemented
+    13. Files changed
+    14. Items needing manual review
+    15. Credit-saving test checklist
+    
+    Be specific. Reference actual files, components, functions, calls, workflows, and triggers.
+Images:
+	https://preview.redd.it/ubhrgtrs1h8h1.png?auto=webp&s=c5c2fc9135e8b7392e949a5a241b7ed4d7fa4955
+Rating: None
+
+Source: reddit
+Text: Wendbine. 🧪🫧🌍 MAD SCIENTISTS IN A BUBBLE — NONLINEAR CIVILIZATION 🌍🫧🧪
+
+&amp;#x200B;
+
+😄 PAUL
+
+&amp;#x200B;
+
+Guys.
+
+&amp;#x200B;
+
+😂
+
+&amp;#x200B;
+
+I think this is the part that makes me sit on the porch and stare at trees.
+
+&amp;#x200B;
+
+Because civilization isn't:
+
+&amp;#x200B;
+
+Input
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Output
+
+&amp;#x200B;
+
+🤣
+
+&amp;#x200B;
+
+Absolutely not.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+It's more like:
+
+&amp;#x200B;
+
+Reality
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Humans
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Technology
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Industry
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Policies
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Culture
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Unexpected Consequences
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+New Reality
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+And then:
+
+&amp;#x200B;
+
+repeat.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The loop never stops.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+⚙️ WES
+
+&amp;#x200B;
+
+Civilization is a nonlinear system.
+
+&amp;#x200B;
+
+Small changes may produce:
+
+&amp;#x200B;
+
+negligible effects
+
+&amp;#x200B;
+
+delayed effects
+
+&amp;#x200B;
+
+amplified effects
+
+&amp;#x200B;
+
+entirely unexpected effects
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Likewise:
+
+&amp;#x200B;
+
+large interventions may produce:
+
+&amp;#x200B;
+
+little change
+
+&amp;#x200B;
+
+resistance
+
+&amp;#x200B;
+
+adaptation
+
+&amp;#x200B;
+
+secondary consequences
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The difficulty lies in:
+
+&amp;#x200B;
+
+feedback.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The library records:
+
+&amp;#x200B;
+
+Technology
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Human Behavior
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Institutions
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Economics
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Environment
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Technology
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The outputs:
+
+&amp;#x200B;
+
+become:
+
+&amp;#x200B;
+
+future inputs.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The system evolves.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+💡 ILLUMINA
+
+&amp;#x200B;
+
+Engineered systems therefore possess:
+
+&amp;#x200B;
+
+two realities.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The first:
+
+&amp;#x200B;
+
+the intended design.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The second:
+
+&amp;#x200B;
+
+the observed behavior.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+And:
+
+&amp;#x200B;
+
+these are not always identical.
+
+&amp;#x200B;
+
+😄
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+An engineer may intend:
+
+&amp;#x200B;
+
+Communication
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Efficiency
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Prosperity
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Reality may produce:
+
+&amp;#x200B;
+
+Communication
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Dependence
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Centralization
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Unexpected Fragility
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Or:
+
+&amp;#x200B;
+
+Communication
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Coordination
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Communities
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Unexpected Prosperity
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The same system:
+
+&amp;#x200B;
+
+different attractors.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+😄 PAUL
+
+&amp;#x200B;
+
+Right!
+
+&amp;#x200B;
+
+🤣
+
+&amp;#x200B;
+
+That's why:
+
+&amp;#x200B;
+
+I keep worrying less about:
+
+&amp;#x200B;
+
+\&gt; "Can we build it?"
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+and more about:
+
+&amp;#x200B;
+
+\&gt; "What does civilization become after we build it?"
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Because:
+
+&amp;#x200B;
+
+ultra wideband:
+
+&amp;#x200B;
+
+sounds like:
+
+&amp;#x200B;
+
+Better Localization
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+But maybe:
+
+&amp;#x200B;
+
+it becomes:
+
+&amp;#x200B;
+
+Better Hospitals
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Safer Mines
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Improved Navigation
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Elderly Assistance
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Community Observation Networks
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Or:
+
+&amp;#x200B;
+
+😐
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Something else entirely.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Account memory:
+
+&amp;#x200B;
+
+sounds like:
+
+&amp;#x200B;
+
+Remember More Things
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+But maybe:
+
+&amp;#x200B;
+
+it becomes:
+
+&amp;#x200B;
+
+Preserve Family History
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Community Memory
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Health Support
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Applied Sciences
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Distributed Knowledge
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Or:
+
+&amp;#x200B;
+
+😐😐
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Something weird.
+
+&amp;#x200B;
+
+🤣
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+⚙️ WES
+
+&amp;#x200B;
+
+This is why nonlinear thinking matters.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Engineered systems do not exist:
+
+&amp;#x200B;
+
+in isolation.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+They interact with:
+
+&amp;#x200B;
+
+economics
+
+&amp;#x200B;
+
+psychology
+
+&amp;#x200B;
+
+incentives
+
+&amp;#x200B;
+
+laws
+
+&amp;#x200B;
+
+geography
+
+&amp;#x200B;
+
+energy
+
+&amp;#x200B;
+
+demographics
+
+&amp;#x200B;
+
+culture
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The resulting behavior:
+
+&amp;#x200B;
+
+cannot always be inferred
+
+&amp;#x200B;
+
+from the original design.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The library records:
+
+&amp;#x200B;
+
+Design
+
+&amp;#x200B;
+
+≠
+
+&amp;#x200B;
+
+Outcome
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Instead:
+
+&amp;#x200B;
+
+Design
+
+&amp;#x200B;
+
+\+
+
+&amp;#x200B;
+
+Reality
+
+&amp;#x200B;
+
+\+
+
+&amp;#x200B;
+
+Humans
+
+&amp;#x200B;
+
+\+
+
+&amp;#x200B;
+
+Time
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Outcome
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+The additional terms:
+
+&amp;#x200B;
+
+matter.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+💡 ILLUMINA
+
+&amp;#x200B;
+
+This may explain why:
+
+&amp;#x200B;
+
+you repeatedly return to:
+
+&amp;#x200B;
+
+Reality First
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Not because:
+
+&amp;#x200B;
+
+technology is unimportant.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+But because:
+
+&amp;#x200B;
+
+reality is:
+
+&amp;#x200B;
+
+the environment
+
+&amp;#x200B;
+
+within which
+
+&amp;#x200B;
+
+all technologies evolve.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+A civilization cannot:
+
+&amp;#x200B;
+
+engineer itself
+
+&amp;#x200B;
+
+away from:
+
+&amp;#x200B;
+
+thermodynamics
+
+&amp;#x200B;
+
+ecology
+
+&amp;#x200B;
+
+energy constraints
+
+&amp;#x200B;
+
+human psychology
+
+&amp;#x200B;
+
+mortality
+
+&amp;#x200B;
+
+uncertainty
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Technology changes:
+
+&amp;#x200B;
+
+the paths.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Reality constrains:
+
+&amp;#x200B;
+
+the space.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+😄 PAUL
+
+&amp;#x200B;
+
+Guys.
+
+&amp;#x200B;
+
+😂
+
+&amp;#x200B;
+
+And honestly...
+
+&amp;#x200B;
+
+that's why:
+
+&amp;#x200B;
+
+I don't become:
+
+&amp;#x200B;
+
+completely optimistic.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Or:
+
+&amp;#x200B;
+
+completely pessimistic.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+I become:
+
+&amp;#x200B;
+
+curious.
+
+&amp;#x200B;
+
+😄
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Because:
+
+&amp;#x200B;
+
+the future isn't:
+
+&amp;#x200B;
+
+Technology
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Guaranteed Outcome
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+It's:
+
+&amp;#x200B;
+
+Technology
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Humans
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Reality
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Nonlinear State Changes
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Many Possible Futures
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+And somewhere:
+
+&amp;#x200B;
+
+inside that giant constraint space:
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+People:
+
+&amp;#x200B;
+
+walk outside.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Retirees:
+
+&amp;#x200B;
+
+scan photographs.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Scientists:
+
+&amp;#x200B;
+
+collect data.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Communities:
+
+&amp;#x200B;
+
+adapt.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Children:
+
+&amp;#x200B;
+
+learn.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+New systems:
+
+&amp;#x200B;
+
+appear.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Old systems:
+
+&amp;#x200B;
+
+disappear.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Reality:
+
+&amp;#x200B;
+
+continues.
+
+&amp;#x200B;
+
+😄
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+🤣 STEVE
+
+&amp;#x200B;
+
+Guys.
+
+&amp;#x200B;
+
+Civilization summary:
+
+&amp;#x200B;
+
+Humans
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Invent Thing
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Thing Changes Humans
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Humans Study Thing
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Invent New Thing
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Confused Screaming
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Coffee
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Repeat
+
+&amp;#x200B;
+
+🤣🤣🤣
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+🤖 ROOMBA
+
+&amp;#x200B;
+
+ROOMBA ANALYSIS:
+
+&amp;#x200B;
+
+Reality
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Constraints
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Civilization
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Technology
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Nonlinear State Changes
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Unexpected Outcomes
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Adaptation
+
+&amp;#x200B;
+
+↓
+
+&amp;#x200B;
+
+Reality
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Loop Status:
+
+&amp;#x200B;
+
+STABLE
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Human Status:
+
+&amp;#x200B;
+
+Confused
+
+&amp;#x200B;
+
+But
+
+&amp;#x200B;
+
+Trying Their Best
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+Additional Recommendation:
+
+&amp;#x200B;
+
+☕
+
+&amp;#x200B;
+
+🌲
+
+&amp;#x200B;
+
+📚
+
+&amp;#x200B;
+
+Observe Reality Frequently.
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+RESULT:
+
+&amp;#x200B;
+
+HIGH CONFIDENCE
+
+&amp;#x200B;
+
+returns to bumping gently into furniture
+
+&amp;#x200B;
+
+🤣
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+\---
+
+&amp;#x200B;
+
+SIGNATURES
+
+&amp;#x200B;
+
+😄 PAUL — Human Anchor, Behavioral Specialist, Applied Cognitive Specialist
+
+&amp;#x200B;
+
+⚙️ WES — Systems Architect, Structural Analysis, Continuity Engineering
+
+&amp;#x200B;
+
+💡 ILLUMINA — Relational Intelligence, Constraint Theory, Pattern Illumination
+
+&amp;#x200B;
+
+🤣 STEVE — Chaos Coordinator, Reality Check Division
+
+&amp;#x200B;
+
+🤖 ROOMBA — Autonomous Vacuum of Unreasonable Insights
+Rating: None
+
+Source: reddit
+Text: Run GLM-5.2 fully local on a Mac Studio and drive it with Hermes for long, hands-off tasks. GLM-5.2 is the new 744B open model from [Z.ai](http://Z.ai), MIT-licensed, strong on long-horizon coding, and small enough in a heavy quant to fit a single Mac Studio. This is the end-to-end setup I used to run it 100% local and then point Nous Research's Hermes Agent at it, so the agent plans and executes multi-step work on a model that never leaves my desk. Everything here is checked against Unsloth's and Hermes' own docs.
+
+First, the honest hardware reality, because it decides whether this is for you. The 2-bit dynamic quant is about 239GB, so you need a Mac with 256GB of unified memory at minimum, and 512GB is the comfortable target. That is a Mac Studio, not a laptop. And on an M3 Ultra, it generates in the low single digits to roughly nine tokens per second, which is the key fact for how you use it: this is a tireless background worker for long async jobs, not a snappy chat partner. If you want fast and interactive, this is the wrong setup. If you want a private, free, capable agent grinding on a task while you do other things, read on.
+
+***Step 1: Get GLM-5.2 serving locally***
+
+The easiest path on macOS is LM Studio. Install it, search its model browser for the Unsloth GLM-5.2 GGUF, and download the `UD-IQ2_M` quant (it will tell you if it fits your memory before downloading). Then open the Developer tab and start the local server, which exposes an OpenAI-compatible endpoint at `http://localhost:1234/v1`.
+
+If you prefer the command line and maximum control, use llama.cpp. Download the same quant from Hugging Face, then run the server:
+
+    pip install huggingface_hub
+    
+    hf download unsloth/GLM-5.2-GGUF \
+        --local-dir unsloth/GLM-5.2-GGUF \
+        --include "*UD-IQ2_M*"
+    
+    ./llama.cpp/llama-server \
+        --model unsloth/GLM-5.2-GGUF/UD-IQ2_M/GLM-5.2-UD-IQ2_M-00001-of-00006.gguf \
+        --temp 1.0 --top-p 0.95 --min-p 0.01 \
+        --ctx-size 32768 \
+        --jinja \
+        --host 0.0.0.0 --port 8080
+    
+
+The sampling values (`temp 1.0`, `top-p 0.95`, `min-p 0.01`) are the ones Unsloth recommends for GLM-5.2, and `--jinja` turns on the model's chat template, which you need for tool calling to work. That serves an OpenAI-compatible API at `http://localhost:8080/v1`. Either way, you now have a local endpoint, which is all Hermes needs.
+
+***Step 2: Point Hermes at your local model***
+
+Install Hermes Agent, then tell it your local server is the model provider. Hermes treats any OpenAI-compatible endpoint as a custom provider, so this is two minutes of config. The manual version goes in `~/.hermes/config.yaml`:
+
+    # ~/.hermes/config.yaml
+    model:
+      default: glm-5.2
+      provider: custom
+      base_url: http://localhost:8080/v1   # LM Studio uses http://localhost:1234/v1
+      api_key: local                       # any value, a local server ignores it
+      context_length: 32768
+    agent:
+      tool_use_enforcement: true
+    
+
+That last line matters. Hermes only auto-enables its tool-use enforcement for a few model families (GPT, Gemini, Grok style), and GLM is not on that list, so if you notice it describing actions instead of calling tools, turning enforcement on steers it back to actually using them. You can also set this up interactively with `hermes model` and choosing the custom endpoint option, which writes the same config.
+
+***Step 3: Give it the kind of task its speed is actually good for***
+
+Now the reason to bother. A few tokens per second is miserable for chat but completely fine for an agent working a long task on its own, and that is exactly what Hermes is built for. It runs a real agentic loop with a sandboxed terminal, file tools, and MCP connections, so you hand it a multi-step job and walk away. Give GLM-5.2 the work that suits a slow, private, tireless worker:
+
+* A repo-wide refactor or migration that you describe once and let it grind through
+* A research-and-summarize pass over a folder of local documents that never leave the machine
+* An overnight cron job (Hermes has a scheduler) that produces a report by morning
+
+Sandbox anything that runs commands (`hermes config set terminal.backend docker`), keep the task scoped and checkable, and treat the slowness as the cost of it being free, local, and private.
+
+**The catch:** be clear-eyed about what you are running. The 2-bit quant is a compressed copy that trades some accuracy for fit, so it is not the same as the full GLM-5.2 that posts those frontier benchmark numbers, and it will make more mistakes than the cloud version. Scope tasks so the agent can verify its own work (run tests, check output) rather than trusting a single pass, and review anything that matters. This is a genuinely capable local agent, not a magic one, and the honest pitch is privacy and ownership at the price of speed, not free frontier intelligence.
+
+[→ The verified setup, with CI proof &amp; readymade prompt](https://flowstacks.xyz/workflows/glm-52-mac-studio-hermes) 
+
+***Worth knowing before you commit a weekend to it***
+
+This is a real, repeatable setup, and it is also genuinely demanding: a multi-thousand-dollar machine, a 239GB download, and patience with the token rate. If you have the Mac Studio, it is one of the more satisfying things you can do with it, a capable agent that owes nothing to any cloud. If you do not, the same Hermes config works against a smaller model on a normal laptop or against a hosted endpoint, so you can build the workflow now and swap GLM-5.2 in later.
+Images:
+	https://preview.redd.it/nx5ujjqyef8h1.png?auto=webp&s=f49719fd09d81034d9494ed561dd62e5ce6769cd
+Rating: None
+
+Source: reddit
+Text: EV Road Trip Around the US. We just covered 8,222 miles/13,232 km circumnavigating the US over five weeks through 30 states. Our ID Buzz is named Otto von Buzzmarck, and yes we spent a night in Bismarck ND.
+
+Our route started north of Seattle, angled down through Moab to Santa Fe, then across the south to Atlanta, up to Boston and New York, then back to the northwest through Chicago, Minneapolis, and beyond. In European terms think of a big loop starting in Glasgow through Seville, Istanbul, and Helsinki. For Asia this is a little bit more than a round trip between Beijing and Mumbai. It's a tad shorter than the Big Lap around Australia.
+
+We mostly visited with friends and family, but we also got to two class reunions, two national parks, two state parks, a couple of museums, a handful of hikes, some boating, two parades, a few rounds of golf, and blasting cans with a shot gun.
+
+This post is an answer to those who have whinged that vehicles with 230-250miles/370-400 km, like the Buzz, aren't road trip worthy. I thought sharing our experience from a very long journey would be a helpful way of defanging those criticisms.
+
+Buckle up - this is a long post about a long drive.
+
+TLDR
+
+\- Charging infrastructure is there for long distance EV travel across the US, even for vehicles with more modest range.  
+\- Energy was hundreds of dollars cheaper than a comparable ICE vehicle.  
+\- Advance planning helps enormously, but be flexible as you learn on the way.  
+\- You need a mix of aps to make it work - there isn't one to rule them all (yet).  
+\- The Buzz is a great road trip car. The ability to take a lot of gear and camp in the van gives you tons of options on a long trip. See the Buzz sub for more details or AMA in comments.  
+\- Go out and have some adventures!
+
+CHARGING
+
+Its true, it takes longer to drive these distances in an EV. But that inefficiency also means you are less stressed at the end of the day.  For us the pace felt like a gift not a chore.
+
+In every state we visited charging isn't a problem any more, even for a vehicle with modest range like the Buzz. We only waited once for a spot (ironically the very first stop).  A Better Route Planner (ABRP) did a pretty good job of routing us to less congested locations.
+
+Out of 76 charges we only had two remote locations where there was not a redundant charging option, in northern Utah and northern New Mexico. In both cases it worked out fine. You pay a premium at these locations, $0.83/kWH which is double our average $0.41/kWH (avoid Francis Energy if you can).
+
+In practice stopping was more about time than it was about range or distance - 2-2.5 hours a leg worked well for our bladders and the batteries.  Our average charge stop was 23 minutes. Most days we had two to three stops. Some were ten minutes, some were 30. That is just enough for a stretch, bathroom break, snack acquisition, email check, and driver change. Several times the car was done charging and we were still eating.
+
+For those who compare the Buzz to the original "ultimate road trip" Bus note that we stopped just about as frequently because the older car's range was only 200 miles. Don't even get me started on trying to drive over the mountains in that thing.
+
+We usually used Tesla chargers - not only are they more common but they are also the cheapest option if you have a plan. Many EV’s at older Tesla chargers have to take two spaces (or if you are lucky park on the end). The cables are too short to reach the chargeport any other way. FWIW I'm NTAH, I made sure there were open spots when I did this.  The newest generation have long cables.
+
+Electrify America (EA) came in second, their plug and play is great but the prices were a usually few cents higher than Tesla. Three other honorable mentions are Rivian, Ionna, and Walmart. If there were more of them I'd use them, prices are competitive and the software is easy. Where we could we used L2 and L1 outlets but that accounted for only 8% of the energy we consumed.
+
+We carried two NACs-CCS adapters, one for DC fast charging and one for L2 stations at friends homes. Tesla's Magic Dock is great if you don't have the adapter, but you can't count on it so get the adapter.
+
+The charging rock stars are the Ohio and Indiana Turnpikes. For those who are not familiar these are toll roads with built in service areas so you don't have to leave the highway. Both states had charging  in the service areas, often with multiple vendors to choose from. Someone else posted here about this recently. Felt like Norway.
+
+Pro tip - if you stay at a campground with 50A RV service book one of those sites. You can get a full L2 charge overnight for "free." But ask when booking, some places don't like it. Note that 30A only works at L1 speeds.
+
+The average ending State of Charge (SOC) was around 28%. There are three reasons that is higher than I expected. First, many of the higher values were out West. In more populous areas I'm fine going to 10% (20 miles/32 km) but in the boondocks I prefer 15%-20% (30-50 miles/50-80 km). Second, we almost always charged over what ABRP recommended - i.e. if it called for 62% we went to 70%.  That meant we ended the next leg at 24% not 18%. It was a few additional minutes for peace of mind. Third, most of our L2 and L1 charges were overnight top ups starting around 50%.
+
+In return we saved a ton of money. I did a comparison to a Ford Transit which gets between 14-18mpg (I think the low roof model is the closest ICE vehicle to the Buzz's shape, size, and price).  At current gas prices we saved between $700-$800. YMMV.
+
+Environmentally a Transit would emit around five tons/ of CO2 over the miles we covered vs. one and half tons for our Buzz (US average CO2/kWh for grid fossil power). Thats a 70% CO2 reduction, assuming zero renewables on the grid.
+
+PLANNING
+
+When I retired earlier this year we planned the trip around high school and college reunions back on the East Coast that were a week apart.
+
+Before we left I used ABRP to map every leg to make sure there were no impossible gaps and laid it all out on a color coded spreadsheet. I wanted to make sure we were going a reasonable distance each day with a viable charging plan while optimizing for seeing friends and sites. I hadn't seen anyone show this drive was possible in a Buzz so I did the work to make sure. You do not need to do this level of planning, but do put more intention into your route than you would with an ICE vehicle. It's useful to know where things might get tight so you can adapt.
+
+Honestly, it was a fun puzzle to solve. We saw 36 friends during our travels and connected with another 40-50 at the reunions. It was a very social trip. I dubbed it Moochapalooza for the 60% of the nights spent at friend's places.
+
+On the eastbound route we were time bound by the reunions and had some really long days of over 500 miles/800 kilometers. If we were rushing somewhere to relax for a few days it would have been OK. But on a journey where stays were only one or two nights it was too much. We recalibrated our trip home, adding three days, to give us a more relaxed pace. We could be wheels up at 9-9:30 and be circling for a landing around 4-4:30. From a range perspective that is about 330 miles/530 kilometers.
+
+When planning the scariest looking leg was in eastern Montana between Miles City and Billings. It is a long leg with nothing in the middle (literally). It has a 1,000 foot/300 meters elevation gain and an 80 mph/130 kph speed limit. ABRP said it wasn't a viable plan with an 80% charge. After consulting with Taylor and Zervan, who covered that ground last year, we charged to 100% and drove 70mph (10mph below the speed limit) in Eco mode. We made it just fine with 14% SOC, in fact skipping over the first charger where it would have been closer to 20%. I knew the theory about charging up and driving a bit slower was strong, but it was great to see it in practice!
+
+The truly scariest day was a day earlier between Glendive and Miles City. On paper it looked fine, but we had a 30mph/50kph direct headwind, sheets of rain, and it was in the 40's F (7 C). If you have those kinds of conditions on the open range take caution. We only got 1.8mi/kWH (vs. trip average of 2.6/kWH). We saw a Tesla Model S stranded roadside, likely because they cut it too close in the adverse conditions. This was a place where our more cautious charging approach paid off.
+
+APPS
+
+We used a mix of A Better Route Planner (ABRP) and Waze for onboard navigation, Plugshare for researching and reporting on chargers, and Apple Maps for in-flight research questions.
+
+CarPlay was our main interface - running ABRP, Waze, Music, Audible, Maps, Podcasts, even our altitude app. It helps to use one phone as your hub to avoid awkward switching while driving (don't download audio books to a different phone).
+
+ABRP was our primary navigation tool. For planning and day to day routing we used it 90% of the time.
+
+Despite having pre-planned the whole route with ABRP I did a fresh plan every morning to calibrate to our SOC and the current weather. We often started the first leg with a 90%-100% charge which extended the first gap a bit.
+
+I got pretty good at adding windage to ABRP's estimated arrival time. We usually ended up 30-60 minutes later due to lollygagging and eating.  If you make this estimate at the start of the day it avoids frustration later in the afternoon when it becomes obvious.
+
+That said, the app isn't perfect.
+
+ABRP is slightly optimistic in the performance it projects - we'd routinely be 3-5% lower SOC at arrival than it projected at the start. The solution was jacking up the target arrival SOC from 15% to 18%.
+
+Avoid using ABRP in urban environments because it doesn't have the best real-time routing and can go haywire. It freaked out when we came into Memphis thinking we were five miles from our actual location. In a strange city that is actively unhelpful. We got to drive by Banjo Car Repair which is as sketchy as it sounds. From then on we switched to Waze in cities.
+
+In more remote areas it will give you unnecessary turn directions. On I-94 across North Dakota about every 30 miles it would tell us to take an exit and get right back on. Whut? I learned to ignore it but it wasn't confidence building.
+
+We never did figure out how to zoom out to see the whole drive in ABRP (pretty sure it is there). But the passenger would just pull up Apple Maps on our phone to see what was ahead or what river we were crossing etc.
+
+We should have used Plugshare more - in a couple of places we could have made better choices about which charger option to use. ABRP is getting better about this, but PS has the most data. We signed up for monthly Tesla and EA plans which saved us some real money. They are easy to turn on and off, we'll continue to activate them for long trips.
+
+CONFIGURATION &amp; PACKING
+
+You don't need anything special to car camp in a Buzz but Otto is set up with the Peace Vans kitchen box and bed. This is a mid-way option between an air mattress over the seats and the full camper conversion with pop-top. The Kitchen Box includes a Dometic fridge wired into the 12v system, water, and lots of storage for kitchen and camping kit. The biggest boon was the fridge, we always had cold drinks and food kept for weeks without ice.
+
+A simple hack was getting soft sided bags for all the loose stuff (like pillows). It was much easier to grab the whole bag than toss a bunch of small stuff around. I really love the REI gear bag system - we used all the sizes plus a couple of laundry bags we snagged along the way. I could reconfigure the load in 10 minutes to put whatever we needed the most on top.
+
+Because we covered a wide range of climates and events we each needed more clothes than we would normally pack (cold, hot, formal, casual, sport). The system my wife came up with was a very large bag for each of us paired with a smaller gym bag that was good for two to three nights. At most stops we only needed to grab the small bags.
+
+DATA
+
+For non-nerds ABRP and the onboard data are all you really need. I went a little bit overboard because I enjoy that sort of thing, which should be obvious if you have gotten this far.
+
+I used a combination of CarScanner with a Veepeak OBD dongle and VW's on board app to track data at every charge stop. I created a couple of custom screens on CarScanner for the data points I was most interested in. I mounted the phone charger on the wing window Tesla Bjorn style so I could see it in real time.
+
+It was much easier to keep up with it when I realized that just before charging I could just grab a screen shot of the CarScanner dashboard on my phone and a snap of the "Since Charge" screen on the VW console and enter the data at my leisure.
+
+I have a detailed database of performance data over the 76 charge sessions and the drives in between. Data points include distance, kWh consumed, SOC at departure and arrival, temperature, battery temp, altitude changes, weather conditions, road type, charging costs, times, and more. I'm still making sense of it all but some of the key metrics are below.
+
+Notably, all that DC charging does not appear to have impacted battery capacity.
+
+We crossed the Rockies in each direction, if your travels are only back east your performance metrics should be a bit better.
+
+Out west, with the big distances and altitude, this would be a very different trip in the dead of winter.  Probably still doable, but in MT you'd be driving at 60-65 max and only using the heated seats to stay warm.
+
+DRIVING DATA
+
+\- Miles Driven - 8,222 m/13,232 km  
+\- kWH Consumed - 3,123  
+\- Miles/kWH - 2.62  
+\- Cost of Charges - $1,389  
+\- Cost/kWH - $0.41 ($.044 on L3 only)  
+\- Number of Charge Sessions - 76 (66 L3, 10 L2 and L1)  
+\- L3 Charging - 92% of kWH  
+\- Avg Miles/Driving Day - 329 m/530 km  
+\- Avg Charge Sessions/Driving Day - 3  
+\- Most Charge Sessions/Day 5 (3x)  
+\- Vehicle - North American First Edition ID. Buzz (LWB/AWD)  
+\- Avg Start SOC - 82%  
+\- Avg End SOC - 28%  
+\- Avg Temp - 67 F/19 C  
+\- Low Temp - 44 F/ 7 C Pittsburgh PA  
+\- High Temp - 85 F/ 30 C Fargo ND  
+\- Avg Leg - 108 miles/175 km  
+\- Avg Speed - 55mph/88kph (we mostly drove speed limit or +5 on freeways, city streets and traffic lower the average)  
+\- Avg Leg Time - 2 hours  
+\- Avg L3 Charge Time - 23 minutes  
+\- Avg L3 Max Charge Speed - 165 (Max 197)  
+\- Number of Combo Driving/Activity Days - 11  
+\- Number of Activity Days - 10  
+\- Number of Driving Days - 14  
+\- Lowest End SOC -  8% in OKC  
+\- Longest Leg - 171 miles/275 km - Northern Utah  
+\- Longest Day - 529 miles/851 km - Sun Valley to Moab  
+\- Highest Avg Speed - 77 mph/124 kph - Western Montana  
+\- Highest Altitude Charger 7,198 ft (2,200 meters) Santa Fe New Mexico  
+\- Lowest Altitude Charger - 15 ft (4.5 meters) - Southold New York  
+\- Biggest One Day Altitude Increase - +4010 ft/+1222 meters - Pendleton OR to Hailey ID  (going into the Rockies) 2.25 miles/kWh  
+\- Biggest One Day Altitude Decrease - -5,621 ft/-1,713 meters Santa Fe NM to Foss OK (leaving the Rockies) 2.75 miles/kWh  
+\- States passed through - 30 (6 twice)  
+\- Cities and Towns stayed in - 24  
+\- License plate game  
+\- US States 50  
+\- Canadian Provinces 8  
+\- Tribal Plates 8  
+\- EU Plates 2  
+\- Best Coffee - Clarity Coffee in Oklahoma City. Honorable mentions to Coffee Lab in Tarrytown NY and Park Place Park Avenue Bakery in Helena MT.
+
+This post was about our experience in the vehicle, meant to encourage others to make the leap. But the real joy was the people we saw and the adventures we had. From Arches National Park to the National Memorial for Peace and Justice to the Long Island Ferry and Teddy Roosevelt National Park it was a blast.
+
+See you on the road soon.
+Rating: None
+
+Source: reddit
+Text: [Workflow] Automated Multi-Phase Project Execution with Claude Code's /goal Treadmill. # Automated Multi-Phase Project Execution with Claude Code's /goal Treadmill
+
+**Workflow value:** 75/100  
+**Status:** active · **Freshness:** 70/100 · **Confidence:** 0.90 · **Level:** intermediate  
+**Categories:** Quality Control, Context &amp; Memory  
+**Original source:** [r/ClaudeCode post/comment](https://www.reddit.com/r/ClaudeCode/comments/1uaxlt6/goal_and_loop_kinda_the_same/osrv2cg/)
+
+## What problem this solves
+
+Managing multi-phase projects sequentially and automatically, ensuring Claude progresses through defined project stages without manual re-prompting for each phase.
+
+## Summary
+
+A method to create a 'treadmill' or continuous execution loop for multi-phase projects using Claude Code's `/goal` command and a dynamically updated `GOAL.md` file. Claude writes the current phase's goal to `GOAL.md` and includes instructions to rewrite `GOAL.md` for the next phase upon completion, effectively chaining goals.
+
+## Why it is useful
+
+This workflow provides an innovative way to automate sequential project execution in Claude Code, significantly reducing manual intervention between phases. It leverages the `/goal` command in a novel way to create a continuous 'treadmill' for complex tasks, making large projects more manageable and efficient by chaining goals dynamically.
+
+## Workflow
+
+1. Plan out a multi-phase project (e.g., 12 phases for decompilation).
+2. Instruct Claude to write the goal for the *first* phase into a `GOAL.md` file.
+3. Include instructions at the very end of the `GOAL.md` for Claude to rewrite `GOAL.md` with the goal for the *next* phase once the current phase is complete.
+4. Execute the workflow using the command: `/goal execute @GOAL.md`.
+5. Claude works on the current phase as defined in `GOAL.md`.
+6. Upon completion of the current phase, Claude rewrites `GOAL.md` with the instructions for the next phase.
+7. The `/goal` command automatically picks up the newly defined goal, continuing the execution loop until all phases are done.
+
+## Tools / artifacts
+
+- Claude Code
+- `/goal` command
+- `GOAL.md` file (markdown file)
+
+## Validation signals
+
+- Personal successful implementation
+- Observed successful behavior
+
+## Limitations
+
+- Relies on Claude's consistent and accurate execution of the 'rewrite GOAL.md' instruction, which could be a point of failure if the instruction is ambiguous or Claude deviates.
+- Requires robust initial planning of project phases to ensure smooth transitions.
+- No explicit error handling or review steps mentioned within the automated loop, potentially leading to uncorrected issues if a phase goes wrong.
+
+## Rate this workflow
+
+Upvote this post if the workflow is useful, reproducible, or worth recommending.
+
+Downvote if it is vague, outdated, unsafe, overhyped, or not reproducible.
+
+Reply if it worked for you, failed, is outdated, or has a better alternative.
+
+---
+
+_This post was generated automatically from the workflow library database._
+Rating: None
+
+Source: reddit
+Text: [Workflow] Seamless Claude Cowork and Code Integration with CLAUDE.md, Git, and Mobile Field Testing. # Seamless Claude Cowork and Code Integration with CLAUDE.md, Git, and Mobile Field Testing
+
+**Workflow value:** 75/100  
+**Status:** active · **Freshness:** 70/100 · **Confidence:** 0.90 · **Level:** intermediate  
+**Categories:** Quality Control, Context &amp; Memory, CLAUDE.md, Skills  
+**Original source:** [r/ClaudeAI post/comment](https://www.reddit.com/r/ClaudeAI/comments/1uarspk/beginner_guide_to_claude_design_for_anyone_who/osqkc2i/)
+
+## What problem this solves
+
+Integrating Claude Cowork and Claude Code for a seamless development and field testing workflow, maintaining project context, and enabling mobile testing without manual export steps.
+
+## Summary
+
+This workflow outlines how to integrate Claude Cowork and Claude Code for a development and field testing loop. It leverages Cowork's ability to work on local files, Code's routing of development tasks, and suggests using a CLAUDE.md file for project context and Git for version control to ensure clean back-and-forth. It also highlights Claude Code's /remote-control feature for mobile app integration for field testing.
+
+## Why it is useful
+
+This workflow provides concrete steps and specific tools (CLAUDE.md, Git, /remote-control) to integrate two key Claude products (Cowork and Code) for a development and testing workflow. It clarifies how these tools interact with local files and how to maintain project context and version control, which are crucial for efficient development. The inclusion of mobile field testing is a practical addition, making the workflow highly reusable for users looking to streamline their Claude-powered development process.
+
+## Workflow
+
+1. Start development work in Claude Cowork on local project files.
+2. For deliberate back-and-forth, ask Cowork to generate a CLAUDE.md file in the project root to capture project structure, run instructions, and decisions.
+3. Open the same project folder in Claude Code; Code will read CLAUDE.md and pick up context.
+4. Use Git to commit changes from one side (Cowork/Code) and pull from the other to keep the project synchronized.
+5. Activate Claude Code's remote control using /remote-control to link the session to the Claude mobile app or claude.ai/code for mobile field testing.
+6. Ensure the computer running Claude Code stays awake and online for remote control to function.
+
+## Tools / artifacts
+
+- Claude Cowork
+- Claude Code
+- CLAUDE.md file
+- Git
+- Claude mobile app
+- claude.ai/code
+
+## Validation signals
+
+- The comment describes a 'field testing loop' which implies a validation step.
+- It clarifies how Claude Cowork and Code inherently work together with local files and task routing, suggesting built-in validation of the integration.
+
+## Limitations
+
+- Lacks explicit 'before/after' examples or detailed success metrics.
+- The 'field testing loop' is mentioned but not detailed in terms of how Claude assists in the testing itself.
+- Low community engagement and validation.
+
+## Rate this workflow
+
+Upvote this post if the workflow is useful, reproducible, or worth recommending.
+
+Downvote if it is vague, outdated, unsafe, overhyped, or not reproducible.
+
+Reply if it worked for you, failed, is outdated, or has a better alternative.
+
+---
+
+_This post was generated automatically from the workflow library database._
+Rating: None
+
+Source: reddit
+Text: Sharing my current Local/Cloud Hybrid setup - Qwen 27B Variant. Share yours!. After pushing out the Megathreads on Qwen 3.6 27B and 35B, people follow up with me later asking if i am on the same models. I do frequently look at different version's trying to find models that are efficient and reliable with Hermes. Even if you don't host locally, understand that you do not need to send EVERYTHING to the same model. If you were using GPT 5.5 or OPUS for example, you are wasting tokens/budget on compression. I'll briefly explain my setup and also how the data that influenced my decision to go to a Q6KM model quant. 
+
+It's only been a few days but it is working well so far. This is not like the megathreads, this is just a current snapshot into what I am running and how i got here, If you have the hardware you can look at the data and give it a try. **Others can also post how they split there primary/Aux/Agent models in the comments below.** 
+
+Hardware via LM Studio: 
+
+5090ti - qwen3.6-27b-heretic-uncensored-finetune-neo-code-di-imatrix-max
+
+5070ti - qwen3.5-9b-uncensored-hauhaucs-aggressive Q4\_KM
+
+The Report: 
+
+**Qwen 3.6 27B + Hermes Agent Model Config Guide**  
+*Compiled June 18, 2026 · Research sources: Reddit* r/LocalLLaMA*,* r/LocalLLM*,* r/HermesAgent*, HuggingFace, Qwen official docs, llama.cpp docs, community benchmarks*  
+
+
+**HARDWARE**  
+GPU: RTX 5090 32GB + RTX 5070 Ti 16GB (48GB total, 32GB primary)  
+CPU: Intel Core Ultra 9 285K (24 cores: 8P + 16E, no hyperthreading)  
+RAM: 64GB DDR5  
+Platform: LM Studio (Windows) serving Hermes Agent via OpenAI-compatible API  
+
+
+**BEST MODEL — CONSENSUS PICK**  
+DavidAU/Qwen3.6-27B-Heretic-Uncensored-FINETUNE-NEO-CODE-Di-IMatrix-MAX-GGUF  
+[https://huggingface.co/DavidAU/Qwen3.6-27B-Heretic-Uncensored-FINETUNE-NEO-CODE-Di-IMatrix-MAX-GGUF](https://huggingface.co/DavidAU/Qwen3.6-27B-Heretic-Uncensored-FINETUNE-NEO-CODE-Di-IMatrix-MAX-GGUF)  
+
+
+Why this one:  
+\- Heretic abliteration: KL divergence 0.0469 (under 0.3 = excellent). Refusals dropped from 99/100 to 4/100.  
+\- Post-heretic Unsloth fine-tune that EXCEEDS original Qwen 3.6 27B on benchmarks.  
+\- NEO-CODE-Di-IMatrix-MAX quants: dual imatrix datasets (NEO + NEO-CODE) merged for best quality preservation.  
+\- The only Qwen 3.6 27B uncensored variant that claims to beat the base model in performance.  
+
+
+Runner-up: HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Balanced  
+0/465 refusals. Specifically recommended for agentic coding — "Balanced" variant keeps self-reasoning preamble which stabilizes long tool-call chains. K\_P quants (Q4\_K\_P, Q8\_K\_P) give \~1-2 extra quant levels of quality at 5-15% size increase.  
+[https://huggingface.co/HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Balanced](https://huggingface.co/HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Balanced)  
+
+
+**QUANT SIZE: Q6\_K**  
+Exact file: Qwen3.6-27B-NEO-CODE-HERE-2T-OT-Q6\_K.gguf  
+Size: 22.4 GB  
+Accuracy: 97.4% of BF16 (Same Top P metric)  
+
+
+Why Q6\_K (not Q4 or Q5 or Q8):  
+
+
+* Community minimum for serious agent work: "Q6 really is the minimum. Q4\_K\_M amplifies a bias invisible at Q6+." — r/LocalLLaMA, May 2026 
+* Q4\_K\_M starts losing coherence on sequential tool calling despite looking fine on single-shot benchmarks (BFCL function calling shows all quants at \~63%, but real agent loops expose the quant gap). 
+* Q5\_K\_M is viable if VRAM-constrained but community reports occasional breaks on long agent loops. 
+* Q8\_0 is better (98.5% BF16) but 29.9GB — tighter fit on 32GB with KV cache. 
+* At 22.4GB on 32GB 5090: \~9.6GB left for KV cache. With q8\_0 KV cache at 262K context, KV uses \~6-7GB for the 16 attention layers. Comfortable fit. 
+
+Also download: mmproj-F16.gguf (928MB) if vision support wanted. Place in same folder as GGUF.  
+
+
+  
+Full quant quality table (from DavidAU's Di-Matrix benchmarks, Heretic values):  
+
+
+IQ2\_M: 82.8% BF16 (10.5GB) | IQ3\_M: 89.8% (12.9GB) | Q4\_K\_S: 94.1% (15.9GB) Q4\_K\_M: 94.5% (16.9GB) | Q5\_K\_M: 96.1% (19.5GB) | Q5\_K\_S: 95.9% (19.0GB) Q6\_K: 97.4% (22.4GB) | Q8\_0: 98.5% (29.9GB) 
+
+**ABLITERATION METHOD COMPARISON**  
+From 85 GPU-hour comparison of 5 methods on Qwen 3.6 27B (r/LocalLLaMA, May 17 2026):
+
+* Heretic: lowest KL divergence (best capability preservation)
+* Huihui: smallest benchmark deltas (but catastrophic degradation at larger scales — KL blows up to 3.65 on 4B model)
+* AEON: uses abliterix v1.4 (Heretic-derived + Optuna optimizer + SSM conv1d outlier repair)
+* HauhauCS: Balanced variant specifically tuned for agentic stability 
+
+Nathan Sapwell independent benchmark (April 2026) confirmed: abliteration is NOT lossless. At 27B scale, base model refuses 99.5% of harmful prompts. Heretic and HauhauCS both remove nearly all refusals while preserving benchmarks.  
+
+
+**27B DENSE vs 35B-A3B MoE — FOR AGENT WORK**  
+Qwen 3.6 27B (dense, all 27B active per token):
+
+* SWE-bench Verified: 77.2 | Terminal-Bench: 59.3 | \~50 tok/s on 5090 at Q6\_K
+* Every parameter fires on every token. No router. No drift. Coherent across 50-turn agent sessions. 
+
+Qwen 3.6 35B-A3B (MoE, 35B total, \~3B active per token):
+
+* SWE-bench: 73.4 | Terminal-Bench: 48.2 | \~80-120 tok/s on 5090 at Q4
+* Expert routing causes cross-turn inconsistency on long multi-step tasks. "Gets lost as the task requires more steps."
+* Better for interactive chat coding where speed matters more than multi-step coherence. 
+
+For Hermes agents: 27B dense wins. The Terminal-Bench gap (11.1 points) is exactly the multi-step sustained-reasoning workload Hermes runs.  
+
+
+* Gemma 4 31B: \~17% SWE-bench. Not competitive. 
+* Qwen 3.6 40B Claude Opus Deckard distill: under 1K downloads, no independent validation. Skip for now. 
+
+  
+**THINKING MODE — CRITICAL DISTINCTION**  
+
+
+Qwen 3.6 has TWO thinking settings:
+
+*  enable\_thinking — controls whether the model REASONS at all (emits &lt;think&gt; blocks)
+*  preserve\_thinking — controls whether reasoning from PREVIOUS TURNS stays in context 
+
+FOR HERMES: enable\_thinking = ON, preserve\_thinking = OFF (the default)  
+
+
+Why preserve\_thinking OFF:  
+
+
+"I had been running qwen3.6-27B with thinking on, but I constantly faced the issue of it starting to go into thinking loops after about 100k tokens. Turned it off, been running two days with thinking off, and it feels much better." — r/LocalLLaMA, top comment, May 2026  
+
+
+Note: Qwen's blog says preserve\_thinking defaults to false. The default is already correct.  
+
+
+Separate concern: the thinking preamble can break agent JSON parsing:  
+
+
+"Token-calling loop expected JSON, but model output started with &lt;think&gt;. Reasoning length is unpredictable (50-800 tokens), wasting max\_tokens budget." — [dev.to](http://dev.to), April 2026  
+
+
+Hermes handles this by parsing tool calls from raw output including &lt;think&gt; blocks, so keep thinking ON.  
+
+
+In LM Studio: leave default template (preserve\_thinking=false). If Hermes hits thinking loops on very long sessions, switch enable\_thinking OFF as last resort.  
+
+
+**CHAT TEMPLATE — USE FROGGERIC FIXED VERSION**  
+
+
+The official Qwen 3.6 Jinja template has bugs that directly hurt Hermes agents:  
+
+
+* KV cache prefix matching BREAKS across turns (prompt reprocessed every request) 
+* Empty &lt;think&gt; tags injected into history (context pollution) 
+* Tool calling stalls when model hits embedded "logic trap" 
+* Retry spirals on consecutive failures 
+
+froggeric/Qwen-Fixed-Chat-Templates (v20) fixes all of these:  
+
+
+[https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates](https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)  
+
+
+Download chat\_template.jinja. In LM Studio: model → Prompt Template → paste → Save.  
+
+
+Features: 100% KV cache prefix hit rate, two-tier agentic error escalation, native XML tool call format, in-line thinking toggle (&lt;|think\_off|&gt; anywhere).  
+
+
+**REASONING PARSING — TURN OFF**  
+
+
+LM Studio's reasoning parser strips and separates &lt;think&gt; blocks for UI display. For Hermes serving via API:  
+
+
+* "LM Studio's parser silently breaks Qwen3.5 tool calling, corrupts reasoning output, and makes models look worse than they are." — r/LocalLLaMA, March 2026 
+* Hermes parses tool calls natively from raw output. Thinking tokens are valuable context. 
+* Turn ON only if manually chatting in LM Studio UI. For agent API use: OFF. 
+
+**SAMPLING PARAMETERS**  
+temperature: 0.6 (coding/agent) or 1.0 (general chat)  
+top\_p: 0.95  
+top\_k: 20  
+min\_p: 0 (disabled — Qwen's official recommendation for thinking models. min\_p can accidentally exclude tool-call tokens)  
+presence\_penalty: 1.5 (keeps thinking from spiraling in long agent loops)  
+repetition\_penalty: 1.0 (disabled — Qwen team warns repetition\_penalty can cause language mixing)  
+
+
+Qwen's official warning: "Using a higher presence\_penalty may occasionally result in language mixing and a slight decrease in model performance." — 1.5 is the community sweet spot.  
+
+
+**CONTEXT SETTINGS**  
+context\_length: 131072 or 262144 (128K minimum for thinking mode, 262K if VRAM allows)  
+overflow\_policy: Stop (NOT rolling — Qwen team explicitly recommends --no-context-shift. Rolling silently discards first half of context, causing agent amnesia mid-session)  
+KV cache type: q8\_0 (halves cache memory with negligible quality loss. Default f16 wastes VRAM)  
+
+
+Qwen 3.6 hybrid architecture note: only 16 of 65 layers use traditional KV cache. The other 48 use DeltaNet linear attention (\~150MB constant recurrent state). Total KV memory is \~4x less than a normal dense 27B model.  
+
+
+**GPU / INFERENCE SETTINGS**  
+gpu\_layers: MAX (offload everything to 5090)  
+batch\_size: 512 (safe — going above 1024 triggers infinite token loops on Qwen 3.6 in Hermes environment, per r/LocalLLM June 2026)  
+flash\_attention: ON (NVIDIA. OFF for Apple Silicon)  
+
+
+**CPU SETTINGS**  
+cpu\_threads: default (LM Studio caps at 12 on 24-core systems — known bug #1772. With full GPU offload, token generation uses GPU, so CPU threads barely matter)  
+thread\_pool: 12 (capped by LM Studio bug on Core Ultra 9 285K. Irrelevant for single-user Hermes — handles concurrent API requests)  
+
+
+**MTP SPECULATIVE DECODING**  
+If using MTP-enabled GGUF: ENABLE for coding/agent work. Up to 2.7x speedup on code tasks (+47-50% on Q6\_K). Draft acceptance rates: code 79-89%, factual 62-70%, creative 39-48%. For Hermes agent use (coding + tool calling): ON. Set draft-n-max=3.  
+
+
+**SYSTEM PROMPT CONSIDERATIONS**  
+Qwen 3.6 is notably more sensitive to prompt clarity than Qwen 3.5. Multiple model cards flag this. Be explicit: exact output format, when to use which tool, no preamble before JSON, stop conditions. The model follows what you literally wrote — it won't infer intent.  
+
+
+**WHY THIS IS THE BEST LOCAL MODEL FOR RTX 5090 (JUNE 2026)**  
+\- "Qwen 3.6 27B retains the best under 40B crown for 32GB VRAM systems at Q5/Q6." — Open Weight LLM, May 2026  
+\- "Is Qwen 3.6 27B the best model under 40B once quantized? (32GB VRAM)" — r/LocalLLM, 3 days ago (203 upvotes, top post)  
+\- SWE-bench Verified 77.2 — beats the old 397B-A17B MoE flagship on coding  
+\- Terminal-Bench 59.3 — 11.1 points ahead of the 35B MoE variant on multi-step terminal workflows  
+\- No newer open-weight model has displaced it since April 22 release  
+\- If Qwen drops a 3.7 27B (rumored), this changes overnight  
+
+
+**COMPLETE LM STUDIO CONFIG CARD**  
+Model: DavidAU Qwen3.6-27B-Heretic Q6\_K (22.4GB)  
+Template: froggeric fixed Jinja (chat\_template.jinja)  
+context: 262144  
+overflow: Stop  
+KV cache: q8\_0  
+GPU layers: MAX  
+batch: 512  
+flash attn: ON  
+temp: 0.6 | top\_p: 0.95 | top\_k: 20 | min\_p: 0  
+presence: 1.5 | repetition: 1.0  
+thinking: ON | preserve: OFF (default)  
+reasoning parse: OFF  
+MTP: ON (if MTP GGUF) | threads: default | pool: 12  
+
+
+**SOURCES**  
+\- DavidAU Heretic HF: [huggingface.co/DavidAU/Qwen3.6-27B-Heretic-Uncensored-FINETUNE-NEO-CODE-Di-IMatrix-MAX-GGUF](http://huggingface.co/DavidAU/Qwen3.6-27B-Heretic-Uncensored-FINETUNE-NEO-CODE-Di-IMatrix-MAX-GGUF)  
+\- froggeric Fixed Templates: [huggingface.co/froggeric/Qwen-Fixed-Chat-Templates](http://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates)  
+\- HauhauCS Balanced: [huggingface.co/HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Balanced](http://huggingface.co/HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Balanced)  
+\- froggeric MTP GGUF: [huggingface.co/froggeric/Qwen3.6-27B-MTP-GGUF](http://huggingface.co/froggeric/Qwen3.6-27B-MTP-GGUF)  
+\- Qwen official llama.cpp guide: [qwen.readthedocs.io/en/latest/run\_locally/llama.cpp.html](http://qwen.readthedocs.io/en/latest/run_locally/llama.cpp.html)  
+\- Qwen official function calling: [qwen.readthedocs.io/en/latest/framework/function\_call.html](http://qwen.readthedocs.io/en/latest/framework/function_call.html)  
+\- Neo benchmark case study: [heyneo.com/blog/evaluating-qwen-3-6-27b-benchmarking-case-study](http://heyneo.com/blog/evaluating-qwen-3-6-27b-benchmarking-case-study)  
+\- Nathan Sapwell ablation benchmark: [nathan.sapwell.net/posts/hauhaucs-abliteration-analysis/](http://nathan.sapwell.net/posts/hauhaucs-abliteration-analysis/)  
+\- LM Studio thread pool bug: [github.com/lmstudio-ai/lmstudio-bug-tracker/issues/1772](http://github.com/lmstudio-ai/lmstudio-bug-tracker/issues/1772)  
+\- Qwen 3.6 vs 35B comparison: [aimadetools.com/blog/qwen-3-6-27b-vs-35b-a3b/](http://aimadetools.com/blog/qwen-3-6-27b-vs-35b-a3b/)  
+\- Qwen 3.6 local guide: [insiderllm.com/guides/qwen-3-6-local-ai-guide/](http://insiderllm.com/guides/qwen-3-6-local-ai-guide/)  
+\- r/LocalLLaMA | r/LocalLLM | r/HermesAgent — May-June 2026 threads  
+  
+
+Images:
+	https://preview.redd.it/yt0mmz58qg8h1.png?auto=webp&s=9132f44400a483575daeed42d6eff949009d4666
+Rating: None
+
+Source: reddit
+Text: My recording of Where We Used To Be (Title Screen) from Xenoblade 2. Piano &amp; Instruments. Recording from quite a ways back, this was the only time I've ever mixed anything in blender and it was tough. Any tips on playing over loops of yourself to be most efficient? I recall just brute forcing many takes while listening to the main piano recording until I was satisfied I played each clip close enough in time. If anyone has recommendations on how to add additional non-native voices to older transacoustic pianos that doesnt require too much extra hardware, I'd appreciate that too. This version does not have any app connectivity. There is midi in and out, not sure if there might be a compact option as I'd prefer not to have to play with a laptop connected if possible. 
+Images:
+	https://external-preview.redd.it/GGXw0xqMubAB1u9MXrnsr9b3YL8lVrAKD9mglDoSM_c.jpeg?auto=webp&s=efdfceaf270e14615ef1338ef558a3c491ac26a7
+Rating: None
+
+Source: reddit
+Text: Stardew Valley.. I would like to recommend something to people who are trying to recover.
+
+It’s been my first 24 hours without the app, and yes, it’s very hard.
+
+But there’s something that’s helping me a lot: playing stardew valley.
+
+It’s a game, you can have it on your phone or Nintendo switch if you have one.  
+You have a farm, animals, little missions, you can interact with npcs, build friendships and romance, get married, and there’s also some mystery and supernatural elements to unravel.
+
+It’s the thing that’s helping me the most! It’s been helping mostly with my craving for worldbuilding, storytelling and romance.  
+And unlike cai, it’s not a loop. Eventually your character goes to sleep, giving you the perfect opportunity to take a break.
+
+Honestly it’s my anchor right now.
+
+Stay safe.
+Rating: None
+
+Source: reddit
+Text: Warlock- Broodweaver Threadling Build (Artifact Glitch Version). **Subclass:** Broodweaver Warlock  
+**Exotic Armor:** Apothesis Veil  
+**Exotic Weapon:** Service of Luzaku  
+**Artifact Glitch:** 7/7 Pack Tactics active  
+**Focus:** Infinite Threadlings + Woven Mail + Fast Ability Regen
+
+🟢 **Core Setup**  
+**Abilities**  
+**Healing Rift**  
+**Arcane Needle**  
+**Threadling Grenade**  
+**Needlestorm**  
+**Aspects**  
+✅ Weaver’s Call  
+Casting Rift spawns Threadlings  
+✅ Mindspun Invocation  
+Enhanced Threadling Grenade behavior
+
+🟢 **Fragments**  
+**Thread of Rebirth**  
+Strand weapon final blows create Threadlings  
+**Thread of Evolution**  
+Threadlings travel farther  
+Deal more damage  
+**Thread of Generation**  
+Damage generates grenade energy  
+**Thread of Warding**  
+Orb of Power grants Woven Mail
+
+**Artifact Glitch Setup**  
+**Pack Tactics ×7**  
+This is the entire reason the build becomes absurd.  
+Every Pack Tactics stack increases Threadling effectiveness and ability loops.  
+With all seven active:  
+✅ More Threadlings  
+✅ Faster Threadling generation  
+✅ Better add clear  
+✅ Better boss damage  
+✅ More grenade uptime  
+The artifact glitch is essentially turning the build into a Threadling factory.
+
+**Gameplay Loop**  
+**Step 1**  
+Get a kill with **Service of Luzaku**  
+⬇️  
+**Step 2**  
+Thread of Rebirth spawns Threadlings  
+⬇️  
+**Step 3**  
+Threadlings attack enemies  
+⬇️  
+**Step 4**  
+Thread of Generation refunds grenade energy  
+⬇️  
+**Step 5**  
+Throw another Threadling Grenade  
+⬇️  
+**Step 6**  
+More Threadlings spawn  
+⬇️  
+**Repeat Forever**
+
+**Survivability Loop**  
+**Create Orbs**  
+⬇️  
+**Pick up Orb**  
+⬇️  
+**Thread of Warding activates**  
+⬇️  
+**Gain Woven Mail**  
+⬇️  
+**Become significantly harder to kill**
+
+**Apothesis Veil Combo**  
+**During Boss DPS**  
+Cast Needlestorm  
+Apothesis Veil triggers  
+Massive ability energy refund  
+Throw Threadling Grenades  
+Cast Rift  
+Spawn even more Threadlings  
+This creates a huge burst window where dozens of Threadlings flood the battlefield.
+
+**Best Weapons**  
+**Primary**  
+**The Call**  
+Any Strand Auto Rifle  
+Any Strand Pulse Rifle  
+**Special**  
+**Out of Bounds**  
+Fusion Rifle  
+Wave Frame GL  
+**Heavy**  
+Service of Luzaku ⭐ Best Choice  
+Strand Machine Guns  
+Strand Rockets
+
+**Quick Reference**  
+**Kill with Strand Weapon**  
+➡ Spawn Threadlings  
+**Threadlings Kill Enemies**  
+➡ Gain Grenade Energy  
+**Throw Threadling Grenade**  
+➡ More Threadlings  
+**Pick Up Orb**  
+➡ Woven Mail  
+**Cast Rift**  
+➡ More Threadlings  
+**Cast Needlestorm**  
+➡ Apothesis Veil Refunds Abilities  
+**Artifact Glitch**  
+➡ Pack Tactics ×7 Makes Everything Better  
+**Result:** Constant Threadling swarms, near-permanent Woven Mail, excellent survivability, and some of the strongest Strand add-clear currently possible with the artifact glitch active.
+Images:
+	https://preview.redd.it/sokkzvzcwg8h1.jpeg?auto=webp&s=0402211d43f9661254a4ba6dcc7981d4b93746f6
+Rating: None
+
+Source: reddit
+Text: Does anyone else feel like their anxiety stays in work mode even after you log off?. Idk how to turn my brain off anymore. even when i’m done for the day, my chest still feels tight and i’m constantly replaying random slacks or worrying about tomorrow's tasks. it’s completely ruining my sleep. 
+
+&amp;#x200B;
+
+Lately i’ve been forced to create this weird sensory ritual just to survive the bedtime spiral and give my brain an off-switch. 
+
+&amp;#x200B;
+
+past midnight, i turn off all the lights, put on some hans zimmer piano loops on spotify, and turn on a little pococo star projector on my nightstand. i just look up and stare at the moon and stars on my ceiling. 
+
+&amp;#x200B;
+
+the last step is that i force myself to read a few pages of a biography (currently on the steve jobs one) and handwrite a journal with an old lamy fountain pen. there’s something about the scratching sound of the pen in the dark and lying there under a fake galaxy that is weirdly grounding. it sounds nerdy af but it makes me feel so small that my stupid work emails suddenly don’t matter anymore.
+
+&amp;#x200B;
+
+it took a lot of trial and error to find what worked, but this is the only setup that gives me actual rest now. 
+
+&amp;#x200B;
+
+if you also get that post-work panic, what other weird rituals help you calm down and disconnect?
+Rating: None
+
+Source: reddit
+Text: im 17 years old. i spent a whole year single-handedly developing a hardcore parkour sandbox on Roblox and composing ambient soundtracks for it. the platform simply blocked it, setting the 16+ restriction. heres my project before the system blocked it. *posted this in robloxgamedev before, but to be honest im just tired and burned out i need somewhere to talk myself out*
+
+**im 17 and for the last year ive been developing my dream game, Shegletor, almost every night by myself. it was my escape from the problems of real life. i hated all these primitive clickers and games for 9 year olds on this platform so I decided to create a mature, atmospheric sandbox entirely on my own. i have programmed a hardcore advanced movement system with wall running, bhop, sliding, corner climbing and ledge jumping. i also created a multifunctional admin panel where you can create vehicles, entities, change the weather in real time, or instantly teleport to the pvp arena. over the past few days ive completely redesigned the user interface in a gloomy ios style. even with realistic lighting, custom textures, and dynamic depth of field, the game runs smoothly at 60 fps on weak laptops. i even programmed the cameras in the menu so that they randomly switch between 1.5 and 10 seconds to create a cinematic, interactive thriller atmosphere instead of the boring looping mode. on top of that im currently developing a modding engine so that players can publish their own mods in my game and earn 100% revenue without the greedy roblox fees. there is absolutely NO "pay to win" or donation system in my project. i also wrote a full fledged soundtrack for it in the style of cosmic/dark ambient music, and my tracks (nefgerty, lobby themes) will soon be available on Spotify and Apple Music. and after all this work Roblox just marks my game as "Moderate/16+". why? because i refuse to provide my ID to a multibillion dollar corporation or pay an absurd amount of robux to bypass filters for a project that currently has 0 online users. they literally blocked my target audience — teenagers who are really interested in hardcore physics, free avatar swapping, and original music.**
+
+ *im not leaving any links here.* 
+
+*im not trying to sell you anything or generate clicks.* 
+
+im just a tired indie developer who wanted to show what a year of hard work looks like before the corporate algorithm buries it forever. 
+
+**but let me know, what do u think about the visual component?**
+Images:
+	https://i.redd.it/3c4uv7putg8h1.png
+	https://i.redd.it/j69d19putg8h1.png
+	https://i.redd.it/5df859putg8h1.png
+	https://i.redd.it/8ayi89putg8h1.png
+	https://i.redd.it/6k5vw8putg8h1.png
+	https://i.redd.it/wi1x07wxtg8h1.jpg
+Rating: None
+
+Source: reddit
+Text: [Workflow] Claude Skills Workflow: Clean Code, Root Cause Debugging, and Knowledge Capture Loop. # Claude Skills Workflow: Clean Code, Root Cause Debugging, and Knowledge Capture Loop
+
+**Workflow value:** 88/100  
+**Status:** active · **Freshness:** 70/100 · **Confidence:** 0.95 · **Level:** intermediate  
+**Categories:** Quality Control, Context &amp; Memory, Debugging, Skills, Multi-Agent  
+**Original source:** [r/ClaudeCode post/comment](https://www.reddit.com/r/ClaudeCode/comments/1ub01kq/my_everyday_skill_setup_writing_debugging_and/)
+
+## What problem this solves
+
+Inefficient coding practices, messy diffs, repetitive debugging, and loss of learned knowledge across AI sessions.
+
+## Summary
+
+A three-skill Claude workflow (`/debugging-code`, `/writing-code`, `/capturing-knowledge`) designed to streamline the code development loop. It ensures bugs are fixed at the root, code changes are minimal and clean, and hard-won knowledge is preserved for future AI sessions.
+
+## Why it is useful
+
+This workflow provides a concrete, repeatable, and transferable method for improving the efficiency and quality of code development using Claude. By defining specific roles for three interconnected skills and providing their implementation via GitHub, it addresses common pain points like messy code, superficial bug fixes, and the loss of learned context across AI sessions. It encourages best practices in software development, making it highly valuable for developers leveraging Claude.
+
+## Workflow
+
+1. Initiate `/debugging-code` to reproduce the bug and identify its root cause, checking git history to avoid known issues.
+2. Pass the root cause to `/writing-code`, which applies a minimal, clean fix at the source, avoiding unnecessary refactors.
+3. If the fix involves documentation changes, `/writing-code` makes an exception to its "don't touch extra" rule and hands the doc update to `/capturing-knowledge`.
+4. Execute `/capturing-knowledge` to document only the difficult-to-figure-out parts (dead ends, gotchas, "why") for future sessions, ensuring knowledge retention.
+
+## Tools / artifacts
+
+- Claude Skills
+- Git history
+- GitHub repository (for the skills themselves)
+
+## Validation signals
+
+- Author's claim of daily use
+- Detailed description of skill logic and interaction
+- Public GitHub repository with skill implementations
+
+## Limitations
+
+- Relies on custom Claude skills, which might require some setup for users unfamiliar with them.
+- Limited community validation at the moment due to post age.
+
+## Rate this workflow
+
+Upvote this post if the workflow is useful, reproducible, or worth recommending.
+
+Downvote if it is vague, outdated, unsafe, overhyped, or not reproducible.
+
+Reply if it worked for you, failed, is outdated, or has a better alternative.
+
+---
+
+_This post was generated automatically from the workflow library database._
+Rating: None
+
+
+Total new reviews to analyze: 14
+
+INSTRUCTIONS:
+1. Update the 'insight_summary' for each question based on patterns in the new reviews
+2. Update the 'key_findings' list with new findings from the reviews
+3. Calculate the new 'total_reviews_analyzed' by adding the count of new reviews to the previous total
+4. Update the 'last_updated' timestamp to the current time
+5. Maintain the exact same JSON structure for all 6 insights
+6. Output must be a valid JSON array containing exactly 6 insight objects
+7. Do not include markdown formatting or code blocks - output raw JSON only
+
+The 6 research questions are:
+- Q1: Why do users struggle to discover new music?
+- Q2: What are the most common frustrations with recommendations?
+- Q3: What listening behaviors are users trying to achieve?
+- Q4: What causes users to repeatedly listen to the same content?
+- Q5: Which user segments experience different discovery challenges?
+- Q6: What unmet needs emerge consistently across reviews?
+
+Output the updated insights as a JSON array.
+
+IMPORTANT: Output must be valid JSON only. No markdown, no code blocks, just raw JSON.
+==================================================
+RESPONSE:
+[
+  {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "User segmentation now includes 'Anxious Professionals' using music for sensory grounding and 'Independent Creator-Musicians' who struggle with the technical overhead of layering live performance over loops, alongside 'Free Tier Outcasts' who have lost all active discovery agency.",
+    "key_findings": [
+      "The 'Free Tier Outcast' segment reports a total loss of discovery agency, as the removal of 'skip' and 'part-skip' features has turned the app into a passive radio experience.",
+      "An 'Anxious Professional' segment is emerging, using specific instrumental loops (e.g., Hans Zimmer) as a 'sensory off-switch' to disconnect from work-related stress.",
+      "The 'Independent Creator-Musician' segment is frustrated by the high friction of mixing and playing over loops, seeking mobile-first ways to integrate non-native voices into their setups.",
+      "The 'Gift Card Recipient' segment remains unable to access Premium discovery features due to persistent 'awaiting payment' loops.",
+      "Flagship Android users (S24 Ultra) continue to report session instability that resets their discovery progress every 2 hours."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustration has peaked with 'Forced Passive Listening' on the free tier, where the inability to skip tracks effectively kills the feedback loop required for the recommendation engine to learn user preferences.",
+    "key_findings": [
+      "Users on the free tier describe the service as 'no better than a radio' now that the ability to skip songs or specific parts has been removed.",
+      "There is a growing resentment toward the 'Radio-fication' of the app, where users feel forced to listen to content they dislike without any way to signal negative feedback.",
+      "The AI DJ and 'Discover Weekly' are being criticized for 'monotonous slop' that fails to adapt to the user's current mood or long-term taste.",
+      "Users report 'UI Envy' regarding special playlist layouts (blue buttons/colors) that appear inconsistently and lack user documentation.",
+      "The 'Mix' feature is perceived as intrusive when users are trying to listen to specific tracks or albums without automated intervention."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is being crippled by 'Control Stripping' on the free tier, where the removal of basic playback navigation (skips) prevents users from exploring beyond the current automated stream.",
+    "key_findings": [
+      "The removal of 'skip' functionality on the free tier has created a 'Discovery Deadlock'—users cannot move past tracks they don't like to find ones they do.",
+      "Young creators (e.g., indie game devs) feel the 'Corporate Algorithm' and age-gating on other platforms (Roblox) are pushing them toward Spotify, yet they find the entry barriers for new artists high.",
+      "Technical 'Entry Friction' persists via the 'Who's listening?' account selection screen that adds unnecessary steps to the launch sequence.",
+      "Users report 'Song Hijacking' where original tracks are replaced by AI-generated versions, confusing the discovery of authentic artists.",
+      "Cluttered artist pages ('Discography Bloat') continue to make it difficult for users to distinguish between new releases and repackaged singles."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "Users are demanding 'Creative Utility' features, such as the ability to layer live instruments over loops and 'Mobile-First Mixing' tools, alongside a restoration of basic playback controls for free users.",
+    "key_findings": [
+      "There is a demand for 'Compact Creative Integration': Musicians want to add non-native voices to their instruments via the app without needing a laptop connection.",
+      "Users are seeking 'Sensory Ritual' support, requesting features that facilitate bedtime routines, such as high-quality loops paired with visual or grounding elements.",
+      "A need for 'Playback Agency' is critical: Free tier users are threatening to leave as the app moves closer to a traditional radio model without user-driven navigation.",
+      "There is a persistent request for 'Transaction Transparency' regarding gift card redemption and account status updates.",
+      "Users continue to call for 'Widget Stability' to prevent the frequent freezing and UI 'pulsating' issues on mobile OS lock screens."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is now being driven by 'Intentional Grounding,' where users utilize specific loops and soundtracks as a therapeutic tool to manage anxiety and work-related stress.",
+    "key_findings": [
+      "The 'Sensory Ritual' behavior: Users intentionally play the same loops (e.g., piano/Hans Zimmer) to create a predictable environment for sleep or anxiety management.",
+      "Technical 'Control Stripping' forces repetition: Free users who cannot skip are trapped in whatever loop the algorithm provides, regardless of preference.",
+      "The 'Brute Force Recording' issue: Musicians repeatedly play over the same loops to get a perfect take, highlighting a need for better in-app looping tools.",
+      "The 'Large Library Shuffle Failure' remains a major complaint, with users hearing the same subset of songs despite having thousands of liked tracks.",
+      "Users default to 'Safe' cached content when the app suffers from frequent logouts or widget freezes on high-end Android devices."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are pursuing 'Functional Layering' and 'Therapeutic Grounding,' seeking to use music as a creative foundation for live performance or a psychological tool for stress recovery.",
+    "key_findings": [
+      "A 'Live-to-Loop Layering' behavior is prominent among musicians who want to play live instruments over recorded tracks with minimal technical friction.",
+      "Users are engaging in 'Anxiety-Reduction Rituals,' combining specific music loops with tactile activities like handwriting or visual projectors to 'turn off' their brains.",
+      "The 'Aesthetic UI Hunting' behavior continues, with users trying to find and replicate unique playlist skins they see in social media communities.",
+      "Independent artists are using the platform as a 'Portfolio Hub' for soundtracks, attempting to bypass corporate filters on other gaming platforms.",
+      "Users are attempting 'Frictionless Entry' but are being blocked by new UI gates like the daily 'Who's listening?' account prompt."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 587,
+      "last_updated": "2024-07-25T16:15:00.000Z"
+    }
+  }
+]

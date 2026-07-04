@@ -1,0 +1,99 @@
+[
+  {
+    "question_id": "Q5",
+    "question_text": "Which user segments experience different discovery challenges?",
+    "insight_summary": "The 'Mono-Functionalist' has emerged as the highest-satisfaction segment, defining a 'win' (W) as an experience where they can successfully ignore the entire ecosystem to focus solely on playback. This contrasts sharply with segments like the 'Shuffle Victim' who are trapped by the platform's active features.",
+    "key_findings": [
+      "The 'Mono-Functionalist' segment: Users who maintain 5-star satisfaction by explicitly ignoring all non-music features, stating they 'don't do anything else' with the app.",
+      "The 'W' (Win) Segment: A group of users who view the app as perfect only when its secondary features are non-intrusive enough to be completely bypassed.",
+      "The 'Piracy Pragmatist' is a growing segment returning to Soulseek and local MP3 players to escape 'renting culture' and ensure music ownership.",
+      "The 'Bundle Refugee' is migrating to YouTube Music due to the perceived 'free' value of the add-on compared to Spotify's price hikes.",
+      "The 'Modified App Power-User' utilizes tools like ReVanced to bypass UI restrictions and pricing models.",
+      "The 'Shuffle Victim' segment consists of long-term users with massive playlists who find the algorithm traps them in a loop of the same 20 songs."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 967,
+      "last_updated": "2024-11-01T10:00:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "What are the most common frustrations with recommendations?",
+    "insight_summary": "Frustrations center on 'Deterministic Stagnation' and algorithmic bloat. A successful user strategy involves 'Selective Engagement,' where users achieve a high-quality experience specifically by refusing to interact with any 'Smart' or recommended features.",
+    "key_findings": [
+      "The 'Broken Shuffle' phenomenon: Users report that shuffling results in the same sequence of songs every time, suggesting server-side determinism.",
+      "Smart Shuffle is perceived as a 'Trojan Horse' for pushing low-royalty tracks or AI content into curated spaces.",
+      "Recommendation Echo Chambers: Feedback loops create 'song fatigue' where the algorithm plays what was just heard, reinforcing a narrow loop.",
+      "The 'Non-Interaction Win': New evidence shows users rate the app 5-stars specifically when they 'don't do anything else' with it, suggesting recommendation features are often viewed as obstacles to overcome.",
+      "Technical Debt: Users find the app increasingly 'heavy' and 'laggy' due to the inclusion of unwanted recommendation UI."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 967,
+      "last_updated": "2024-11-01T10:00:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Why do users struggle to discover new music?",
+    "insight_summary": "Discovery is stifled by 'Algorithmic Laziness' and a deliberate 'Feature Avoidance' strategy. High-satisfaction users are increasingly opting out of discovery tools entirely to maintain a stable and functional app experience.",
+    "key_findings": [
+      "The 'Library Burial' effect: Large collections are ignored by the algorithm, making discovery of 'forgotten' tracks within one's own library impossible.",
+      "Intentional Feature Isolation: Users are achieving a 'win' state by 'not doing anything else' with the app, effectively closing off discovery channels to avoid friction.",
+      "Involuntary Repetition: Features like 'Smart Shuffle' re-insert tracks that were intentionally removed, discouraging users from exploring new content.",
+      "Manual Workaround Fatigue: Users rely on third-party services to shuffle playlists because native discovery tools feel forced or irrelevant.",
+      "Price-to-Value Disconnect: Discovery feels less rewarding when users feel they are paying premium prices for a cluttered, functionally degrading experience."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 967,
+      "last_updated": "2024-11-01T10:00:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q6",
+    "question_text": "What unmet needs emerge consistently across reviews?",
+    "insight_summary": "There is a massive surge in demand for 'Functional Minimalism.' Users are signaling that the 'winning' version of the app is one where they can ignore everything except the core music player, suggesting a need for a 'Music-Only' mode.",
+    "key_findings": [
+      "The 'Zero-Interaction' Preference: Strong evidence that a segment of users values the app more when they can successfully ignore its secondary features ('don't do anything else with it').",
+      "Demand for 'True Shuffle': Users want a toggle for 'pure random' listening that does not prioritize 'marketable' tracks.",
+      "Need for 'App Optimization': Demand for a 'Lite' version that removes podcasts, AI features, and social bloat to fix extreme lag.",
+      "Automated Maintenance: Users want the app to handle its own 'cache clearing' to prevent the performance degradation that currently requires manual intervention.",
+      "Transparent Compensation: A growing movement seeks platforms where a clear majority of the subscription fee reaches the artist."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 967,
+      "last_updated": "2024-11-01T10:00:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q4",
+    "question_text": "What causes users to repeatedly listen to the same content?",
+    "insight_summary": "Repetition is driven by server-side shuffle syncing and a 'Safe Pick' bias. However, some users intentionally repeat content as a way to stay within the 'safe' core functionality of the app, avoiding 'broken' discovery features.",
+    "key_findings": [
+      "The 'Sync Trap': Shuffle order is often synced across devices, meaning users hear the exact same sequence during their commute that they heard at work.",
+      "Core-Only Usage: Users who 'don't do anything else' with the app may be falling into repetition cycles simply because they are avoiding the discovery tools meant to break them.",
+      "Cache-Induced Stagnation: Manual cache clearing remains the only known 'reset' for the algorithm to provide variety.",
+      "The 'Safe Pick' Bias: The platform repeats popular songs to minimize skip risk, which kills the enjoyment of those songs over time.",
+      "The 'Stats Grip': Users stay with the platform despite frustrations only because of their historical data (Wrapped/stats)."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 967,
+      "last_updated": "2024-11-01T10:00:00.000Z"
+    }
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "What listening behaviors are users trying to achieve?",
+    "insight_summary": "Users are pursuing 'Sovereign Listening' and 'Focused Utility.' This involves decoupling music from platform control or adopting a 'minimalist' usage pattern where the app is treated as a simple utility rather than a social or discovery hub.",
+    "key_findings": [
+      "'Focused Utility': A behavior where users deliberately ignore all 'extra' features (podcasts, AI, social) to maintain a clean, music-only experience.",
+      "'The W Experience': Achieving high satisfaction by treating the app as a single-purpose tool and 'not doing anything else' with its broader ecosystem.",
+      "'Platform Hopping': Users are actively testing alternatives like 'Demus' or 'Qobuz' to find stable playlist management.",
+      "'The New Piracy': A resurgence in downloading as a reaction to the 'if buying isn't owning, pirating isn't stealing' philosophy.",
+      "'Manual Curation': Users are increasingly ignoring 'Smart' features in favor of manual queueing to avoid 'shareholder-benefit' algorithms."
+    ],
+    "metadata": {
+      "total_reviews_analyzed": 967,
+      "last_updated": "2024-11-01T10:00:00.000Z"
+    }
+  }
+]
