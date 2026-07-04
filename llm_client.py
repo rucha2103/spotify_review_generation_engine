@@ -8,7 +8,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 import google.generativeai as genai
 
-load_dotenv()
+# load_dotenv()
 
 
 class LLMClient:
