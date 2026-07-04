@@ -8,13 +8,22 @@ import google.generativeai as genai
 # load_dotenv()
 
 
+# api_key = os.getenv("GEMINI_API_KEY")
+
+# if not api_key:
+#     print("GEMINI_API_KEY not found in environment variables")
+#     exit(1)
+
+# Debug line
 api_key = os.getenv("GEMINI_API_KEY")
 
-if not api_key:
-    print("GEMINI_API_KEY not found in environment variables")
-    exit(1)
+print(f"DEBUG: The value of GEMINI_API_KEY is: {api_key}") 
 
-genai.configure(api_key=api_key)
+if api_key:
+    genai.configure(api_key=api_key)
+else:
+    print("CRITICAL: The key is still None/Empty.")
+
 
 print("Available Gemini models:")
 print("=" * 50)
