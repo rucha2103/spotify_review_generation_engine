@@ -1,12 +1,12 @@
 FROM python:3.10
-
 WORKDIR /code
-
-COPY ./requirements.txt /code/requirements.txt
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
 COPY . .
+COPY start.sh /code/start.sh
+RUN chmod +x /code/start.sh
 
-EXPOSE 7860
+# Expose both ports (7860 for UI, 8080 for API)
+EXPOSE 7860 8080
 
-CMD ["streamlit", "run", "frontend.py", "--server.port", "7860"]
+CMD ["./start.sh"]
