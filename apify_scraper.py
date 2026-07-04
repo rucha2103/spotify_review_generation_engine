@@ -10,7 +10,7 @@ from apify_client import ApifyClient
 from dotenv import load_dotenv
 
 # Load environment variables
-# load_dotenv()
+load_dotenv()
 
 class ApifyScraper:
     def __init__(self, api_key: Optional[str] = None):

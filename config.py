@@ -7,7 +7,7 @@ from typing import Optional
 from dotenv import load_dotenv
 
 # Load environment variables
-# load_dotenv()
+load_dotenv()
 
 
 class Config:
