@@ -10,7 +10,7 @@ jobs:
       - name: Sync to Hugging Face
         uses: huggingface/hub-sync@v0.1.0
         with:
-          github_repo_id: rucha2103/spotify_review_generation_engine
+          github_repo_id: ${{ github.repository }}
           huggingface_repo_id: rucha2103/spotify_review_generation_engine
           hf_token: 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
           space_sdk: streamlit
