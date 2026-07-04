@@ -20,3 +20,6 @@ streamlit==1.29.0
 
 # Utilities
 python-dateutil==2.8.2
+
+
+apify-client==1.7.2
